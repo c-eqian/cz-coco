@@ -1,7 +1,7 @@
 # cz-coco
 
 #### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+Vue3 + Typescript + pnpm + rollup/gulp 工程化搭建组件库
 
 #### Software Architecture
 Software architecture description
