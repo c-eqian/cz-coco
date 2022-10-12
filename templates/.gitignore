@@ -1,15 +1,10 @@
-
 # packages
 .temp
 .cache
 .DS_Store
-./**/.DS_Store
 node_modules
 /dist
 /deploy
-
-# test coverage
-coverage
 
 # local env files
 .env.local
