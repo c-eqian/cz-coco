@@ -6,5 +6,3 @@ import { CZMessage } from "./src/message";
 export{
     CZMessage
 }
-
-export default CZMessage;

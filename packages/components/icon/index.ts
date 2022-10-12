@@ -1,9 +1,9 @@
 import { withInstall } from "@cz-coco/utils/with-install"
 import Icon from "./src/icon.vue";
 
-const WIcon = withInstall(Icon);
+const CZIcon = withInstall(Icon);
 
 export{
-    WIcon
+    CZIcon
 }
-export default WIcon;
+export default CZIcon;

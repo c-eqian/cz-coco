@@ -1,9 +1,9 @@
 import { withInstall } from "@cz-coco/utils/with-install"
 import Button from "./src/button.vue";
 
-const WButton = withInstall(Button);
+const CZButton = withInstall(Button);
 
 export{
-    WButton
+    CZButton
 }
-export default WButton;
+export default CZButton;

@@ -5,8 +5,9 @@ import clientConfig3 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+p
 import clientConfig4 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+plugin-nprogress@2.0.0-beta.51/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
 import clientConfig5 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+plugin-theme-data@2.0.0-beta.51/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
 import clientConfig6 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+theme-default@2.0.0-beta.51/node_modules/@vuepress/theme-default/lib/client/config.js'
-import clientConfig7 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+plugin-docsearch@2.0.0-beta.51_tbpndr44ulefs3hehwpi2mkf2y/node_modules/@vuepress/plugin-docsearch/lib/client/config.js'
-import clientConfig8 from 'G:/vue-project/cz-coco/docs/.vuepress/client.ts'
+import clientConfig7 from 'G:/vue-project/cz-coco/docs/.vuepress/.temp/register-components/clientConfig.d1e77a94.js'
+import clientConfig8 from 'G:/vue-project/cz-coco/node_modules/.pnpm/vuepress-plugin-demoblock-plus@2.0.0-beta.6/node_modules/vuepress-plugin-demoblock-plus/dist/client/config.mjs'
+import clientConfig9 from 'G:/vue-project/cz-coco/docs/.vuepress/client.ts'
 
 export const clientConfigs = [
   clientConfig0,
@@ -18,4 +19,5 @@ export const clientConfigs = [
   clientConfig6,
   clientConfig7,
   clientConfig8,
+  clientConfig9,
 ]

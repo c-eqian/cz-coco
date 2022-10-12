@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-1982571c\",\"path\":\"/components/message.html\",\"title\":\"Select 选择器\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"基本用法\",\"slug\":\"基本用法\",\"link\":\"#基本用法\",\"children\":[]}],\"git\":{\"updatedTime\":null},\"filePathRelative\":\"components/message.md\"}")
+export const data = JSON.parse("{\"key\":\"v-1982571c\",\"path\":\"/components/message.html\",\"title\":\"Layout\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Layout\",\"desc\":\"desc\"},\"excerpt\":\"\",\"headers\":[{\"level\":3,\"title\":\"@sum-ui/layout\",\"slug\":\"sum-ui-layout\",\"link\":\"#sum-ui-layout\",\"children\":[]}],\"git\":{\"updatedTime\":1665559896000},\"filePathRelative\":\"components/message.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()

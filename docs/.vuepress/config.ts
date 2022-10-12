@@ -1,8 +1,12 @@
 // @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import { searchPlugin } from '@vuepress/plugin-search';
+import path from "path";
+import demoblockPlugin from 'vuepress-plugin-demoblock-plus';
+import {  registerComponentsPlugin  } from '@vuepress/plugin-register-components';
+// const demoblockPlugin = require('vuepress-plugin-demoblock-plus')
 import { containerPlugin } from '@vuepress/plugin-container';
+
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'cz-components',
@@ -65,17 +69,20 @@ export default defineUserConfig({
     }
   }),
   plugins: [
-    containerPlugin({
-      type: 'tip'
-    }),
-    docsearchPlugin({
-      apiKey: '',
-      appId: '',
-      indexName: ''
+    registerComponentsPlugin({
       // 配置项
+      componentsDir: path.resolve(__dirname, './components'),
+    }),
+    demoblockPlugin({
+      customClass: 'demoblock-custom',
+      theme: 'github-light',
+      cssPreprocessor: 'scss',
+      scriptReplaces: [
+        {
+          searchValue: /const ({ defineComponent as _defineComponent }) = Vue/g,
+          replaceValue: 'const { defineComponent: _defineComponent } = Vue'
+        }
+      ]
     })
-    // searchPlugin({
-    //   // 配置项
-    // }),
   ]
 });

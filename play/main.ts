@@ -1,8 +1,7 @@
 import { createApp } from "vue"
 import App from './app.vue'
-import { WIcon } from '@cz-coco/components/icon'
-import { WButton } from '@cz-coco/components/button'
-import { CZMessage } from '@cz-coco/components/message'
+import { CZIcon } from '@cz-coco/components/icon'
+import { CZButton } from '@cz-coco/components/button'
 import '@cz-coco/theme-chalk/src/index.scss'
 import 'element-plus/theme-chalk/index.css'
 import Element from 'element-plus'
@@ -16,8 +15,7 @@ Object.entries(comp).forEach(([name,comp]) => {
 
 const app = createApp(App);
 
-app.use(WIcon)
-app.use(WButton)
+app.use(CZIcon)
 app.use(Element)
-app.use(CZMessage)
+app.use(CZButton)
 app.mount('#app')
