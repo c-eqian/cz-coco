@@ -9,8 +9,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "element-plus": "^1.1.0-beta.24"
-  }
+  "license": "ISC"
 }

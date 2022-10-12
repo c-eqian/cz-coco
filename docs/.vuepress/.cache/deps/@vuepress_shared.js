@@ -2,22 +2,10 @@ import {
   isArray,
   isFunction,
   isString
-} from "./chunk-2VVOGXAK.js";
-import {
-  init_define_DEMOBLOCK_LOCALES,
-  init_define_EXTERNAL_LINK_ICON_LOCALES,
-  init_define_MZ_ZOOM_OPTIONS
-} from "./chunk-LBSEN4GU.js";
+} from "./chunk-BOYXR77U.js";
+import "./chunk-TWLJ45QX.js";
 
-// dep:@vuepress_shared
-init_define_DEMOBLOCK_LOCALES();
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
-
-// node_modules/@vuepress/shared/dist/index.js
-init_define_DEMOBLOCK_LOCALES();
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
+// node_modules/.pnpm/@vuepress+shared@2.0.0-beta.51/node_modules/@vuepress/shared/dist/index.js
 var resolveHeadIdentifier = ([
   tag,
   attrs,
@@ -56,29 +44,6 @@ var formatDateString = (str, defaultDateString = "") => {
   const [, yearStr, monthStr, dayStr] = dateMatch;
   return [yearStr, monthStr.padStart(2, "0"), dayStr.padStart(2, "0")].join("-");
 };
-var htmlEscapeMap = {
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  "'": "&#39;",
-  '"': "&quot;"
-};
-var htmlEscapeRegexp = /[&<>'"]/g;
-var htmlEscape = (str) => str.replace(htmlEscapeRegexp, (char) => htmlEscapeMap[char]);
-var htmlUnescapeMap = {
-  "&amp;": "&",
-  "&#38;": "&",
-  "&lt;": "<",
-  "&#60;": "<",
-  "&gt;": ">",
-  "&#62;": ">",
-  "&apos;": "'",
-  "&#39;": "'",
-  "&quot;": '"',
-  "&#34;": '"'
-};
-var htmlUnescapeRegexp = /&(amp|#38|lt|#60|gt|#62|apos|#39|quot|#34);/g;
-var htmlUnescape = (str) => str.replace(htmlUnescapeRegexp, (char) => htmlUnescapeMap[char]);
 var isLinkFtp = (link) => link.startsWith("ftp://");
 var isLinkHttp = (link) => /^(https?:)?\/\//.test(link);
 var markdownLinkRegexp = /.md((\?|#).*)?$/;
@@ -117,8 +82,6 @@ export {
   ensureEndingSlash,
   ensureLeadingSlash,
   formatDateString,
-  htmlEscape,
-  htmlUnescape,
   isArray,
   isFunction,
   isLinkExternal,

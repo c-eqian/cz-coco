@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-1982571c\",\"path\":\"/components/message.html\",\"title\":\"Table\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Table\",\"desc\":\"desc\"},\"excerpt\":\"\",\"headers\":[{\"level\":3,\"title\":\"@cz-coco/table\",\"slug\":\"cz-coco-table\",\"children\":[]},{\"level\":3,\"title\":\"SumTable Attributes\",\"slug\":\"sumtable-attributes\",\"children\":[]},{\"level\":3,\"title\":\"Pagenation Attributes\",\"slug\":\"pagenation-attributes\",\"children\":[]},{\"level\":3,\"title\":\"Events\",\"slug\":\"events\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"components/message.md\"}")
+export const data = JSON.parse("{\"key\":\"v-1982571c\",\"path\":\"/components/message.html\",\"title\":\"Select 选择器\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"基本用法\",\"slug\":\"基本用法\",\"link\":\"#基本用法\",\"children\":[]}],\"git\":{\"updatedTime\":null},\"filePathRelative\":\"components/message.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()
