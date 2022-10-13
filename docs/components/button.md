@@ -14,7 +14,6 @@
 </template>
 <script lang="ts">
 // import { CZMessage } from '@cz-coco/components';
-// import {ElMessage} from "element-plus";
 import {defineComponent} from 'vue';
 
 export default defineComponent({
