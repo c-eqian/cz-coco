@@ -4,13 +4,13 @@ title: 开始
 ## 安装
 
 ```bash
-npm i @cz-coco/layout
+npm i @sum-ui/layout
 # or
-yarn add @cz-coco/layout
+yarn add @sum-ui/layout
 
-npm i @cz-coco/table
+npm i @sum-ui/table
 # or
-yarn add @cz-coco/table
+yarn add @sum-ui/table
 ```
 
 ## 使用
@@ -24,12 +24,11 @@ yarn add @cz-coco/table
 
 <script lang="ts">
 import { defineComponent, toRefs } from 'vue'
-import SumLayout from '@cz-coco/layout'
-import SumTable from '@cz-coco/table'
+import SumTable from '@cz-coco/components'
 
 export default defineComponent({
-  name: 'sum-layout',
-  components: { SumLayout, SumTable },
+  name: 'cz-coco',
+  components: { SumTable },
   setup() {}
 })
 </script>
