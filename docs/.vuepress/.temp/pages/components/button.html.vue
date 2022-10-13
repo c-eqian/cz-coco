@@ -3,11 +3,10 @@
 <h2 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h2>
 <p>基础的按钮用法。</p>
 <demo customClass="demoblock-custom" sourceCode="&lt;template&gt;
-  &lt;el-button type=&quot;primary&quot; @click=&quot;handelMessage&quot;&gt;弹窗测试&lt;/el-button&gt;
+  &lt;button type=&quot;primary&quot; @click=&quot;handelMessage&quot;&gt;弹窗测试&lt;/button&gt;
 &lt;/template&gt;
 &lt;script lang=&quot;ts&quot;&gt;
 // import { CZMessage } from '@cz-coco/components';
-// import {ElMessage} from &quot;element-plus&quot;;
 import {defineComponent} from 'vue';
 
 export default defineComponent({
@@ -32,11 +31,10 @@ export default defineComponent({
         <template #highlight>
           <div v-pre class="language-vue">
             <pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #24292F">&lt;</span><span style="color: #116329">template</span><span style="color: #24292F">&gt;</span></span>
-<span class="line"><span style="color: #24292F">  &lt;</span><span style="color: #116329">el-button</span><span style="color: #24292F"> </span><span style="color: #0550AE">type</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;primary&quot;</span><span style="color: #24292F"> @</span><span style="color: #0550AE">click</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;</span><span style="color: #24292F">handelMessage</span><span style="color: #0A3069">&quot;</span><span style="color: #24292F">&gt;弹窗测试&lt;/</span><span style="color: #116329">el-button</span><span style="color: #24292F">&gt;</span></span>
+<span class="line"><span style="color: #24292F">  &lt;</span><span style="color: #116329">button</span><span style="color: #24292F"> </span><span style="color: #0550AE">type</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;primary&quot;</span><span style="color: #24292F"> @</span><span style="color: #0550AE">click</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;</span><span style="color: #24292F">handelMessage</span><span style="color: #0A3069">&quot;</span><span style="color: #24292F">&gt;弹窗测试&lt;/</span><span style="color: #116329">button</span><span style="color: #24292F">&gt;</span></span>
 <span class="line"><span style="color: #24292F">&lt;/</span><span style="color: #116329">template</span><span style="color: #24292F">&gt;</span></span>
 <span class="line"><span style="color: #24292F">&lt;</span><span style="color: #116329">script</span><span style="color: #24292F"> </span><span style="color: #0550AE">lang</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;ts&quot;</span><span style="color: #24292F">&gt;</span></span>
 <span class="line"><span style="color: #6E7781">// import { CZMessage } from &#39;@cz-coco/components&#39;;</span></span>
-<span class="line"><span style="color: #6E7781">// import {ElMessage} from &quot;element-plus&quot;;</span></span>
 <span class="line"><span style="color: #CF222E">import</span><span style="color: #24292F"> {defineComponent} </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;vue&#39;</span><span style="color: #24292F">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #CF222E">export</span><span style="color: #953800"> </span><span style="color: #CF222E">default</span><span style="color: #953800"> </span><span style="color: #8250DF">defineComponent</span><span style="color: #953800">({</span></span>
@@ -90,24 +88,16 @@ export default defineComponent({
         components: {
           "render-demo-0": (function() {
     
-    const { createTextVNode: _createTextVNode, resolveComponent: _resolveComponent, withCtx: _withCtx, openBlock: _openBlock, createBlock: _createBlock } = Vue
+    const { openBlock: _openBlock, createElementBlock: _createElementBlock } = Vue
 
 function render(_ctx, _cache) {
-  const _component_el_button = _resolveComponent("el-button")
-
-  return (_openBlock(), _createBlock(_component_el_button, {
+  return (_openBlock(), _createElementBlock("button", {
     type: "primary",
-    onClick: _ctx.handelMessage
-  }, {
-    default: _withCtx(() => [
-      _createTextVNode("弹窗测试")
-    ]),
-    _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["onClick"]))
+    onClick: _cache[0] || (_cache[0] = (...args) => (_ctx.handelMessage && _ctx.handelMessage(...args)))
+  }, "弹窗测试"))
 }
   
     // import { CZMessage } from '@cz-coco/components';
-// import {ElMessage} from "element-plus";
 const {defineComponent} = Vue;
 
 const democomponentExport = defineComponent({
