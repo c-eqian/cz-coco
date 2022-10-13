@@ -7,7 +7,6 @@
 &lt;/template&gt;
 &lt;script lang=&quot;ts&quot;&gt;
 // import { CZMessage } from '@cz-coco/components';
-// import {ElMessage} from &quot;element-plus&quot;;
 import {defineComponent} from 'vue';
 
 export default defineComponent({
@@ -36,7 +35,6 @@ export default defineComponent({
 <span class="line"><span style="color: #24292F">&lt;/</span><span style="color: #116329">template</span><span style="color: #24292F">&gt;</span></span>
 <span class="line"><span style="color: #24292F">&lt;</span><span style="color: #116329">script</span><span style="color: #24292F"> </span><span style="color: #0550AE">lang</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;ts&quot;</span><span style="color: #24292F">&gt;</span></span>
 <span class="line"><span style="color: #6E7781">// import { CZMessage } from &#39;@cz-coco/components&#39;;</span></span>
-<span class="line"><span style="color: #6E7781">// import {ElMessage} from &quot;element-plus&quot;;</span></span>
 <span class="line"><span style="color: #CF222E">import</span><span style="color: #24292F"> {defineComponent} </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;vue&#39;</span><span style="color: #24292F">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #CF222E">export</span><span style="color: #953800"> </span><span style="color: #CF222E">default</span><span style="color: #953800"> </span><span style="color: #8250DF">defineComponent</span><span style="color: #953800">({</span></span>
@@ -107,7 +105,6 @@ function render(_ctx, _cache) {
 }
   
     // import { CZMessage } from '@cz-coco/components';
-// import {ElMessage} from "element-plus";
 const {defineComponent} = Vue;
 
 const democomponentExport = defineComponent({

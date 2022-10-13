@@ -1,6 +1,6 @@
 ---
 title: 'message弹窗'
-desc: 'desc'
+desc: '描述'
 ---
 
 ### 基础用法
