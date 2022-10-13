@@ -10,7 +10,8 @@ import { containerPlugin } from '@vuepress/plugin-container';
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'cz-coco',
-  description: '组件库',
+  base: '/cz-coco/', // 这是部署到github相关的配置
+  description: '组件库&工具库',
   locales: {
     '/': {
       lang: 'zh-CN'

@@ -12,7 +12,7 @@ desc: '描述'
 ::: demo
 ```vue
 <template>
-  <el-button type="primary" @click="handelMessage">弹窗测试</el-button>
+  <button type="primary" @click="handelMessage">弹窗测试</button>
 </template>
 <script lang="ts">
 // import { CZMessage } from '@cz-coco/components';

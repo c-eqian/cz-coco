@@ -1,19 +1,15 @@
 <template>
-  <el-button :type="type" @click="handlerClick">Primary</el-button>
+  <button :type="type">Primary</button>
 </template>
 
 <script lang="ts">
-import { ElButton } from "element-plus";
 import { defineComponent } from "vue";
-import { buttonProps } from "./button";
+import  { buttonProps, type IButtonProps } from "./type";
 
 export default defineComponent({
-  name: "WButton",
+  name: "CZButton",
   props:buttonProps,
-  components: {
-    ElButton,
-  },
-  setup() {
+  setup( prop: IButtonProps) {
     const handlerClick = () => {
       alert("WQ!!!!!!");
     };

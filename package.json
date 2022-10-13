@@ -54,7 +54,8 @@
     "@vuepress/plugin-register-components": "^2.0.0-beta.51",
     "yarn": "^1.22.19",
     "vue-highlight.js": "^2.2.0",
-    "highlight.js": "^9.12.0"
+    "highlight.js": "^9.12.0",
+    "less": "^4.1.2"
   },
   "dependencies": {
     "@cz-coco/components": "workspace:^1.0.0",
