@@ -33,6 +33,7 @@ importers:
       gulp-clean-css: ^4.3.0
       gulp-sass: ^5.0.0
       gulp-typescript: ^6.0.0-alpha.1
+      highlight.js: ^9.12.0
       pnpm: ^7.12.2
       rimraf: ^3.0.2
       rollup: ^2.58.3
@@ -44,6 +45,7 @@ importers:
       typescript: ^4.4.4
       vitepress: ^1.0.0-alpha.19
       vue: ^3.2.0
+      vue-highlight.js: ^2.2.0
       vuepress: ^2.0.0-beta.51
       vuepress-plugin-demoblock-plus: ^2.0.0-beta.6
       vuepress-vite: ^2.0.0-beta.51
@@ -80,6 +82,7 @@ importers:
       gulp-clean-css: 4.3.0
       gulp-sass: 5.1.0
       gulp-typescript: 6.0.0-alpha.1_typescript@4.8.4
+      highlight.js: 9.18.5
       rimraf: 3.0.2
       rollup: 2.79.1
       rollup-plugin-typescript2: 0.30.0_gypgyaqhine6mwjfvh7icfhviq
@@ -90,6 +93,7 @@ importers:
       typescript: 4.8.4
       vitepress: 1.0.0-alpha.19_7dizhlaz5myrf77sm3yawxx3ue
       vue: 3.2.40
+      vue-highlight.js: 2.2.0_etre32257bnsf7qe3xflltnmuq
       vuepress: 2.0.0-beta.51_ubr4ffsmdcywfrlxn53rnaktey
       vuepress-plugin-demoblock-plus: 2.0.0-beta.6
       vuepress-vite: 2.0.0-beta.51_ubr4ffsmdcywfrlxn53rnaktey
@@ -1845,6 +1849,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /detect-indent/5.0.0:
+    resolution: {integrity: sha512-rlpvsxUtM0PQvy9iZe640/IWwWYyBsTApREbA1pHOpmOUIl9MkP/U4z7vTtg4Oaojvqhxt7sdufnT0EzGaR31g==}
+    engines: {node: '>=4'}
+    dev: true
+
   /dir-glob/3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
@@ -2971,6 +2980,12 @@ packages:
     resolution: {integrity: sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==}
     dev: true
 
+  /highlight.js/9.18.5:
+    resolution: {integrity: sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==}
+    deprecated: Support has ended for 9.x series. Upgrade to @latest
+    requiresBuild: true
+    dev: true
+
   /homedir-polyfill/1.0.3:
     resolution: {integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==}
     engines: {node: '>=0.10.0'}
@@ -2998,6 +3013,11 @@ packages:
 
   /immutable/4.1.0:
     resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
+    dev: true
+
+  /indent-string/3.2.0:
+    resolution: {integrity: sha512-BYqTHXTGUIvg7t1r4sJNKcbDZkL92nkXA8YtRpbjFHRHGDL/NtUeiBJMeE60kIFN/Mg8ESaWQvftaYMGJzQZCQ==}
+    engines: {node: '>=4'}
     dev: true
 
   /inflight/1.0.6:
@@ -4072,6 +4092,14 @@ packages:
       resolve: 1.22.1
     dev: true
 
+  /redent/2.0.0:
+    resolution: {integrity: sha512-XNwrTx77JQCEMXTeb8movBKuK75MgH0RZkujNuDKCezemx/voapl9i2gCSi8WWm8+ox5ycJi1gxF22fR7c0Ciw==}
+    engines: {node: '>=4'}
+    dependencies:
+      indent-string: 3.2.0
+      strip-indent: 2.0.0
+    dev: true
+
   /regex-not/1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
     engines: {node: '>=0.10.0'}
@@ -4553,6 +4581,11 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
+  /strip-indent/2.0.0:
+    resolution: {integrity: sha512-RsSNPLpq6YUL7QYy44RnPVTn/lcVZtb48Uof3X5JLbF4zD/Gs7ZFDv2HWol+leoQN2mT86LAzSshGfkTlSOpsA==}
+    engines: {node: '>=4'}
+    dev: true
+
   /sucrase/3.28.0:
     resolution: {integrity: sha512-TK9600YInjuiIhVM3729rH4ZKPOsGeyXUwY+Ugu9eilNbdTFyHr6XcAGYbRVZPDgWj6tgI7bx95aaJjHnbffag==}
     engines: {node: '>=8'}
@@ -5003,6 +5036,18 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
+      vue: 3.2.40
+    dev: true
+
+  /vue-highlight.js/2.2.0_etre32257bnsf7qe3xflltnmuq:
+    resolution: {integrity: sha512-7C1Qbbn/FWdFlSKx7qD2i3vxPw5UWSnuEF5B8SwxHyrsIFmfU4Lw2GpeTm76DeYiAX+ZxQqlJHdI68PevXpCjw==}
+    peerDependencies:
+      highlight.js: ^9.11.0
+      vue: '2'
+    dependencies:
+      detect-indent: 5.0.0
+      highlight.js: 9.18.5
+      redent: 2.0.0
       vue: 3.2.40
     dev: true
 

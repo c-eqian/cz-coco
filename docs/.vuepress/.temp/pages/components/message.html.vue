@@ -1,5 +1,104 @@
-<template><div><h3 id="sum-ui-layout" tabindex="-1"><a class="header-anchor" href="#sum-ui-layout" aria-hidden="true">#</a> @sum-ui/layout</h3>
-<demo customClass="demoblock-custom" sourceCode=""><CZMessage></CZMessage><p>&lt;&lt;&lt; @/docs/.vuepress/components/CZMessage.vue</p>
-</demo></div></template>
+<template><div><h3 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h3>
+<demo customClass="demoblock-custom" sourceCode="&lt;template&gt;
+  &lt;el-button type=&quot;primary&quot; @click=&quot;handelMessage&quot;&gt;弹窗测试&lt;/el-button&gt;
+&lt;/template&gt;
+&lt;script lang=&quot;ts&quot;&gt;
+// import { CZMessage } from '@cz-coco/components';
+// import {ElMessage} from &quot;element-plus&quot;;
+import {defineComponent} from 'vue';
 
+export default defineComponent({
+  setup() {
+    const handelMessage = () =&gt; {
+      // CZMessage({
+      //   type: 'success',
+      //   message: '我是测试的'
+      // })
+    }
+    return {
+      handelMessage
+    }
+  }
+})
+&lt;/script&gt;
+"><render-demo-0 />
+        
+        <template #highlight>
+          <div v-pre class="language-vue">
+            <pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #24292F">&lt;</span><span style="color: #116329">template</span><span style="color: #24292F">&gt;</span></span>
+<span class="line"><span style="color: #24292F">  &lt;</span><span style="color: #116329">el-button</span><span style="color: #24292F"> </span><span style="color: #0550AE">type</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;primary&quot;</span><span style="color: #24292F"> @</span><span style="color: #0550AE">click</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;</span><span style="color: #24292F">handelMessage</span><span style="color: #0A3069">&quot;</span><span style="color: #24292F">&gt;弹窗测试&lt;/</span><span style="color: #116329">el-button</span><span style="color: #24292F">&gt;</span></span>
+<span class="line"><span style="color: #24292F">&lt;/</span><span style="color: #116329">template</span><span style="color: #24292F">&gt;</span></span>
+<span class="line"><span style="color: #24292F">&lt;</span><span style="color: #116329">script</span><span style="color: #24292F"> </span><span style="color: #0550AE">lang</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;ts&quot;</span><span style="color: #24292F">&gt;</span></span>
+<span class="line"><span style="color: #6E7781">// import { CZMessage } from &#39;@cz-coco/components&#39;;</span></span>
+<span class="line"><span style="color: #6E7781">// import {ElMessage} from &quot;element-plus&quot;;</span></span>
+<span class="line"><span style="color: #CF222E">import</span><span style="color: #24292F"> {defineComponent} </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;vue&#39;</span><span style="color: #24292F">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #CF222E">export</span><span style="color: #953800"> </span><span style="color: #CF222E">default</span><span style="color: #953800"> </span><span style="color: #8250DF">defineComponent</span><span style="color: #953800">({</span></span>
+<span class="line"><span style="color: #953800">  </span><span style="color: #8250DF">setup</span><span style="color: #953800">() </span><span style="color: #24292F">{</span></span>
+<span class="line"><span style="color: #24292F">    </span><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #8250DF">handelMessage</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> () </span><span style="color: #CF222E">=&gt;</span><span style="color: #24292F"> {</span></span>
+<span class="line"><span style="color: #24292F">      </span><span style="color: #6E7781">// CZMessage({</span></span>
+<span class="line"><span style="color: #24292F">      </span><span style="color: #6E7781">//   type: &#39;success&#39;,</span></span>
+<span class="line"><span style="color: #24292F">      </span><span style="color: #6E7781">//   message: &#39;我是测试的&#39;</span></span>
+<span class="line"><span style="color: #24292F">      </span><span style="color: #6E7781">// })</span></span>
+<span class="line"><span style="color: #24292F">    }</span></span>
+<span class="line"><span style="color: #24292F">    </span><span style="color: #CF222E">return</span><span style="color: #24292F"> {</span></span>
+<span class="line"><span style="color: #24292F">      handelMessage</span></span>
+<span class="line"><span style="color: #24292F">    }</span></span>
+<span class="line"><span style="color: #24292F">  }</span></span>
+<span class="line"><span style="color: #953800">})</span></span>
+<span class="line"><span style="color: #24292F">&lt;/</span><span style="color: #116329">script</span><span style="color: #24292F">&gt;</span></span>
+<span class="line"></span></code></pre>
+          </div>
+        </template></demo></div></template>
 
+<script lang="ts">
+      import * as Vue from 'vue'
+      
+      export default {
+        name: 'component-doc',
+        components: {
+          "render-demo-0": (function() {
+    
+    const { createTextVNode: _createTextVNode, resolveComponent: _resolveComponent, withCtx: _withCtx, openBlock: _openBlock, createBlock: _createBlock } = Vue
+
+function render(_ctx, _cache) {
+  const _component_el_button = _resolveComponent("el-button")
+
+  return (_openBlock(), _createBlock(_component_el_button, {
+    type: "primary",
+    onClick: _ctx.handelMessage
+  }, {
+    default: _withCtx(() => [
+      _createTextVNode("弹窗测试")
+    ]),
+    _: 1 /* STABLE */
+  }, 8 /* PROPS */, ["onClick"]))
+}
+  
+    // import { CZMessage } from '@cz-coco/components';
+// import {ElMessage} from "element-plus";
+const {defineComponent} = Vue;
+
+const democomponentExport = defineComponent({
+  setup() {
+    const handelMessage = () => {
+      // CZMessage({
+      //   type: 'success',
+      //   message: '我是测试的'
+      // })
+    }
+    return {
+      handelMessage
+    }
+  }
+})
+    return {
+      render,
+      ...democomponentExport
+    }
+  })(),
+        }
+      }
+    </script>
+
+<style lang="scss"></style>

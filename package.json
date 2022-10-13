@@ -52,7 +52,9 @@
     "vuepress-vite": "^2.0.0-beta.51",
     "vuepress-plugin-demoblock-plus": "^2.0.0-beta.6",
     "@vuepress/plugin-register-components": "^2.0.0-beta.51",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "vue-highlight.js": "^2.2.0",
+    "highlight.js": "^9.12.0"
   },
   "dependencies": {
     "@cz-coco/components": "workspace:^1.0.0",
