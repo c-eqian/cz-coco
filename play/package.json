@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite"
   },
-  "author": "WQ",
+  "author": "cz",
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",

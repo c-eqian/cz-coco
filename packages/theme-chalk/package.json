@@ -5,6 +5,6 @@
   "scripts": {
     "build": "gulp"
   },
-  "author": "WQ",
+  "author": "cz",
   "license": "ISC"
 }

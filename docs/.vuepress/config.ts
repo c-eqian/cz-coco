@@ -9,7 +9,7 @@ import { containerPlugin } from '@vuepress/plugin-container';
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  title: 'cz-components',
+  title: 'cz-coco',
   description: '组件库',
   locales: {
     '/': {
