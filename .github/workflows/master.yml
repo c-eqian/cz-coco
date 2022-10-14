@@ -22,7 +22,9 @@ jobs:
         with:
           # 选择要使用的 node 版本
           node-version: '16'
+          cache: 'pnpm'
 
+      - uses: pnpm/action-setup@v2.2.1
       # 缓存 node_modules
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -37,7 +39,7 @@ jobs:
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: pnpm --frozen-lockfile
+        run: pnpm i
 
       # 运行构建脚本
       - name: Build VuePress site
