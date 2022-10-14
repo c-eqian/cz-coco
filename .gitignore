@@ -2,7 +2,7 @@
 .idea
 
 # Package Manager
-#node_modules
+node_modules
 .pnpm-debug.log*
 
 # Bundle
