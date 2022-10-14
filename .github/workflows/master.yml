@@ -24,7 +24,7 @@ jobs:
           node-version: '16'
           cache: 'pnpm'
 
-      - uses: pnpm/action-setup@v7
+      - uses: pnpm/action-setup@v2
       # 缓存 node_modules
       - name: Cache dependencies
         uses: actions/cache@v2
