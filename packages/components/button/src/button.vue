@@ -1,22 +1,35 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 十三
+ * @Date: 2022-10-14 10:23:03
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-14 16:26:22
+-->
 <template>
-  <button :type="type">Primary</button>
+  <button :class="[`cz-button--${props.type}`, 'cz-button']" >
+  <slot></slot>
+  </button>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" name="CZButton">
+import { defineComponent, computed, watch } from 'vue'
 import  { buttonProps, type IButtonProps } from "./type";
-
 export default defineComponent({
   name: "CZButton",
   props:buttonProps,
-  setup( prop: IButtonProps) {
-    const handlerClick = () => {
-      alert("WQ!!!!!!");
-    };
-
+  setup(props: IButtonProps) {
     return {
-      handlerClick,
+      props
     };
   },
 });
 </script>
+<style scoped lang="scss">
+.cz-button {
+  &--primary {
+    background-color: #409eff;
+  }
+}
+
+</style>

@@ -11,6 +11,7 @@ const install = (app: App) => {
   // components.forEach((component) => app.use(component));
 
   Object.entries(components).forEach(([name, component]) => {
+    console.log(22222, name)
     app.component(name, component);
   });
 };

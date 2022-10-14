@@ -3,7 +3,7 @@ import Button from "./src/button.vue";
 
 const CZButton = withInstall(Button);
 
-export{
+export {
     CZButton
 }
 export default CZButton;

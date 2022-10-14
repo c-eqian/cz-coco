@@ -29,7 +29,7 @@ const buildFull = async () => {
     {
       format: "umd", // 打包的格式
       file: path.resolve(outDir, "index.js"),
-      name: "wPlus", // 全局变量名字
+      name: "cz-coco", // 全局变量名字
       exports: "named", // 导出的名字 用命名的方式导出 libaryTarget:"" name:""
       globals: {
         // 表示使用的vue是全局的
@@ -54,7 +54,7 @@ const buildFull = async () => {
 async function buildEntry() {
   // 读取cz-coco目录下的所有内容，包括目录和文件
   const entryFiles = await fs.readdir(wpRoot, { withFileTypes: true });
-  
+
   // 过滤掉 不是文件的内容和package.json文件  index.ts 作为打包入口
   const entryPoints = entryFiles
     .filter((f) => f.isFile())

@@ -1,12 +1,13 @@
-<template>
-    <w-icon color="blue" :size="30" class="w-icon-delete">Hello Icon</w-icon>
-    <w-button></w-button>
-  <el-button @click="CZMessage.success({
-        message: '我是测试的'
-      })">
-    弹窗
-  </el-button>
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 十三
+ * @Date: 2022-10-14 10:23:03
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-14 16:25:38
+-->
+<template >
+<CZButton type="primary">测试</CZButton>
 </template>
 <script lang="ts" setup>
-import { CZMessage } from '@cz-coco/components'
 </script>

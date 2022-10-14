@@ -1,3 +1,12 @@
+<!--
+ * @Descripttion:
+ * @version:
+ * @Author: 十三
+ * @Date: 2022-10-14 10:23:03
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-14 16:38:29
+-->
+
 # Button 按钮
 
 常用的操作按钮。
@@ -10,11 +19,11 @@
 
 ```vue
 <template>
-  <button type="primary" @click="handelMessage">弹窗测试</button>
+  <CZButton type="primary">测试</CZButton>
 </template>
 <script lang="ts">
 // import { CZMessage } from '@cz-coco/components';
-import {defineComponent} from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'test',
@@ -26,9 +35,9 @@ export default defineComponent({
       // })
     }
     return {
-      handelMessage
+      handelMessage,
     }
-  }
+  },
 })
 </script>
 ```
