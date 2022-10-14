@@ -266,7 +266,6 @@ export {
   isSymbol,
   isObject,
   isPromise,
-  toTypeString,
   toRawType,
   isPlainObject,
   isIntegerKey,
@@ -282,4 +281,4 @@ export {
   toNumber,
   getGlobalThis
 };
-//# sourceMappingURL=chunk-BOYXR77U.js.map
+//# sourceMappingURL=chunk-5WH6ZM22.js.map
