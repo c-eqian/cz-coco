@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: 十三
+ * @Date: 2022-10-15 00:21:16
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-15 16:00:52
+ */
 // @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
@@ -20,9 +28,13 @@ export default defineUserConfig({
       lang: 'en-US'
     }
   },
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
   theme: defaultTheme({
-    logo: 'https://s1.ax1x.com/2022/09/10/vOVha6.jpg',
-    repo: 'https://gitlab.com/foo/bar',
+    // logo: 'https://s1.ax1x.com/2022/09/10/vOVha6.jpg',
+    logo: 'https://s1.ax1x.com/2022/10/15/x0Q84P.png',
+    repo: 'https://github.com/C1320/cz-coco',
     editLink: false,
     editLinkText: '编辑此页',
     editLinkPattern: '',
@@ -54,6 +66,11 @@ export default defineUserConfig({
     ],
     sidebar: [
       // SidebarItem
+      {
+        text: '使用',
+        collapsible: false,
+        children: ['install']
+      },
       {
         text: 'Basic 基础组件',
         collapsible: false,
