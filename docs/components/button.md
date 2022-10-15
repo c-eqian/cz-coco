@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-14 16:38:29
+ * @LastEditTime: 2022-10-16 00:53:28
 -->
 
 # Button 按钮
@@ -19,27 +19,22 @@
 
 ```vue
 <template>
-  <CZButton type="primary">测试</CZButton>
+  <div class="demo-mr">
+    <cz-button type="primary">primary</cz-button>
+    <cz-button type="success">success</cz-button>
+    <cz-button type="info">info</cz-button>
+    <cz-button type="warning">warning</cz-button>
+    <cz-button type="danger">danger</cz-button>
+    <cz-button type="text">text</cz-button>
+  </div>
 </template>
-<script lang="ts">
-// import { CZMessage } from '@cz-coco/components';
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'test',
-  setup() {
-    const handelMessage = () => {
-      // CZMessage({
-      //   type: 'success',
-      //   message: '我是测试的'
-      // })
-    }
-    return {
-      handelMessage,
-    }
-  },
-})
-</script>
+<style scoped lang="scss">
+.demo-mr {
+  .cz-button {
+    margin-right: 10px;
+  }
+}
+</style>
 ```
 
 :::
@@ -52,13 +47,22 @@ export default defineComponent({
 
 ```vue
 <template>
-  <el-button>默认按钮</el-button>
-  <el-button type="primary">主要按钮</el-button>
-  <el-button type="success">成功按钮</el-button>
-  <el-button type="info">信息按钮</el-button>
-  <el-button type="warning">警告按钮</el-button>
-  <el-button type="danger">危险按钮</el-button>
+  <div class="demo-mr">
+    <cz-button type="primary">primary</cz-button>
+    <cz-button type="success">success</cz-button>
+    <cz-button type="info">info</cz-button>
+    <cz-button type="warning">warning</cz-button>
+    <cz-button type="danger">danger</cz-button>
+    <cz-button type="text">text</cz-button>
+  </div>
 </template>
+<style scoped lang="scss">
+.demo-mr {
+  .cz-button {
+    margin-right: 10px;
+  }
+}
+</style>
 ```
 
 :::

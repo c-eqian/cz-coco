@@ -1,13 +1,25 @@
 /*
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: 十三
  * @Date: 2022-10-15 00:59:41
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-15 01:16:41
+ * @LastEditTime: 2022-10-16 00:38:17
  */
 import * as cst from './constant';
-import { ref } from 'vue';
+import { ref, computed, unref } from 'vue';
+
+/**
+ * 组件名转换 CzButton => cz-button
+ * @param cname
+ * @returns
+ */
+export const componentNameFormat = (cname: string): string => {
+  if (!cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX)) return cname;
+  const compName = cname.toLowerCase();
+  return `${cst.NAMESPACE_PREFIX}-${compName.replace(cst.NAMESPACE_PREFIX, '')}`;
+};
+
 /**
  * 全局z-index
  */
@@ -18,7 +30,12 @@ const globalZIndex = ref<number>(cst.INITIAL_GLOBAL_Z_INDEX);
 const globalId = ref<number>(cst.INITIAL_ID);
 
 /** 全局 z-index 自动自增 */
-export const getNextGlobalZIndex = () => ++globalZIndex.value;
+export const getNextGlobalZIndex = () => {
+  return globalZIndex.value + 1;
+};
+
+/** 全局 z-index 自动Id */
+export const getNextGlobalId = () => globalId.value + 1;
 
 /** 设置全局 z-index */
 export const setGlobalZIndex = (val: number) => {
@@ -31,7 +48,7 @@ export const setGlobalZIndex = (val: number) => {
  * @returns
  * test-icon => testIcon
  */
- export const camelize = (str: string): string => {
+export const camelize = (str: string): string => {
   return str.replace(/-(\w)/g, (_, c) => c.toUpperCase());
 };
 
@@ -40,8 +57,8 @@ export const setGlobalZIndex = (val: number) => {
  * @param str
  * @returns
  */
- export function firstLetterToUpperCase(str: string): string {
-  return str.replace(/^[a-z]/, (firstLetter) => firstLetter.toUpperCase());
+export function firstLetterToUpperCase(str: string): string {
+  return str.replace(/^[a-z]/, firstLetter => firstLetter.toUpperCase());
 }
 
 /**
@@ -50,7 +67,7 @@ export const setGlobalZIndex = (val: number) => {
  * @returns
  * icon => CzIcon
  */
- export function createComponentName(cname: string): string {
+export function createComponentName(cname: string): string {
   const ns = firstLetterToUpperCase(cst.COMPONENT_NAMESPACE_PREFIX);
   const componentName = firstLetterToUpperCase(cname);
   return `${ns}${componentName}`;
@@ -61,17 +78,66 @@ const _bem = (
   block: string,
   blockSuffix: string,
   element: string,
-  modifier: string
+  modifier: string,
 ) => {
-  let cls = `${namespace}-${block}`
+  let cls = `${namespace}-${block}`;
   if (blockSuffix) {
-    cls += `-${blockSuffix}`
+    cls += `-${blockSuffix}`;
   }
   if (element) {
-    cls += `__${element}`
+    cls += `__${element}`;
   }
   if (modifier) {
-    cls += `--${modifier}`
+    cls += `--${modifier}`;
   }
-  return cls
-}
+  return cls;
+};
+
+/**
+ * BEM
+ */
+
+export const  useNamespace = (block: string) => {
+const namespace = computed(() => cst.NAMESPACE_PREFIX)
+const b = (blockSuffix = '') =>
+  _bem(unref(namespace), block, blockSuffix, '', '')
+  const e = (element?: string) =>
+  element ? _bem(unref(namespace), block, '', element, '') : ''
+  const m = (modifier?: string) =>
+  modifier ? _bem(unref(namespace), block, '', '', modifier) : ''
+  const be = (blockSuffix?: string, element?: string) =>
+  blockSuffix && element
+  ? _bem(unref(namespace), block, blockSuffix, element, '')
+    : ''
+  const em = (element?: string, modifier?: string) =>
+  element && modifier
+  ? _bem(unref(namespace), block, '', element, modifier)
+    : ''
+  const bm = (blockSuffix?: string, modifier?: string) =>
+  blockSuffix && modifier
+  ? _bem(unref(namespace), block, blockSuffix, '', modifier)
+    : ''
+  const bem = (blockSuffix?: string, element?: string, modifier?: string) =>
+  blockSuffix && element && modifier
+   ? _bem(unref(namespace), block, blockSuffix, element, modifier)
+     : ''
+  const is: {
+    (name: string, state: boolean | undefined): string
+    (name: string): string
+   } = (name: string, ...args: [boolean | undefined] | []) => {
+  const state = args.length >= 1 ? args[0]! : true
+  return name && state ? `${cst.STATEPREFIX}${name}` : ''
+   }
+  return {
+  namespace,
+  b,
+  e,
+  m,
+  be,
+  em,
+  bm,
+  bem,
+  is,
+   }
+ }
+export type UseNamespaceReturn = ReturnType<typeof useNamespace>;

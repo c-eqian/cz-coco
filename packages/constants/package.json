@@ -1,5 +1,5 @@
 {
-  "name": "@cz-coco/utils",
+  "name": "@cz-coco/constants",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

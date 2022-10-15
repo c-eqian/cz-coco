@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 十三
+ * @Date: 2022-10-15 19:27:22
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-16 02:08:59
+-->
 <template>
   <transition name="cz-message-fade">
     <div
@@ -61,5 +69,4 @@ defineExpose({
 </script>
 
 <style scoped lang="scss">
-@import "../style/style.scss";
 </style>

@@ -4,10 +4,10 @@
  * @Author: 十三
  * @Date: 2022-10-15 01:02:27
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-15 04:07:52
+ * @LastEditTime: 2022-10-15 20:52:36
  */
-// css 类命名空间前缀
-export const CSS_NAMESPACE_PREFIX = 'cz';
+// 命名空间前缀
+export const NAMESPACE_PREFIX = 'cz';
 // 组件命名空间前缀
 export const COMPONENT_NAMESPACE_PREFIX = 'Cz';
 // 组件大小
