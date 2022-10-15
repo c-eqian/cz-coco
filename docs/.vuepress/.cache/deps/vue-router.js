@@ -18,10 +18,9 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-Q5ZHDAOU.js";
-import "./chunk-5WH6ZM22.js";
+} from "./chunk-JEFOGESD.js";
 
-// node_modules/.pnpm/vue-router@4.1.5_vue@3.2.40/node_modules/vue-router/dist/vue-router.mjs
+// node_modules/.pnpm/vue-router@4.1.5_vue@3.2.37/node_modules/vue-router/dist/vue-router.mjs
 var isBrowser = typeof window !== "undefined";
 function isESModule(obj) {
   return obj.__esModule || obj[Symbol.toStringTag] === "Module";

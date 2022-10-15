@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: 十三
+ * @Date: 2022-10-15 00:21:16
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-15 12:28:14
+ */
 // import { WIcon,WButton } from "@cz-coco/components";
 import * as components from "@cz-coco/components";
 import type { App } from "vue";

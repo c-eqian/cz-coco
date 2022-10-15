@@ -1,26 +1,27 @@
 <!--
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-14 16:26:22
+ * @LastEditTime: 2022-10-15 04:20:05
 -->
 <template>
-  <button :class="[`cz-button--${props.type}`, 'cz-button']" >
-  <slot></slot>
+  <button :class="[`cz-button--${props.type}`, 'cz-button']">
+    <slot />
   </button>
 </template>
 
 <script lang="ts" name="CZButton">
-import { defineComponent, computed, watch } from 'vue'
-import  { buttonProps, type IButtonProps } from "./type";
+import { defineComponent } from 'vue';
+import { buttonProps, IButtonProps } from './type';
+
 export default defineComponent({
-  name: "CZButton",
-  props:buttonProps,
+  name: 'CZButton',
+  props: buttonProps,
   setup(props: IButtonProps) {
     return {
-      props
+      props,
     };
   },
 });
@@ -31,5 +32,4 @@ export default defineComponent({
     background-color: #409eff;
   }
 }
-
 </style>
