@@ -37,7 +37,7 @@ jobs:
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: npm install -g pnpm
+      - run: npm install -g pnpm
       - run: pnpm install
 
       # 运行构建脚本
