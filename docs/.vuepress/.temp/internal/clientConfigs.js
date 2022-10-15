@@ -6,7 +6,7 @@ import clientConfig4 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+p
 import clientConfig5 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+plugin-theme-data@2.0.0-beta.51/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
 import clientConfig6 from 'G:/vue-project/cz-coco/node_modules/.pnpm/@vuepress+theme-default@2.0.0-beta.51/node_modules/@vuepress/theme-default/lib/client/config.js'
 import clientConfig7 from 'G:/vue-project/cz-coco/docs/.vuepress/.temp/register-components/clientConfig.d1e77a94.js'
-import clientConfig8 from 'G:/vue-project/cz-coco/node_modules/.pnpm/vuepress-plugin-demoblock-plus@2.0.0-beta.6/node_modules/vuepress-plugin-demoblock-plus/dist/client/config.mjs'
+import clientConfig8 from 'G:/vue-project/cz-coco/node_modules/.pnpm/vuepress-plugin-demoblock-plus@2.0.0-beta.5_less@4.1.3+sass@1.55.0/node_modules/vuepress-plugin-demoblock-plus/dist/client/config.mjs'
 import clientConfig9 from 'G:/vue-project/cz-coco/docs/.vuepress/client.ts'
 
 export const clientConfigs = [
