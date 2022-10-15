@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-15 12:39:44
+ * @LastEditTime: 2022-10-15 12:50:23
 -->
 <template>
   <button :class="[`cz-button--${props.type}`, 'cz-button']">
@@ -27,9 +27,4 @@ export default defineComponent({
 });
 </script>
 <style scoped lang="scss">
-.cz-button {
-  &--primary {
-    background-color: #409eff;
-  }
-}
 </style>
