@@ -28,7 +28,7 @@ jobs:
         run: npm install -g pnpm
       - run: pnpm install
       - run: pnpm uninstall vuepress-plugin-demoblock-plus
-      - run: pnpm uninstall vuepress-plugin-demoblock-plus@beta
+      - run: pnpm install vuepress-plugin-demoblock-plus@beta
 
       # 运行构建脚本
       - name: Build VuePress site
