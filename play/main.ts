@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-15 12:28:54
+ * @LastEditTime: 2022-10-15 12:35:45
  */
 import { createApp } from 'vue';
 import App from './app.vue';
