@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-15 04:20:05
+ * @LastEditTime: 2022-10-15 12:39:44
 -->
 <template>
   <button :class="[`cz-button--${props.type}`, 'cz-button']">

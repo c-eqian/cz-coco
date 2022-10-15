@@ -87,8 +87,6 @@ module.exports = {
       }
     ],
     'import/no-cycle': 'off',
-    "import/no-extraneous-dependencies": ["error",  { packageDir: path.join(__dirname) }
-  ],
     'no-underscore-dangle': 'off',
     'import/order': 'off',
     'prefer-object-spread': 'off',
