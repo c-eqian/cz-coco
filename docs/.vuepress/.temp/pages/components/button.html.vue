@@ -105,7 +105,7 @@ function render(_ctx, _cache) {
     default: _withCtx(() => [
       _createTextVNode("测试")
     ]),
-    _: 1
+    _: 1 /* STABLE */
   }))
 }
   
@@ -142,39 +142,39 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("默认按钮")
       ]),
-      _: 1
+      _: 1 /* STABLE */
     }),
     _createVNode(_component_el_button, { type: "primary" }, {
       default: _withCtx(() => [
         _createTextVNode("主要按钮")
       ]),
-      _: 1
+      _: 1 /* STABLE */
     }),
     _createVNode(_component_el_button, { type: "success" }, {
       default: _withCtx(() => [
         _createTextVNode("成功按钮")
       ]),
-      _: 1
+      _: 1 /* STABLE */
     }),
     _createVNode(_component_el_button, { type: "info" }, {
       default: _withCtx(() => [
         _createTextVNode("信息按钮")
       ]),
-      _: 1
+      _: 1 /* STABLE */
     }),
     _createVNode(_component_el_button, { type: "warning" }, {
       default: _withCtx(() => [
         _createTextVNode("警告按钮")
       ]),
-      _: 1
+      _: 1 /* STABLE */
     }),
     _createVNode(_component_el_button, { type: "danger" }, {
       default: _withCtx(() => [
         _createTextVNode("危险按钮")
       ]),
-      _: 1
+      _: 1 /* STABLE */
     })
-  ], 64))
+  ], 64 /* STABLE_FRAGMENT */))
 }
   
     const democomponentExport = {}
