@@ -3,7 +3,7 @@ name: docs
 on:
   # 每当 push 到 main 分支时触发部署
   push:
-    branches: [master]
+    branches: [feature/docs]
   # 手动触发部署
   workflow_dispatch:
 
@@ -50,6 +50,6 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # 部署到 gh-pages 分支
-          BRANCH: gh-pages
+          BRANCH: test-pages
           # 部署目录为 VuePress 的默认输出目录
           FOLDER: docs/.vuepress/dist
