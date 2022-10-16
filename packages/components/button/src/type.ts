@@ -4,10 +4,10 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 02:21:58
+ * @LastEditTime: 2022-10-16 12:30:42
  */
 import type { ExtractPropTypes } from 'vue';
-import { componentSizes } from '@cz-coco/constants/size'
+import { componentSizes } from '@cz-coco/constants/size';
 export const buttonTypes = [
   'default',
   'primary',
@@ -16,19 +16,47 @@ export const buttonTypes = [
   'info',
   'danger',
   'text',
-  '',
+  ''
 ] as const;
 export const buttonProps = {
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  loading: {
+    type: Boolean,
+    default: false
+  },
+  plain: {
+    type: Boolean,
+    default: false
+  },
+  text: {
+    type: Boolean,
+    default: false
+  },
+  link: {
+    type: Boolean,
+    default: false
+  },
+  round: {
+    type: Boolean,
+    default: false
+  },
+  circle: {
+    type: Boolean,
+    default: false
+  },
   type: {
     type: String,
     values: buttonTypes,
-    default: '',
+    default: ''
   },
   size: {
     type: String,
     values: componentSizes,
-    default: '',
+    default: ''
   }
 };
 
-export type IButtonProps = ExtractPropTypes<typeof buttonProps>
+export type IButtonProps = ExtractPropTypes<typeof buttonProps>;

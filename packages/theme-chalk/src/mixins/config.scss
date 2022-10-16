@@ -1,5 +1,8 @@
-$namespace:'cz'
-
+$namespace: 'cz' !default;
+$common-separator: '-' !default;
+$element-separator: '__' !default;
+$modifier-separator: '--' !default;
+$state-prefix: 'is-' !default;
 
 /**
 * 命名规范 BEM规范

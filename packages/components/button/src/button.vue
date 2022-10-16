@@ -4,31 +4,44 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 00:30:34
+ * @LastEditTime: 2022-10-16 12:41:25
 -->
 <template>
-  <button :class="[ns.m(props.type), ns.b()]">
+  <button
+    :class="[
+      ns.m(_type),
+      ns.m(_size),
+      ns.b(),
+      ns.is('disabled', _disabled),
+      ns.is('plain', _plain)
+    ]"
+  >
     <slot />
   </button>
 </template>
 
-<script  lang="ts">
-import { defineComponent } from 'vue';
-import { buttonProps, IButtonProps  } from './type';
-import { createComponentName,useNamespace } from '@cz-coco/utils/helper';
+<script lang="ts">
+import { defineComponent, computed } from 'vue';
+import { buttonProps, IButtonProps } from './type';
+import { createComponentName, useNamespace } from '@cz-coco/utils/helper';
 
 export default defineComponent({
   name: createComponentName('button'),
   props: buttonProps,
   setup(props: IButtonProps) {
     const ns = useNamespace('button');
-    console.log(ns.b())
+    const _type = computed(() => props.type);
+    const _size = computed(() => props.size);
+    const _disabled = computed(() => props.disabled);
+    const _plain = computed(() => props.plain);
     return {
-      props,
-      ns,
+      _type,
+      _size,
+      _disabled,
+      _plain,
+      ns
     };
-  },
+  }
 });
 </script>
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

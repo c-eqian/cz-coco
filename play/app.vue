@@ -4,15 +4,22 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 00:44:24
+ * @LastEditTime: 2022-10-16 12:39:05
 -->
-<template >
-<cz-button type="primary">primary</cz-button>
-<cz-button type="success">success</cz-button>
-<cz-button type="info">info</cz-button>
-<cz-button type="warning">warning</cz-button>
-<cz-button type="danger">danger</cz-button>
-<cz-button type="text">text</cz-button>
+<template>
+  <div class="demo-mr">
+    <cz-button plain disabled>Plain</cz-button>
+    <cz-button type="primary" plain disabled>Primary</cz-button>
+    <cz-button type="success" plain disabled>Success</cz-button>
+    <cz-button type="info" plain disabled>Info</cz-button>
+    <cz-button type="warning" plain disabled>Warning</cz-button>
+    <cz-button type="danger" plain disabled>Danger</cz-button>
+  </div>
 </template>
-<script lang="ts" setup>
-</script>
+<style scoped lang="scss">
+.demo-mr {
+  .cz-button {
+    margin-right: 10px;
+  }
+}
+</style>

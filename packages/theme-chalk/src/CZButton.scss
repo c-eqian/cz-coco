@@ -1,166 +1,467 @@
-@use './mixins/vars.scss' as *;
-.cz-button {
+@use 'sass:map';
+@use './common/vars.scss' as *;
+@use './mixins/button' as *;
+@use './mixins/mixins.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './mixins/var' as *;
+
+$button-icon-span-gap: () !default;
+$button-icon-span-gap: map.merge(
+  (
+    'large': 8px,
+    'default': 6px,
+    'small': 4px,
+  ),
+  $button-icon-span-gap
+);
+
+@include b(button) {
+  @include set-component-css-var('button', $button);
+}
+@include b(button) {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   line-height: 1;
-  height: 32px;
+  // min-height will expand when in flex
+  height: map.get($input-height, 'default');
   white-space: nowrap;
   cursor: pointer;
-  color: #fff;
+  color: getCssVar('button', 'text-color');
   text-align: center;
   box-sizing: border-box;
   outline: none;
-  transition: .1s;
-  font-weight: 500;
+  transition: 0.1s;
+  font-weight: getCssVar('button', 'font-weight');
   user-select: none;
   vertical-align: middle;
   -webkit-appearance: none;
-  background-color: #409eff;
-  border: #409eff;
-  border-color: #409eff;
-  padding: 8px 15px;
-  font-size: 14px;
-  border-radius: 4px;
-  &--primary {
-    color: #fff;
-    background-color: $primary;
-    border-color: $primary;
-    &:hover {
-      opacity: 0.8;
-      color: #fff;
-    }
-  }
-  &--success {
-    color: #fff;
-    background-color: $success;
-    border-color: $success;
-    &:hover {
-      opacity: 0.8;
-      background-color: $success;
-      color: #fff;
-    }
-  }
-  &--danger {
-    color: #fff;
-    background-color: $danger;
-    border-color: $danger;
-    &:hover {
-      color: #fff;
-      border-color: $danger;
-      opacity: 0.8;
-    }
-  }
-  &--info {
-    color: #fff;
-    background-color: $info;
-    border-color: $info;
-    &:hover {
-      color: #fff;
-      border-color: $info;
-      opacity: 0.8;
-    }
-  }
-  &--warning {
-    color: #fff;
-    background-color: $warning;
-    border-color: $warning;
-    &:hover {
-      color: #fff;
-      border-color: $warning;
-      opacity: 0.8;
-    }
-  }
-  &--text {
-    border-color: transparent;
-    color: #409eff;
-    background: transparent;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  // 禁止
-  .is-disabled{
-    color: #fff;
-    cursor: not-allowed;
-    background-color: #fff;
-    border-color: #ebeef5;
-  }
-  &--default.is-disabled{
-    color: #c0c4cc;
-    cursor: not-allowed;
-    background-color: #fff;
-    border-color: #ebeef5;
-  }
-  &--primary.is-disabled{
-    color: #fff;
-    background-color: #a0cfff;
-    border-color: #a0cfff;
-  }
-  &--success.is-disabled{
-    color: #fff;
-    background-color: #b3e19d;
-    border-color: #b3e19d;
-  }
-  &--danger.is-disabled{
-    color: #fff;
-    background-color: #fab6b6;
-    border-color: #fab6b6;
-  }
-  &--info.is-disabled{
-    color: #fff;
-    background-color: #c8c9cc;
-    border-color: #c8c9cc;
-  }
-  &--warning.is-disabled{
-    color: #fff;
-    background-color: #f3d19e;
-    border-color: #f3d19e;
-  }
-  &--text.is-disabled{
-    cursor: no-drop;
-    color: #555;
-    border: 1px solid #fff;
-    background: none;
-    opacity: .5;
-  }
-  // 圆角
-  .is-round{
-    border-radius: 20px;
-  }
-  // 圆
-  .is-circle{
-    border-radius: 50%;
-    padding: 12px;
-  }
-  .icon-loading{
-    display: inline-block;
-    margin-right: 4px;
-    animation: rotating 2s linear infinite;
-    -webkit-animation: rotating 2s linear infinite;
-  }
-  
-  @keyframes rotating {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  &--medium{
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  &--small{
-    padding: 9px 15px;
-    font-size: 12px;
-  }
-  &--mini{
-    padding: 7px 15px;
-    font-size: 12px;
+  background-color: getCssVar('button', 'bg-color');
+  border: getCssVar('border');
+  border-color: getCssVar('button', 'border-color');
+
+  &:hover,
+  &:focus {
+    color: getCssVar('button', 'hover', 'text-color');
+    border-color: getCssVar('button', 'hover', 'border-color');
+    background-color: getCssVar('button', 'hover', 'bg-color');
+    outline: none;
   }
 
+  &:active {
+    color: getCssVar('button', 'active', 'text-color');
+    border-color: getCssVar('button', 'active', 'border-color');
+    background-color: getCssVar('button', 'active', 'bg-color');
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid getCssVar('button', 'outline-color');
+    outline-offset: 1px;
+  }
+
+  > span {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  & + & {
+    margin-left: 12px;
+  }
+
+  @include button-size(
+    map.get($button-padding-vertical, 'default') - $button-border-width,
+    map.get($button-padding-horizontal, 'default') - $button-border-width,
+    map.get($button-font-size, 'default'),
+    map.get($button-border-radius, 'default')
+  );
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  & [class*='#{$namespace}-icon'] {
+    & + span {
+      margin-left: map.get($button-icon-span-gap, 'default');
+    }
+    svg {
+      vertical-align: bottom;
+    }
+  }
+
+  @include when(plain) {
+    @include css-var-from-global(
+      ('button', 'hover', 'text-color'),
+      ('color', 'primary')
+    );
+    @include css-var-from-global(
+      ('button', 'hover', 'bg-color'),
+      ('fill-color', 'blank')
+    );
+    @include css-var-from-global(
+      ('button', 'hover', 'border-color'),
+      ('color', 'primary')
+    );
+  }
+
+  @include when(active) {
+    color: getCssVar('button', 'active', 'text-color');
+    border-color: getCssVar('button', 'active', 'border-color');
+    background-color: getCssVar('button', 'active', 'bg-color');
+    outline: none;
+  }
+
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      color: getCssVar('button', 'disabled', 'text-color');
+      cursor: not-allowed;
+      background-image: none;
+      background-color: getCssVar('button', 'disabled', 'bg-color');
+      border-color: getCssVar('button', 'disabled', 'border-color');
+    }
+  }
+
+  @include when(loading) {
+    position: relative;
+    pointer-events: none;
+
+    &:before {
+      // mask the button
+      z-index: 1;
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: getCssVar('mask-color', 'extra-light');
+    }
+  }
+  @include when(round) {
+    border-radius: getCssVar('border-radius', 'round');
+  }
+  @include when(circle) {
+    border-radius: 50%;
+    padding: map.get($button-padding-vertical, 'default') - $button-border-width;
+  }
+
+  @include when(text) {
+    color: getCssVar('button', 'text-color');
+    border: 0 solid transparent;
+    background-color: transparent;
+
+    @include when(disabled) {
+      color: getCssVar('button', 'disabled', 'text-color');
+      background-color: transparent !important;
+    }
+
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus {
+        background-color: getCssVar('fill-color', 'light');
+      }
+
+      &:focus-visible {
+        outline: 2px solid getCssVar('button', 'outline-color');
+        outline-offset: 1px;
+      }
+
+      &:active {
+        background-color: getCssVar('fill-color');
+      }
+
+      @include when(has-bg) {
+        background-color: getCssVar('fill-color', 'light');
+
+        &:hover,
+        &:focus {
+          background-color: getCssVar('fill-color');
+        }
+
+        &:active {
+          background-color: getCssVar('fill-color', 'dark');
+        }
+      }
+    }
+  }
+
+  @include e(text) {
+    @include m(expand) {
+      letter-spacing: 0.3em;
+      margin-right: -0.3em;
+    }
+  }
+
+  @include when(link) {
+    border-color: transparent;
+    color: getCssVar('button', 'text-color');
+    background: transparent;
+    padding: 2px;
+    height: auto;
+
+    &:hover,
+    &:focus {
+      color: getCssVar('button', 'hover', 'link-text-color');
+    }
+
+    @include when(disabled) {
+      color: getCssVar('button', 'disabled', 'text-color');
+      background-color: transparent !important;
+      border-color: transparent !important;
+    }
+
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background-color: transparent;
+      }
+
+      &:active {
+        color: getCssVar('button', 'active-color');
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @include m(text) {
+    border-color: transparent;
+    background: transparent;
+    color: getCssVar('color', 'primary');
+    padding-left: 0;
+    padding-right: 0;
+    @include when(disabled) {
+      color: getCssVar('button', 'disabled', 'text-color');
+      background-color: transparent !important;
+      border-color: transparent !important;
+    }
+
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus {
+        color: getCssVar('color', 'primary', 'light-3');
+        border-color: transparent;
+        background-color: transparent;
+      }
+
+      &:active {
+        color: getCssVar('color', 'primary', 'dark-2');
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @include e(link) {
+    @include m(expand) {
+      letter-spacing: 0.3em;
+      margin-right: -0.3em;
+    }
+  }
+
+  @each $type in (primary, success, warning, danger, info) {
+    @include m($type) {
+      @include button-variant($type);
+    }
+  }
+
+  @each $size in (large, small) {
+    @include m($size) {
+      @include set-css-var-value(
+        ('button', 'size'),
+        map.get($input-height, $size)
+      );
+
+      height: getCssVar('button', 'size');
+
+      & [class*='#{$namespace}-icon'] {
+        & + span {
+          margin-left: map.get($button-icon-span-gap, $size);
+        }
+      }
+
+      @include button-size(
+        map.get($button-padding-vertical, $size) - $button-border-width,
+        map.get($button-padding-horizontal, $size) - $button-border-width,
+        map.get($button-font-size, $size),
+        map.get($button-border-radius, $size)
+      );
+
+      @include when(circle) {
+        width: getCssVar('button', 'size');
+        padding: map.get($button-padding-vertical, $size) - $button-border-width;
+      }
+    }
+  }
 }
+// .cz-button {
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   line-height: 1;
+//   height: 32px;
+//   white-space: nowrap;
+//   cursor: pointer;
+//   color: #fff;
+//   text-align: center;
+//   box-sizing: border-box;
+//   outline: none;
+//   transition: .1s;
+//   font-weight: 500;
+//   user-select: none;
+//   vertical-align: middle;
+//   -webkit-appearance: none;
+//   background-color: #409eff;
+//   border: #409eff;
+//   border-color: #409eff;
+//   padding: 8px 15px;
+//   font-size: 14px;
+//   border-radius: 4px;
+//   &--primary {
+//     color: #fff;
+//     background-color: $primary;
+//     border-color: $primary;
+//     &:hover {
+//       opacity: 0.8;
+//       color: #fff;
+//     }
+//   }
+//   &--success {
+//     color: #fff;
+//     background-color: $success;
+//     border-color: $success;
+//     &:hover {
+//       opacity: 0.8;
+//       background-color: $success;
+//       color: #fff;
+//     }
+//   }
+//   &--danger {
+//     color: #fff;
+//     background-color: $danger;
+//     border-color: $danger;
+//     &:hover {
+//       color: #fff;
+//       border-color: $danger;
+//       opacity: 0.8;
+//     }
+//   }
+//   &--info {
+//     color: #fff;
+//     background-color: $info;
+//     border-color: $info;
+//     &:hover {
+//       color: #fff;
+//       border-color: $info;
+//       opacity: 0.8;
+//     }
+//   }
+//   &--warning {
+//     color: #fff;
+//     background-color: $warning;
+//     border-color: $warning;
+//     &:hover {
+//       color: #fff;
+//       border-color: $warning;
+//       opacity: 0.8;
+//     }
+//   }
+//   &--text {
+//     border-color: transparent;
+//     color: #409eff;
+//     background: transparent;
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+//   // 禁止
+//   .is-disabled{
+//     color: #fff;
+//     cursor: not-allowed;
+//     background-color: #fff;
+//     border-color: #ebeef5;
+//   }
+//   &--default.is-disabled{
+//     color: #c0c4cc;
+//     cursor: not-allowed;
+//     background-color: #fff;
+//     border-color: #ebeef5;
+//   }
+//   &--primary.is-disabled{
+//     color: #fff;
+//     background-color: #a0cfff;
+//     border-color: #a0cfff;
+//   }
+//   &--success.is-disabled{
+//     color: #fff;
+//     background-color: #b3e19d;
+//     border-color: #b3e19d;
+//   }
+//   &--danger.is-disabled{
+//     color: #fff;
+//     background-color: #fab6b6;
+//     border-color: #fab6b6;
+//   }
+//   &--info.is-disabled{
+//     color: #fff;
+//     background-color: #c8c9cc;
+//     border-color: #c8c9cc;
+//   }
+//   &--warning.is-disabled{
+//     color: #fff;
+//     background-color: #f3d19e;
+//     border-color: #f3d19e;
+//   }
+//   &--text.is-disabled{
+//     cursor: no-drop;
+//     color: #555;
+//     border: 1px solid #fff;
+//     background: none;
+//     opacity: .5;
+//   }
+//   // 圆角
+//   .is-round{
+//     border-radius: 20px;
+//   }
+//   // 圆
+//   .is-circle{
+//     border-radius: 50%;
+//     padding: 12px;
+//   }
+//   .icon-loading{
+//     display: inline-block;
+//     margin-right: 4px;
+//     animation: rotating 2s linear infinite;
+//     -webkit-animation: rotating 2s linear infinite;
+//   }
+  
+//   @keyframes rotating {
+//     0% {
+//       transform: rotate(0deg);
+//     }
+//     50% {
+//       transform: rotate(180deg);
+//     }
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }
+//   &--medium{
+//     padding: 10px 20px;
+//     font-size: 14px;
+//   }
+//   &--small{
+//     padding: 9px 15px;
+//     font-size: 12px;
+//   }
+//   &--mini{
+//     padding: 7px 15px;
+//     font-size: 12px;
+//   }
+
+// }

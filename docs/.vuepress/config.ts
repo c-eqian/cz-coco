@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-15 16:00:52
+ * @LastEditTime: 2022-10-16 13:19:03
  */
 // @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
@@ -93,9 +93,18 @@ export default defineUserConfig({
       componentsDir: path.resolve(__dirname, './components'),
     }),
     demoblockPlugin({
+      scriptImports: ["import * as cz from '@cz-coco/components'"],
       customClass: 'demoblock-custom',
       theme: 'github-light',
       cssPreprocessor: 'scss',
+      scriptReplaces: [
+        { searchValue: /const ({ defineComponent as _defineComponent }) = Vue/g,
+          replaceValue: 'const { defineComponent: _defineComponent } = Vue'
+        },
+        { searchValue: /import ({.*}) from '@cz-coco\/components'/g,
+        replaceValue: (_s: any, s1: any) => (`const ${s1} = cz`) as string 
+        },
+      ]
     })
   ]
 });
