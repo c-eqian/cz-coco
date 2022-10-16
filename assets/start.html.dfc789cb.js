@@ -1,4 +1,4 @@
-import{_ as s,o as n,c as a,a as l}from"./app.7b84ec92.js";const e={},p=l(`<h2 id="\u5B89\u88C5" tabindex="-1"><a class="header-anchor" href="#\u5B89\u88C5" aria-hidden="true">#</a> \u5B89\u88C5</h2><div class="language-bash ext-sh line-numbers-mode"><pre class="shiki" style="background-color:#ffffff;"><code><span class="line"><span style="color:#24292F;">npm i @sum-ui/layout</span></span>
+import{_ as s,o as n,c as a,a6 as l}from"./app.5b70d173.js";const e={},p=l(`<h2 id="\u5B89\u88C5" tabindex="-1"><a class="header-anchor" href="#\u5B89\u88C5" aria-hidden="true">#</a> \u5B89\u88C5</h2><div class="language-bash ext-sh line-numbers-mode"><pre class="shiki" style="background-color:#ffffff;"><code><span class="line"><span style="color:#24292F;">npm i @sum-ui/layout</span></span>
 <span class="line"><span style="color:#6E7781;"># or</span></span>
 <span class="line"><span style="color:#24292F;">yarn add @sum-ui/layout</span></span>
 <span class="line"></span>
