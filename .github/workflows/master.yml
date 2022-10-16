@@ -22,25 +22,14 @@ jobs:
         with:
           # 选择要使用的 node 版本
           node-version: "16"
-        # 缓存 node_modules
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        id: pnpm-cache
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
       - name: Clean node_modules
         run: rm -rf node_modules
-      - run: npm cache clean --force
+      - run: npm cache clean -f
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
         run: npm install -g pnpm
+      - run: pnpm install vuepress-plugin-demoblock-plus@beta -D -w
       - run: pnpm install
-      - run: pnpm uninstall vuepress-plugin-demoblock-plus
-      - run: pnpm install vuepress-plugin-demoblock-plus@2.0.0-beta.5 --save-dev -w
 
       # 运行构建脚本
       - name: Build VuePress site
