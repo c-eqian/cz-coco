@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-15 12:28:14
+ * @LastEditTime: 2022-10-16 14:16:08
  */
 // import { WIcon,WButton } from "@cz-coco/components";
 import * as components from "@cz-coco/components";
@@ -19,7 +19,6 @@ const install = (app: App) => {
   // components.forEach((component) => app.use(component));
 
   Object.entries(components).forEach(([name, component]) => {
-    console.log(22222, name)
     app.component(name, component);
   });
 };
