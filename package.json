@@ -41,6 +41,7 @@
     "eslint": "7.32.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
+    "eslint-config-roc": "^0.1.0",
     "eslint-import-resolver-alias": "1.1.2",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -80,9 +81,9 @@
   "dependencies": {
     "@cz-coco/components": "workspace:^1.0.0",
     "@cz-coco/constants": "workspace:^1.0.0",
+    "@cz-coco/hooks": "workspace:^1.0.0",
     "@cz-coco/theme-chalk": "workspace:^1.0.0",
     "@cz-coco/utils": "workspace:^1.0.0",
-    "@cz-coco/hooks": "workspace:^1.0.0",
     "dayjs": "^1.10.7",
     "pnpm": "^7.12.2"
   },

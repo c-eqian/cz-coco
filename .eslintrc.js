@@ -14,7 +14,7 @@ module.exports = {
     'airbnb-base',
     'plugin:vue/vue3-strongly-recommended',
     'plugin:import/recommended',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -79,6 +79,11 @@ module.exports = {
         tsx: 'never'
       }
     ],
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "packageDir": './',
+      }
+  ],
     // 默认不能使用一元运算符++和--
     'no-plusplus': [
       'error',
