@@ -69,6 +69,7 @@ module.exports = {
     'import/named': 'off', // 停用 import/named 校验
     'no-unused-expressions': 'off', // 禁止使用未使用的表达式
     'max-len': ['error', { code: 120 }],
+    'comma-dangle': ["error", "never"], // 禁止末尾使用的逗号
     'import/extensions': [
       'error',
       'always',
@@ -79,6 +80,11 @@ module.exports = {
         tsx: 'never'
       }
     ],
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "packageDir": './',
+      }
+  ],
     // 默认不能使用一元运算符++和--
     'no-plusplus': [
       'error',

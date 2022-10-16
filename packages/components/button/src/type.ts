@@ -4,11 +4,12 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 14:53:07
+ * @LastEditTime: 2022-10-17 01:45:02
  */
 import type { ExtractPropTypes, InjectionKey } from 'vue';
 import { componentSizes } from '@cz-coco/constants/size';
-import { createComponentName } from '@cz-coco/utils/helper'
+import { createComponentName } from '@cz-coco/utils/helper';
+
 export const buttonTypes = [
   'default',
   'primary',
