@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-16 13:33:29
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-17 12:38:49
+ * @LastEditTime: 2022-10-17 18:32:06
 -->
 <h1 id="message-消息弹窗" tabindex="-1"><a class="header-anchor" href="#message-消息弹窗" aria-hidden="true">#</a> message 消息弹窗</h1>
 <h3 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h3>
@@ -14,13 +14,13 @@
   &gt;
 &lt;/template&gt;
 &lt;script lang=&quot;ts&quot;&gt;
-import { CZMessage } from '@cz-coco/components';
+import { CzMessage } from '@cz-coco/components';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
     const handelMessage = () =&gt; {
-      CZMessage({
+      CzMessage({
         type: 'success',
         message: '我是测试的'
       });
@@ -41,13 +41,13 @@ export default defineComponent({
 <span class="line"><span style="color: #24292F">  &gt;</span></span>
 <span class="line"><span style="color: #24292F">&lt;/</span><span style="color: #116329">template</span><span style="color: #24292F">&gt;</span></span>
 <span class="line"><span style="color: #24292F">&lt;</span><span style="color: #116329">script</span><span style="color: #24292F"> </span><span style="color: #0550AE">lang</span><span style="color: #24292F">=</span><span style="color: #0A3069">&quot;ts&quot;</span><span style="color: #24292F">&gt;</span></span>
-<span class="line"><span style="color: #CF222E">import</span><span style="color: #24292F"> { CZMessage } </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;@cz-coco/components&#39;</span><span style="color: #24292F">;</span></span>
+<span class="line"><span style="color: #CF222E">import</span><span style="color: #24292F"> { CzMessage } </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;@cz-coco/components&#39;</span><span style="color: #24292F">;</span></span>
 <span class="line"><span style="color: #CF222E">import</span><span style="color: #24292F"> { defineComponent } </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;vue&#39;</span><span style="color: #24292F">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #CF222E">export</span><span style="color: #953800"> </span><span style="color: #CF222E">default</span><span style="color: #953800"> </span><span style="color: #8250DF">defineComponent</span><span style="color: #953800">({</span></span>
 <span class="line"><span style="color: #953800">  </span><span style="color: #8250DF">setup</span><span style="color: #953800">() </span><span style="color: #24292F">{</span></span>
 <span class="line"><span style="color: #24292F">    </span><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #8250DF">handelMessage</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> () </span><span style="color: #CF222E">=&gt;</span><span style="color: #24292F"> {</span></span>
-<span class="line"><span style="color: #24292F">      </span><span style="color: #8250DF">CZMessage</span><span style="color: #24292F">({</span></span>
+<span class="line"><span style="color: #24292F">      </span><span style="color: #8250DF">CzMessage</span><span style="color: #24292F">({</span></span>
 <span class="line"><span style="color: #24292F">        type: </span><span style="color: #0A3069">&#39;success&#39;</span><span style="color: #24292F">,</span></span>
 <span class="line"><span style="color: #24292F">        message: </span><span style="color: #0A3069">&#39;我是测试的&#39;</span></span>
 <span class="line"><span style="color: #24292F">      });</span></span>
@@ -83,17 +83,17 @@ function render(_ctx, _cache) {
     default: _withCtx(() => [
       _createTextVNode("弹窗测试")
     ]),
-    _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["onClick"]))
+    _: 1
+  }, 8, ["onClick"]))
 }
   
-    const { CZMessage } = cz;
+    const { CzMessage } = cz;
 const { defineComponent } = Vue;
 
 const democomponentExport = defineComponent({
   setup() {
     const handelMessage = () => {
-      CZMessage({
+      CzMessage({
         type: 'success',
         message: '我是测试的'
       });

@@ -163,37 +163,37 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("primary")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, { type: "success" }, {
       default: _withCtx(() => [
         _createTextVNode("success")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, { type: "info" }, {
       default: _withCtx(() => [
         _createTextVNode("info")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, { type: "warning" }, {
       default: _withCtx(() => [
         _createTextVNode("warning")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, { type: "danger" }, {
       default: _withCtx(() => [
         _createTextVNode("danger")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, { type: "text" }, {
       default: _withCtx(() => [
         _createTextVNode("text")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     })
   ]))
 }
@@ -217,19 +217,19 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Large")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, null, {
       default: _withCtx(() => [
         _createTextVNode("Default")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, { size: "small" }, {
       default: _withCtx(() => [
         _createTextVNode("Small")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, {
       size: "large",
@@ -238,8 +238,8 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Search")
       ]),
-      _: 1 /* STABLE */
-    }, 8 /* PROPS */, ["icon"]),
+      _: 1
+    }, 8, ["icon"]),
     _createVNode(_component_cz_button, {
       size: "small",
       icon: _ctx.Search
@@ -247,8 +247,8 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Search")
       ]),
-      _: 1 /* STABLE */
-    }, 8 /* PROPS */, ["icon"]),
+      _: 1
+    }, 8, ["icon"]),
     _createVNode(_component_cz_button, {
       type: "primary",
       size: "large"
@@ -256,7 +256,7 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("primary")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, {
       type: "success",
@@ -265,13 +265,13 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("success")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, { type: "info" }, {
       default: _withCtx(() => [
         _createTextVNode("Default")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     })
   ]))
 }
@@ -298,7 +298,7 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Plain")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, {
       type: "primary",
@@ -308,7 +308,7 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Primary")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, {
       type: "success",
@@ -318,7 +318,7 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Success")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, {
       type: "info",
@@ -328,7 +328,7 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Info")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, {
       type: "warning",
@@ -338,7 +338,7 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Warning")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     }),
     _createVNode(_component_cz_button, {
       type: "danger",
@@ -348,7 +348,7 @@ function render(_ctx, _cache) {
       default: _withCtx(() => [
         _createTextVNode("Danger")
       ]),
-      _: 1 /* STABLE */
+      _: 1
     })
   ]))
 }

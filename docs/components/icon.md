@@ -4,11 +4,10 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-17 13:39:11
+ * @LastEditTime: 2022-10-17 18:36:34
 -->
 
 # icon 图标
-
 
 ## 基础用法
 
@@ -99,4 +98,4 @@ color 改变图标颜色
 :::
 
 <br>
-<CzMessage />
+<icon />

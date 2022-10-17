@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 19:27:22
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-17 12:44:51
+ * @LastEditTime: 2022-10-17 18:31:36
 -->
 <template>
   <transition name="cz-message-fade">
@@ -43,7 +43,7 @@ const state = ref({
   top: 0
 });
 const setVisible = (isVisible: boolean) => {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     state.value.visible = isVisible;
     timer.value = setTimeout(() => {
       if (timer.value) clearTimeout(timer);
