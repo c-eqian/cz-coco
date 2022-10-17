@@ -5,6 +5,8 @@ export const pagesComponents = {
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/index.html.vue")),
   // path: /components/button.html
   "v-3bb939a7": defineAsyncComponent(() => import(/* webpackChunkName: "v-3bb939a7" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/button.html.vue")),
+  // path: /components/icon.html
+  "v-0746ee80": defineAsyncComponent(() => import(/* webpackChunkName: "v-0746ee80" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/icon.html.vue")),
   // path: /components/install.html
   "v-8d8fe944": defineAsyncComponent(() => import(/* webpackChunkName: "v-8d8fe944" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/install.html.vue")),
   // path: /components/message.html
