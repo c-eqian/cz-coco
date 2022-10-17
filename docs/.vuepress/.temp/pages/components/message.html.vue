@@ -83,8 +83,8 @@ function render(_ctx, _cache) {
     default: _withCtx(() => [
       _createTextVNode("弹窗测试")
     ]),
-    _: 1
-  }, 8, ["onClick"]))
+    _: 1 /* STABLE */
+  }, 8 /* PROPS */, ["onClick"]))
 }
   
     const { CzMessage } = cz;

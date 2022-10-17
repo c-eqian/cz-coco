@@ -5,6 +5,8 @@
 node_modules
 .pnpm-debug.log*
 docs/.vuepress/dist
+docs/.vuepress/.cache
+docs/.vuepress/.temp
 # Bundle
 dist
 coverage
