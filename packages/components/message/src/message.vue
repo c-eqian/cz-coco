@@ -1,10 +1,10 @@
 <!--
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: 十三
  * @Date: 2022-10-15 19:27:22
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 02:08:59
+ * @LastEditTime: 2022-10-17 12:44:51
 -->
 <template>
   <transition name="cz-message-fade">
@@ -12,9 +12,10 @@
       v-show="state.visible"
       :class="styleClass"
       :style="{
-        top:state.top + 'px'
+        top: state.top + 'px'
       }"
     >
+      <i class="cz-icon cz-icon-success" />
       {{ message }}
     </div>
   </transition>
@@ -27,22 +28,22 @@ import { CMessageType } from '../types/type';
 const props = defineProps({
   type: {
     type: String,
-    default: CMessageType.message,
+    default: CMessageType.message
   },
   message: {
     type: String,
-    default: '',
-  },
+    default: ''
+  }
 });
 const timer = ref<any>(null);
 const height = ref<number>(40);
 const margin = ref<number>(20);
 const state = ref({
   visible: false,
-  top: 0,
+  top: 0
 });
-const setVisible = (isVisible:boolean) => {
-  return new Promise((resolve) => {
+const setVisible = (isVisible: boolean) => {
+  return new Promise(resolve => {
     state.value.visible = isVisible;
     timer.value = setTimeout(() => {
       if (timer.value) clearTimeout(timer);
@@ -51,22 +52,18 @@ const setVisible = (isVisible:boolean) => {
     }, 300);
   });
 };
-const setTop = (top:any) => {
+const setTop = (top: any) => {
   console.log(top);
   state.value.top = top;
   return top;
 };
-const styleClass = computed(() => [
-  'cz-message',
-  props.type,
-]);
+const styleClass = computed(() => ['cz-message', props.type]);
 defineExpose({
   setTop,
   setVisible,
   height,
-  margin,
+  margin
 });
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

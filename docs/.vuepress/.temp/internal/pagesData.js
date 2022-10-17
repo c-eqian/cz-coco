@@ -2,7 +2,13 @@ export const pagesData = {
   // path: /
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"C:/cz-coco/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /components/button.html
+<<<<<<< HEAD
   "v-3bb939a7": () => import(/* webpackChunkName: "v-3bb939a7" */"C:/cz-coco/docs/.vuepress/.temp/pages/components/button.html.js").then(({ data }) => data),
+=======
+  "v-3bb939a7": () => import(/* webpackChunkName: "v-3bb939a7" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/button.html.js").then(({ data }) => data),
+  // path: /components/icon.html
+  "v-0746ee80": () => import(/* webpackChunkName: "v-0746ee80" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/icon.html.js").then(({ data }) => data),
+>>>>>>> feature/components
   // path: /components/install.html
   "v-8d8fe944": () => import(/* webpackChunkName: "v-8d8fe944" */"C:/cz-coco/docs/.vuepress/.temp/pages/components/install.html.js").then(({ data }) => data),
   // path: /components/message.html

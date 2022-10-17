@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 13:19:03
+ * @LastEditTime: 2022-10-17 13:30:25
  */
 // @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
@@ -58,7 +58,7 @@ export default defineUserConfig({
       },
       {
         text: '组件',
-        link: '/components/message.md'
+        link: '/components/install.md'
       },
       {
         text: '主题',
@@ -75,7 +75,7 @@ export default defineUserConfig({
       {
         text: 'Basic 基础组件',
         collapsible: false,
-        children: ['button', 'message']
+        children: ['icon', 'button', 'message']
       }
     ],
     locales: {
