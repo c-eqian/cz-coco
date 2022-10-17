@@ -8,16 +8,18 @@
  */
 
 import _button from './button';
+import _image from './image';
 import type { App } from 'vue';
 
 export * from './button';
 export * from './message';
+export * from './image';
 
-const components = [_button];
+const components = [_button, _image];
 export default {
   install(app: App) {
     components.map((item) => {
       app.use(item);
     });
-  },
+  }
 };
