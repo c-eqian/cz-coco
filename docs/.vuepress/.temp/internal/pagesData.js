@@ -2,13 +2,9 @@ export const pagesData = {
   // path: /
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"C:/cz-coco/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /components/button.html
-<<<<<<< HEAD
   "v-3bb939a7": () => import(/* webpackChunkName: "v-3bb939a7" */"C:/cz-coco/docs/.vuepress/.temp/pages/components/button.html.js").then(({ data }) => data),
-=======
-  "v-3bb939a7": () => import(/* webpackChunkName: "v-3bb939a7" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/button.html.js").then(({ data }) => data),
   // path: /components/icon.html
-  "v-0746ee80": () => import(/* webpackChunkName: "v-0746ee80" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/icon.html.js").then(({ data }) => data),
->>>>>>> feature/components
+  "v-0746ee80": () => import(/* webpackChunkName: "v-0746ee80" */"C:/cz-coco/docs/.vuepress/.temp/pages/components/icon.html.js").then(({ data }) => data),
   // path: /components/install.html
   "v-8d8fe944": () => import(/* webpackChunkName: "v-8d8fe944" */"C:/cz-coco/docs/.vuepress/.temp/pages/components/install.html.js").then(({ data }) => data),
   // path: /components/message.html
@@ -19,4 +15,6 @@ export const pagesData = {
   "v-621628ba": () => import(/* webpackChunkName: "v-621628ba" */"C:/cz-coco/docs/.vuepress/.temp/pages/guide/start.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"C:/cz-coco/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
+  // path: /components/image.html
+  "v-d82ea0c4": () => import(/* webpackChunkName: "v-d82ea0c4" */"C:/cz-coco/docs/.vuepress/.temp/pages/components/image.html.js").then(({ data }) => data),
 }

@@ -1,6 +1,6 @@
 /*
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
@@ -9,9 +9,9 @@
 // @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import path from "path";
+import path from 'path';
 import demoblockPlugin from 'vuepress-plugin-demoblock-plus';
-import {  registerComponentsPlugin  } from '@vuepress/plugin-register-components';
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 // const demoblockPlugin = require('vuepress-plugin-demoblock-plus')
 import { containerPlugin } from '@vuepress/plugin-container';
 
@@ -29,9 +29,7 @@ export default defineUserConfig({
       lang: 'en-US'
     }
   },
-  head: [
-    ['link', { rel: 'icon', href: '/logo.png' }]
-  ],
+  head: [['link', { rel: 'icon', href: '/logo.png' }]],
   theme: defaultTheme({
     // logo: 'https://s1.ax1x.com/2022/09/10/vOVha6.jpg',
     logo: 'https://s1.ax1x.com/2022/10/15/x0Q84P.png',
@@ -75,7 +73,7 @@ export default defineUserConfig({
       {
         text: 'Basic 基础组件',
         collapsible: false,
-        children: ['icon', 'button', 'message']
+        children: ['icon', 'button', 'message', 'image']
       }
     ],
     locales: {
@@ -90,7 +88,7 @@ export default defineUserConfig({
   plugins: [
     registerComponentsPlugin({
       // 配置项
-      componentsDir: path.resolve(__dirname, './components'),
+      componentsDir: path.resolve(__dirname, './components')
     }),
     demoblockPlugin({
       scriptImports: ["import * as cz from '@cz-coco/components'"],
@@ -98,12 +96,14 @@ export default defineUserConfig({
       theme: 'github-light',
       cssPreprocessor: 'scss',
       scriptReplaces: [
-        { searchValue: /const ({ defineComponent as _defineComponent }) = Vue/g,
+        {
+          searchValue: /const ({ defineComponent as _defineComponent }) = Vue/g,
           replaceValue: 'const { defineComponent: _defineComponent } = Vue'
         },
-        { searchValue: /import ({.*}) from '@cz-coco\/components'/g,
-        replaceValue: (_s: any, s1: any) => (`const ${s1} = cz`) as string 
-        },
+        {
+          searchValue: /import ({.*}) from '@cz-coco\/components'/g,
+          replaceValue: (_s: any, s1: any) => `const ${s1} = cz` as string
+        }
       ]
     })
   ]

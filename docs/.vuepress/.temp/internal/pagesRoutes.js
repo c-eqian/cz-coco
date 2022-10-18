@@ -7,4 +7,5 @@ export const pagesRoutes = [
   ["v-e45cc9ec","/guide/install.html",{"title":"安装"},["/guide/install","/guide/install.md"]],
   ["v-621628ba","/guide/start.html",{"title":"开始"},["/guide/start","/guide/start.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
+  ["v-d82ea0c4","/components/image.html",{"title":"image 图片"},["/components/image","/components/image.md"]],
 ]

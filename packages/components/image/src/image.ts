@@ -8,6 +8,7 @@ export const fitTypes = [
   'none',
   'scale-down'
 ] as const;
+
 export const imageProps = {
   src: {
     type: String,
@@ -28,7 +29,7 @@ export const imageProps = {
   fit: {
     type: String,
     values: fitTypes,
-    default: ''
+    default: 'fill'
   }
 };
 
