@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-17 13:30:25
+ * @LastEditTime: 2022-10-18 22:48:06
  */
 // @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
@@ -14,6 +14,7 @@ import demoblockPlugin from 'vuepress-plugin-demoblock-plus';
 import {  registerComponentsPlugin  } from '@vuepress/plugin-register-components';
 // const demoblockPlugin = require('vuepress-plugin-demoblock-plus')
 import { containerPlugin } from '@vuepress/plugin-container';
+import { getFiles } from '../utils/AutoCompleteSide';
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -75,7 +76,8 @@ export default defineUserConfig({
       {
         text: 'Basic 基础组件',
         collapsible: false,
-        children: ['icon', 'button', 'message']
+        children: getFiles()
+        // children: ['icon', 'button', 'message']
       }
     ],
     locales: {
