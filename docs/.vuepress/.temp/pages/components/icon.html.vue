@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-17 13:39:11
+ * @LastEditTime: 2022-10-17 18:36:34
 -->
 <h1 id="icon-图标" tabindex="-1"><a class="header-anchor" href="#icon-图标" aria-hidden="true">#</a> icon 图标</h1>
 <h2 id="基础用法" tabindex="-1"><a class="header-anchor" href="#基础用法" aria-hidden="true">#</a> 基础用法</h2>
@@ -144,7 +144,8 @@
 <span class="line"></span></code></pre>
           </div>
         </template></demo><br>
-<CzMessage /></div></template>
+<icon />
+</div></template>
 
 <script lang="ts">
       import * as Vue from 'vue'

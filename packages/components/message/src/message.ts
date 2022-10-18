@@ -14,13 +14,13 @@ const CMessageHide = (app: any, vm: any, duration: number) => {
   vm.timer = setTimeout(async () => {
     await vm.setVisible(false);
     app.unmount();
-    CMessageArray.value = CMessageArray.value.filter((item) => item !== vm);
+    CMessageArray.value = CMessageArray.value.filter(item => item !== vm);
     clearTimeout(vm.timer);
   }, duration || 3000);
 };
 
 const findIndex = (array: Array<[]>, value: any) => {
-  return array.findIndex((item) => item === value);
+  return array.findIndex(item => item === value);
 };
 /**
  * 设置弹窗高度
@@ -50,15 +50,15 @@ const CMessageShow = (app: any, duration: number) => {
   watch(CMessageArray, () => CMessageSetTop(vm));
   CMessageHide(app, vm, duration);
 };
-const CZMessage = (options: ICMessageOptions) => {
+const CzMessage = (options: ICMessageOptions) => {
   const CMessageApp = createApp(CMessageComponent, options as any);
   CMessageShow(CMessageApp, options.duration || 3000);
 };
 Object.values(CMessageType).forEach((type) => {
   // @ts-ignore
-  CZMessage[type] = (options: ICMessageOptions) => {
+  CzMessage[type] = (options: ICMessageOptions) => {
     options.type = type;
-    return CZMessage(options);
+    return CzMessage(options);
   };
 });
-export { CMessageType, CZMessage };
+export { CMessageType, CzMessage };

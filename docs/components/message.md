@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-16 13:33:29
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-17 12:38:49
+ * @LastEditTime: 2022-10-17 18:32:06
 -->
 
 # message 消息弹窗
@@ -23,13 +23,13 @@
   >
 </template>
 <script lang="ts">
-import { CZMessage } from '@cz-coco/components';
+import { CzMessage } from '@cz-coco/components';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
     const handelMessage = () => {
-      CZMessage({
+      CzMessage({
         type: 'success',
         message: '我是测试的'
       });
