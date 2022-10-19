@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-1982571c\",\"path\":\"/components/message.html\",\"title\":\"message 消息弹窗\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":3,\"title\":\"基础用法\",\"slug\":\"基础用法\",\"link\":\"#基础用法\",\"children\":[]}],\"git\":{\"updatedTime\":1665985321000},\"filePathRelative\":\"components/message.md\"}")
+export const data = JSON.parse("{\"key\":\"v-1982571c\",\"path\":\"/components/message.html\",\"title\":\"message 消息弹窗\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":3,\"title\":\"基础用法\",\"slug\":\"基础用法\",\"link\":\"#基础用法\",\"children\":[]},{\"level\":3,\"title\":\"指定属性\",\"slug\":\"指定属性\",\"link\":\"#指定属性\",\"children\":[]},{\"level\":3,\"title\":\"自定义图标\",\"slug\":\"自定义图标\",\"link\":\"#自定义图标\",\"children\":[]}],\"git\":{\"updatedTime\":1666003121000},\"filePathRelative\":\"components/message.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()

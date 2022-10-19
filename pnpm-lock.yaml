@@ -16,6 +16,8 @@ importers:
       '@types/gulp-autoprefixer': ^0.0.33
       '@types/gulp-clean-css': ^4.3.0
       '@types/gulp-sass': ^5.0.0
+      '@types/lodash': ^4.14.186
+      '@types/lodash-es': ^4.17.6
       '@types/node': 18.8.0
       '@types/sass': ^1.16.1
       '@typescript-eslint/eslint-plugin': 5.20.0
@@ -52,6 +54,9 @@ importers:
       gulp-typescript: ^6.0.0-alpha.1
       less: ^4.1.2
       lint-staged: 12.4.0
+      lodash: ^4.17.21
+      lodash-es: ^4.17.21
+      lodash-unified: ^1.0.2
       pnpm: ^7.12.2
       prettier: 2.6.2
       prettier-eslint: 15.0.1
@@ -79,7 +84,12 @@ importers:
       '@cz-coco/hooks': link:packages/hooks
       '@cz-coco/theme-chalk': link:packages/theme-chalk
       '@cz-coco/utils': link:packages/utils
+      '@types/lodash': 4.14.186
+      '@types/lodash-es': 4.17.6
       dayjs: 1.11.5
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.2_3ib2ivapxullxkx3xftsimdk7u
       pnpm: 7.13.4
     devDependencies:
       '@algolia/client-search': 4.14.2
@@ -1087,6 +1097,16 @@ packages:
   /@types/linkify-it/3.0.2:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
     dev: true
+
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
+    dependencies:
+      '@types/lodash': 4.14.186
+    dev: false
+
+  /@types/lodash/4.14.186:
+    resolution: {integrity: sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==}
+    dev: false
 
   /@types/markdown-it-emoji/2.0.2:
     resolution: {integrity: sha512-2ln8Wjbcj/0oRi/6VnuMeWEHHuK8uapFttvcLmDIe1GKCsFBLOLBX+D+xhDa9oWOQV0IpvxwrSfKKssAqqroog==}
@@ -7017,6 +7037,22 @@ packages:
       p-locate: 5.0.0
     dev: true
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
+  /lodash-unified/1.0.2_3ib2ivapxullxkx3xftsimdk7u:
+    resolution: {integrity: sha512-OGbEy+1P+UT26CYi4opY4gebD8cWRDxAT6MAObIVQMiqYdxZr1g3QHWCToVsm31x2NkLS4K3+MC2qInaRMa39g==}
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      '@types/lodash-es': 4.17.6
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+    dev: false
+
   /lodash.clonedeep/4.5.0:
     resolution: {integrity: sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==}
     dev: true
@@ -7035,7 +7071,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols/4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}

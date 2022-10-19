@@ -4,58 +4,24 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 12:39:05
+ * @LastEditTime: 2022-10-20 00:27:39
 -->
 <template>
   <div class="demo-mr">
-    <cz-button plain disabled>
-      Plain
-    </cz-button>
-    <cz-button
-      type="primary"
-      plain
-      disabled
-    >
-      Primary
-    </cz-button>
-    <cz-button
-      type="success"
-      plain
-      disabled
-    >
-      Success
-    </cz-button>
-    <cz-button
-      type="info"
-      plain
-      disabled
-    >
-      Info
-    </cz-button>
-    <cz-button
-      type="warning"
-      plain
-      disabled
-    >
-      Warning
-    </cz-button>
-    <cz-button
-      type="danger"
-      plain
-      disabled
-    >
-      Danger
-    </cz-button>
-    <div>
-      <cz-image
-        src="https://interactive-examples.mdn.mozilla.net/media/examples/plumeria.jpg"
-        fit="cover"
-        width="400"
-        height="400"
-      />
-    </div>
+    <cz-button type="primary" @click="test"> 测试 </cz-button>
   </div>
 </template>
+<script lang="ts" setup>
+import { CzMessage } from '@cz-coco/components';
+
+const test = () => {
+  CzMessage({
+    type: 'success',
+    message: '测试 LastEditTime',
+    duration: 10000
+  });
+};
+</script>
 <style scoped lang="scss">
 .demo-mr {
   .cz-button {

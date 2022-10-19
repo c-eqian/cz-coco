@@ -4,11 +4,11 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-17 01:45:02
+ * @LastEditTime: 2022-10-19 19:42:57
  */
 import type { ExtractPropTypes, InjectionKey } from 'vue';
 import { componentSizes } from '@cz-coco/constants/size';
-import { createComponentName } from '@cz-coco/utils/helper';
+import { useCreateComponentName } from '@cz-coco/hooks';
 
 export const buttonTypes = [
   'default',
@@ -63,5 +63,5 @@ export const buttonProps = {
 
 export type IButtonProps = ExtractPropTypes<typeof buttonProps>;
 export const buttonInjectionKey: InjectionKey<IButtonProps> = Symbol(
-  createComponentName('button')
+  useCreateComponentName('button')
 );

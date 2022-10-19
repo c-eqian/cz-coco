@@ -1,8 +1,19 @@
-import { createApp, ref, watch } from 'vue';
-import { ICMessageOptions, CMessageType } from '../types/type';
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-unused-vars */
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: 十三
+ * @Date: 2022-10-19 00:33:17
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-19 22:24:17
+ */
+import { App, createApp, ref, watch } from 'vue';
 import CMessageComponent from './message.vue';
+import { IMessageOptions, messageTypes } from '../types';
+import { isString } from 'lodash-es';
 
-const CMessageArray = ref<Array<[]>>([]);
+const CMessageArray = ref<InstanceType<typeof CMessageComponent>[]>([]);
 /**
  * 隐藏弹窗
  * @param app
@@ -10,7 +21,8 @@ const CMessageArray = ref<Array<[]>>([]);
  * @param duration
  * @constructor
  */
-const CMessageHide = (app: any, vm: any, duration: number) => {
+const CMessageHide = (app: any, vm: InstanceType<typeof CMessageComponent>, duration: number) => {
+  console.log(1111, vm);
   vm.timer = setTimeout(async () => {
     await vm.setVisible(false);
     app.unmount();
@@ -27,10 +39,10 @@ const findIndex = (array: Array<[]>, value: any) => {
  * @param vm
  * @constructor
  */
-const CMessageSetTop = (vm: any) => {
+const CMessageSetTop = (vm: InstanceType<typeof CMessageComponent>) => {
   console.log(vm);
   const { setTop, height, margin } = vm;
-  const currentIndex = findIndex(CMessageArray.value, vm);
+  const currentIndex = findIndex(CMessageArray.value as any, vm);
   setTop(margin * (currentIndex + 1) + height * currentIndex);
 };
 /**
@@ -39,26 +51,73 @@ const CMessageSetTop = (vm: any) => {
  * @param duration
  * @constructor
  */
-const CMessageShow = (app: any, duration: number) => {
+const CMessageShow = (app: App, duration: number) => {
   const oFrag = document.createDocumentFragment();
-  const vm = app.mount(oFrag);
-  console.log(vm, 11);
+  const vm = app.mount(oFrag) as any;
   CMessageArray.value.push(vm);
   document.body.appendChild(oFrag);
+  console.log(vm);
   CMessageSetTop(vm);
   vm.setVisible(true);
+  console.log(vm);
   watch(CMessageArray, () => CMessageSetTop(vm));
   CMessageHide(app, vm, duration);
 };
-const CzMessage = (options: ICMessageOptions) => {
-  const CMessageApp = createApp(CMessageComponent, options as any);
-  CMessageShow(CMessageApp, options.duration || 3000);
+export type MessageOptionsWithType = Omit<IMessageOptions, 'type'>
+export type MessageParamsWithType = MessageOptionsWithType | IMessageOptions['message'];
+export interface MessageHandler {
+  close: () => void;
+}
+export type MessageParams = IMessageOptions | IMessageOptions['message']
+export type MessageFn = {
+  (options: MessageParams): void;
+}
+export type MessageTypedFn = (
+  options: MessageParamsWithType,
+) => MessageHandler
+
+export interface Message extends MessageFn {
+  success: MessageTypedFn;
+  warning: MessageTypedFn;
+  info: MessageTypedFn;
+  error: MessageTypedFn;
+}
+/**
+ * 序列化参数
+ * @param params
+ */
+const normalizeOptions = (params: MessageParams) => {
+  const options = isString(params) ? { message: params } : params;
+  return options;
 };
-Object.values(CMessageType).forEach((type) => {
-  // @ts-ignore
-  CzMessage[type] = (options: ICMessageOptions) => {
-    options.type = type;
-    return CzMessage(options);
+const createMessage = (options: IMessageOptions | { message: string; duration?: number;}) => {
+  const CMessageApp = createApp(CMessageComponent, options as any);
+  console.log(options);
+  CMessageShow(CMessageApp, options.duration ?? 3000);
+};
+Object.values(messageTypes).forEach((type) => {
+  createMessage[type] = (options: IMessageOptions) => {
+    const normalize = normalizeOptions(options);
+    return createMessage({ ...normalize, type });
   };
 });
-export { CMessageType, CzMessage };
+// export { CzMessage };
+// /**
+//  * 序列化参数
+//  * @param params
+//  */
+// const normalizeOptions = (params: MessageParams) => {
+//   const options = isString(params) ? { message: params } : params;
+//   return options;
+// };
+// const createMessage = (options: IMessageOptions | { message: string; duration?: number;}) => {
+//   const CMessageApp = createApp(CMessageComponent, options as any);
+//   CMessageShow(CMessageApp, options.duration ?? 3000);
+// };
+// export const message: MessageFn & Partial<Message> = (
+//   options = {} as MessageParams
+// ) => {
+//   const normalize = normalizeOptions(options);
+//   createMessage(normalize);
+// };
+export { createMessage };

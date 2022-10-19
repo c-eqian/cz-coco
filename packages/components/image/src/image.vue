@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion:
+ * @version:
+ * @Author: 十三
+ * @Date: 2022-10-19 00:30:34
+ * @LastEditors: 十三
+ * @LastEditTime: 2022-10-19 19:43:50
+-->
 <template>
   <img
     :style="style"
@@ -8,10 +16,10 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import { imageProps } from './image';
-import { createComponentName } from '@cz-coco/utils/helper';
+import { useCreateComponentName } from '@cz-coco/hooks';
 
 export default defineComponent({
-  name: createComponentName('image'),
+  name: useCreateComponentName('image'),
   props: imageProps,
   setup(props) {
     const style = computed(() => {

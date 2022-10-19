@@ -4,9 +4,9 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:59:41
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-16 00:38:17
+ * @LastEditTime: 2022-10-19 20:07:18
  */
-import * as cst from './constant';
+import { cst } from '@cz-coco/constants';
 import { ref, computed, unref } from 'vue';
 
 /**
@@ -14,7 +14,7 @@ import { ref, computed, unref } from 'vue';
  * @param cname
  * @returns
  */
-export const componentNameFormat = (cname: string): string => {
+export const useComponentNameFormat = (cname: string): string => {
   if (!cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX)) return cname;
   const compName = cname.toLowerCase();
   return `${cst.NAMESPACE_PREFIX}-${compName.replace(cst.NAMESPACE_PREFIX, '')}`;
@@ -67,7 +67,7 @@ export function firstLetterToUpperCase(str: string): string {
  * @returns
  * icon => CzIcon
  */
-export function createComponentName(cname: string): string {
+export function useCreateComponentName(cname: string): string {
   const ns = firstLetterToUpperCase(cst.COMPONENT_NAMESPACE_PREFIX);
   const componentName = firstLetterToUpperCase(cname);
   return `${ns}${componentName}`;
@@ -78,7 +78,7 @@ const _bem = (
   block: string,
   blockSuffix: string,
   element: string,
-  modifier: string,
+  modifier: string
 ) => {
   let cls = `${namespace}-${block}`;
   if (blockSuffix) {
@@ -97,47 +97,42 @@ const _bem = (
  * BEM
  */
 
-export const  useNamespace = (block: string) => {
-const namespace = computed(() => cst.NAMESPACE_PREFIX)
-const b = (blockSuffix = '') =>
-  _bem(unref(namespace), block, blockSuffix, '', '')
-  const e = (element?: string) =>
-  element ? _bem(unref(namespace), block, '', element, '') : ''
-  const m = (modifier?: string) =>
-  modifier ? _bem(unref(namespace), block, '', '', modifier) : ''
-  const be = (blockSuffix?: string, element?: string) =>
-  blockSuffix && element
-  ? _bem(unref(namespace), block, blockSuffix, element, '')
-    : ''
-  const em = (element?: string, modifier?: string) =>
-  element && modifier
-  ? _bem(unref(namespace), block, '', element, modifier)
-    : ''
-  const bm = (blockSuffix?: string, modifier?: string) =>
-  blockSuffix && modifier
-  ? _bem(unref(namespace), block, blockSuffix, '', modifier)
-    : ''
-  const bem = (blockSuffix?: string, element?: string, modifier?: string) =>
-  blockSuffix && element && modifier
-   ? _bem(unref(namespace), block, blockSuffix, element, modifier)
-     : ''
+export const useNamespace = (block: string) => {
+  const namespace = computed(() => cst.NAMESPACE_PREFIX);
+  const b = (blockSuffix = '') => _bem(unref(namespace), block, blockSuffix, '', '');
+  const e = (element?: string) => (element ? _bem(unref(namespace), block, '', element, '') : '');
+  const m = (modifier?: string) => (modifier ? _bem(unref(namespace), block, '', '', modifier) : '');
+  const be = (blockSuffix?: string, element?: string) => (blockSuffix && element
+    ? _bem(unref(namespace), block, blockSuffix, element, '')
+    : '');
+  const em = (element?: string, modifier?: string) => (element && modifier
+    ? _bem(unref(namespace), block, '', element, modifier)
+    : '');
+  const bm = (blockSuffix?: string, modifier?: string) => (blockSuffix && modifier
+    ? _bem(unref(namespace), block, blockSuffix, '', modifier)
+    : '');
+  const bem = (blockSuffix?: string, element?: string, modifier?: string) => (blockSuffix && element && modifier
+    ? _bem(unref(namespace), block, blockSuffix, element, modifier)
+    : '');
   const is: {
-    (name: string, state: boolean | undefined): string
-    (name: string): string
+    // eslint-disable-next-line no-unused-vars
+    (name: string, state: boolean | undefined): string;
+    // eslint-disable-next-line no-unused-vars
+    (name: string): string;
    } = (name: string, ...args: [boolean | undefined] | []) => {
-  const state = args.length >= 1 ? args[0]! : true
-  return name && state ? `${cst.STATEPREFIX}${name}` : ''
-   }
+     const state = args.length >= 1 ? args[0]! : true;
+     return name && state ? `${cst.STATE_PREFIX}${name}` : '';
+   };
   return {
-  namespace,
-  b,
-  e,
-  m,
-  be,
-  em,
-  bm,
-  bem,
-  is,
-   }
- }
+    namespace,
+    b,
+    e,
+    m,
+    be,
+    em,
+    bm,
+    bem,
+    is
+  };
+};
 export type UseNamespaceReturn = ReturnType<typeof useNamespace>;
