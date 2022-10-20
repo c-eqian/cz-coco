@@ -96,7 +96,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'import/order': 'off',
     'prefer-object-spread': 'off',
-    'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
+    'arrow-parens': [2, 'as-needed', { requireForBlockBody: false }],
     'no-async-promise-executor': 'off',
     'vue/no-multi-spaces': 'error', // 不允许有多余的空格
     'vue/html-end-tags': 'error',

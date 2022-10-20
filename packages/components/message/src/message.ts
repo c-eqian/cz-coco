@@ -6,7 +6,7 @@
  * @Author: 十三
  * @Date: 2022-10-19 00:33:17
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-19 22:24:17
+ * @LastEditTime: 2022-10-20 10:55:25
  */
 import { App, createApp, ref, watch } from 'vue';
 import CMessageComponent from './message.vue';
@@ -22,7 +22,6 @@ const CMessageArray = ref<InstanceType<typeof CMessageComponent>[]>([]);
  * @constructor
  */
 const CMessageHide = (app: any, vm: InstanceType<typeof CMessageComponent>, duration: number) => {
-  console.log(1111, vm);
   vm.timer = setTimeout(async () => {
     await vm.setVisible(false);
     app.unmount();
@@ -95,7 +94,8 @@ const createMessage = (options: IMessageOptions | { message: string; duration?: 
   console.log(options);
   CMessageShow(CMessageApp, options.duration ?? 3000);
 };
-Object.values(messageTypes).forEach((type) => {
+
+Object.values(messageTypes).forEach(type => {
   createMessage[type] = (options: IMessageOptions) => {
     const normalize = normalizeOptions(options);
     return createMessage({ ...normalize, type });

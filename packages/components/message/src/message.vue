@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 19:27:22
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-20 01:17:49
+ * @LastEditTime: 2022-10-20 10:55:12
 -->
 <template>
   <transition :name="`${ns.b('fade')}`">
@@ -43,7 +43,7 @@ const iconMap = {
   error: 'error-filling',
   warning: 'warning-circle-fill'
 };
-const _icon = computed(() => iconMap[props.icon] ?? props.icon);
+const _icon = computed(() => iconMap[props.icon ?? ''] ?? props.icon);
 const _message = computed(() => props.message);
 const setVisible = (isVisible: boolean) => {
   return new Promise(resolve => {
@@ -56,7 +56,6 @@ const setVisible = (isVisible: boolean) => {
   });
 };
 const setTop = (top: any) => {
-  console.log(top);
   state.value.top = top;
   return top;
 };
