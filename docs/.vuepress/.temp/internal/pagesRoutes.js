@@ -1,6 +1,7 @@
 export const pagesRoutes = [
   ["v-8daa1a0e","/",{"title":""},["/index.html","/README.md"]],
   ["v-3bb939a7","/components/button.html",{"title":"Button 按钮"},["/components/button","/components/button.md"]],
+  ["v-40a1d089","/components/card.html",{"title":"card 卡片"},["/components/card","/components/card.md"]],
   ["v-0746ee80","/components/icon.html",{"title":"icon 图标"},["/components/icon","/components/icon.md"]],
   ["v-d82ea0c4","/components/image.html",{"title":"image 图片"},["/components/image","/components/image.md"]],
   ["v-8d8fe944","/components/install.html",{"title":"安装使用"},["/components/install","/components/install.md"]],

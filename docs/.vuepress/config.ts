@@ -4,7 +4,7 @@
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-20 00:58:02
+ * @LastEditTime: 2022-10-22 11:23:18
  */
 // @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
@@ -34,7 +34,6 @@ export default defineUserConfig({
   theme: defaultTheme({
     // logo: 'https://s1.ax1x.com/2022/09/10/vOVha6.jpg',
     logo: 'https://s1.ax1x.com/2022/10/15/x0Q84P.png',
-    repo: 'https://github.com/C1320/cz-coco',
     editLink: false,
     editLinkText: '编辑此页',
     editLinkPattern: '',
@@ -62,7 +61,15 @@ export default defineUserConfig({
       {
         text: '主题',
         link: '/foo/'
-      }
+      },
+      {
+        text: 'Gitee',
+        link: 'https://gitee.com/cyq13/cz-coco'
+      },
+      {
+        text: 'Github',
+        link: 'https://github.com/C1320/cz-coco'
+      },
     ],
     sidebar: [
       // SidebarItem

@@ -4,15 +4,23 @@
  * @Author: 十三
  * @Date: 2022-10-14 10:23:03
  * @LastEditors: 十三
- * @LastEditTime: 2022-10-20 00:27:39
+ * @LastEditTime: 2022-10-22 11:31:23
 -->
+
+# card 卡片
+
+## 基础用法
+
+基础的卡片用法。
+
+:::demo
+
+```vue
 <template>
   <div class="demo-mr">
-    <cz-card />
+    <cz-card>这是卡片</cz-card>
   </div>
 </template>
-<script lang="ts" setup>
-</script>
 <style scoped lang="scss">
 .demo-mr {
   .cz-button {
@@ -20,3 +28,6 @@
   }
 }
 </style>
+```
+
+:::

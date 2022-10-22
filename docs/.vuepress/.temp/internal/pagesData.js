@@ -3,6 +3,8 @@ export const pagesData = {
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /components/button.html
   "v-3bb939a7": () => import(/* webpackChunkName: "v-3bb939a7" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/button.html.js").then(({ data }) => data),
+  // path: /components/card.html
+  "v-40a1d089": () => import(/* webpackChunkName: "v-40a1d089" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/card.html.js").then(({ data }) => data),
   // path: /components/icon.html
   "v-0746ee80": () => import(/* webpackChunkName: "v-0746ee80" */"G:/vue-project/cz-coco/docs/.vuepress/.temp/pages/components/icon.html.js").then(({ data }) => data),
   // path: /components/image.html
