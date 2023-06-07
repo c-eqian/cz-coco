@@ -4,7 +4,7 @@
 # Package Manager
 node_modules
 .pnpm-debug.log*
-/docs/.vuepress/dist
+/docs/.vuepress/dist/**
 /docs/.vuepress/.cache**
 /docs/.vuepress/.temp**
 .temp
