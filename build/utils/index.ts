@@ -12,7 +12,9 @@ import { spawn } from "child_process";
 import { projectRoot } from "./paths";
 
 // 自定义每个task的name
+
 export const withTaskName = <T>(name: string, fn: T) =>
+    // @ts-ignore
   Object.assign(fn, { displayName: name });
 
 // 在node中开启一个子进程来运行脚本

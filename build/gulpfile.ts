@@ -10,6 +10,7 @@ const copySourceCode = () => async () => {
   await run(`cp ${wpRoot}/package.json ${outDir}/package.json`);
 };
 
+
 /**
  * 1. 打包样式
  * 2. 打包工具方法
@@ -19,10 +20,12 @@ const copySourceCode = () => async () => {
  * 6. 发布组件
  */
 export default series(
+    // @ts-ignore
   withTaskName("clean", async () => run("rm -rf ./dist")), // 删除dist目录
   parallel(
+      // @ts-ignore
     withTaskName("buildPackages", () =>
-      run("pnpm run --filter ./packages --parallel build")
+        run("pnpm run --filter \"./packages/**\" --parallel build")
     ), // 并行执行packages目录下的build脚本
     withTaskName("buildFullComponent", () =>
       run("pnpm run build buildFullComponent")

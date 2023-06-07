@@ -1,6 +1,6 @@
-import type { epPropKey } from './runtime'
-import type { ExtractPropTypes, PropType } from 'vue'
-import type { IfNever, UnknownToNever, WritableArray } from './util'
+import type { epPropKey } from './runtime';
+import type { ExtractPropTypes, PropType } from 'vue';
+import type { IfNever, UnknownToNever, WritableArray } from './util';
 
 type Value<T> = T[keyof T]
 
@@ -16,7 +16,7 @@ type Value<T> = T[keyof T]
  */
 export type ExtractPropType<T extends object> = Value<
   ExtractPropTypes<{
-    key: T
+    key: T;
   }>
 >
 
@@ -28,13 +28,13 @@ export type ExtractPropType<T extends object> = Value<
  * @example
  * ResolvePropType<BooleanConstructor> => boolean
  * ResolvePropType<PropType<T>> => T
- **/
+ * */
 export type ResolvePropType<T> = IfNever<
   T,
   never,
   ExtractPropType<{
-    type: WritableArray<T>
-    required: true
+    type: WritableArray<T>;
+    required: true;
   }>
 >
 
@@ -72,7 +72,7 @@ export type EpPropInputDefault<
  */
 export type NativePropType =
   | ((...args: any) => any)
-  | { new (...args: any): any }
+  | { new (...args: any): any; }
   | undefined
   | null
 export type IfNativePropType<T, Y, N> = [T] extends [NativePropType] ? Y : N
@@ -100,11 +100,11 @@ export type EpPropInput<
   Default extends EpPropMergeType<Type, Value, Validator>,
   Required extends boolean
 > = {
-  type?: Type
-  required?: Required
-  values?: readonly Value[]
-  validator?: ((val: any) => val is Validator) | ((val: any) => boolean)
-  default?: EpPropInputDefault<Required, Default>
+  type?: Type;
+  required?: Required;
+  values?: readonly Value[];
+  validator?: ((val: any) => val is Validator) | ((val: any) => boolean);
+  default?: EpPropInputDefault<Required, Default>;
 }
 
 /**
@@ -124,16 +124,16 @@ export type EpPropInput<
   }
  */
 export type EpProp<Type, Default, Required> = {
-  readonly type: PropType<Type>
-  readonly required: [Required] extends [true] ? true : false
-  readonly validator: ((val: unknown) => boolean) | undefined
-  [epPropKey]: true
-} & IfNever<Default, unknown, { readonly default: Default }>
+  readonly type: PropType<Type>;
+  readonly required: [Required] extends [true] ? true : false;
+  readonly validator: ((val: unknown) => boolean) | undefined;
+  [epPropKey]: true;
+} & IfNever<Default, unknown, { readonly default: Default; }>
 
 /**
  * Determine if it is `EpProp`
  */
-export type IfEpProp<T, Y, N> = T extends { [epPropKey]: true } ? Y : N
+export type IfEpProp<T, Y, N> = T extends { [epPropKey]: true; } ? Y : N
 
 /**
  * Converting input to output.
@@ -161,4 +161,4 @@ export type EpPropFinalized<Type, Value, Validator, Default, Required> = EpProp<
   Required
 >
 
-export {}
+export {};

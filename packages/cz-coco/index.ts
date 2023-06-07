@@ -1,14 +1,14 @@
 /*
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: 十三
  * @Date: 2022-10-15 00:21:16
  * @LastEditors: 十三
  * @LastEditTime: 2022-10-16 14:16:08
  */
 // import { WIcon,WButton } from "@cz-coco/components";
-import * as components from "@cz-coco/components";
-import type { App } from "vue";
+import * as components from '@cz-coco/components';
+import type { App } from 'vue';
 
 // const components = [WIcon,WButton];
 
@@ -25,8 +25,8 @@ const install = (app: App) => {
 
 // app.use(WPlus)
 export default {
-  install,
+  install
 };
 
 // import { WIcon } from 'cz-coco
-export * from "@cz-coco/components";
+export * from '@cz-coco/components';
