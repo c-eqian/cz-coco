@@ -35,7 +35,6 @@ jobs:
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
         run: npm install -g pnpm
-      - run: pnpm store prune
       - run: pnpm install
       - run: pnpm uninstall vuepress-plugin-demoblock-plus
       - run: pnpm install vuepress-plugin-demoblock-plus@2.0.0-beta.5 --save-dev -w
