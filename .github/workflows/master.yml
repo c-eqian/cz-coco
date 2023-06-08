@@ -29,8 +29,7 @@ jobs:
       - run: rimraf node_modules
       - run: rimraf pnpm-lock.yaml
       - run: pnpm install
-      - run: pnpm uninstall vuepress-plugin-demoblock-plus
-      - run: pnpm install vuepress-plugin-demoblock-plus@2.0.0-beta.5 --save-dev -w
+      - run: pnpm install @vuepress/client@2.0.0-beta.51 -S -w
 
       # 运行构建脚本
       - name: Build VuePress site
