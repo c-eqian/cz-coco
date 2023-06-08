@@ -6,10 +6,11 @@
     "docs"
   ],
   "scripts": {
-    "dev": "pnpm -C play dev",
+    "dev": "pnpm -C play dev --debug",
     "build": "gulp -f build/gulpfile.ts",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs  --clean-cache",
+    "docs:serve": "serve docs/.vuepress/dist"
   },
   "author": "cz",
   "license": "ISC",
@@ -70,10 +71,12 @@
     "unplugin-vue-components": "^0.22.8",
     "unplugin-vue-define-options": "0.12.0",
     "vitepress": "^1.0.0-alpha.19",
-    "vue": "3.2.37",
+    "vue": "3.2.44",
     "vuepress": "^2.0.0-beta.51",
     "vuepress-plugin-demoblock-plus": "2.0.0-beta.5",
     "vuepress-theme-reco": "2.0.0-beta.16",
+    "@vuepress/plugin-pwa": "2.0.0-beta.51",
+    "@vuepress/plugin-pwa-popup": "2.0.0-beta.51",
     "vuepress-vite": "^2.0.0-beta.51",
     "yarn": "^1.22.19"
   },
