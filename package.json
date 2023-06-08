@@ -28,7 +28,7 @@
     "@vue/compiler-sfc": "^3.2.20",
     "@vue/tsconfig": "^0.1.3",
     "@vuepress/bundler-vite": "^2.0.0-beta.48",
-    "@vuepress/client": "^2.0.0-beta.50",
+    "@vuepress/client": "^2.0.0-beta.51",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.51",
     "@vuepress/plugin-register-components": "^2.0.0-beta.51",
     "@vuepress/plugin-search": "^2.0.0-beta.51",
@@ -83,12 +83,9 @@
     "@cz-coco/hooks": "workspace:^1.0.0",
     "@cz-coco/theme-chalk": "workspace:^1.0.0",
     "@cz-coco/utils": "workspace:^1.0.0",
-    "@types/lodash": "^4.14.186",
-    "@types/lodash-es": "^4.17.6",
     "dayjs": "^1.10.7",
-    "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
-    "lodash-unified": "^1.0.2",
+    "lodash-unified": "^1.0.3",
     "pnpm": "^7.12.2"
   },
   "lint-staged": {

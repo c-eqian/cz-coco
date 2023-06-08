@@ -16,7 +16,7 @@ export const getFiles = (dir: string = path.resolve(__dirname, '../components'))
     if (stat.isDirectory()) {
       // 判断是不是目录
       const dirs = fs.readdirSync(d);
-      dirs.forEach((value) => {
+      dirs.forEach((value:any) => {
         // console.log('路径',path.resolve(dir,value));
         isDir(path.join(d, value));
       });

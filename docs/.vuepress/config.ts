@@ -6,16 +6,17 @@
  * @LastEditors: 十三
  * @LastEditTime: 2022-10-22 11:23:18
  */
-// @ts-ignore
 import { defineUserConfig, defaultTheme } from 'vuepress';
-import { docsearchPlugin } from '@vuepress/plugin-docsearch';
+// import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import path from 'path';
-import demoblockPlugin from 'vuepress-plugin-demoblock-plus';
+import demoBlockPlugin from 'vuepress-plugin-demoblock-plus';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 // const demoblockPlugin = require('vuepress-plugin-demoblock-plus')
-import { containerPlugin } from '@vuepress/plugin-container';
+// import { containerPlugin } from '@vuepress/plugin-container';
 import { getFiles } from '../utils/AutoCompleteSide';
 
+// @ts-ignore
+// @ts-ignore
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'cz-coco',
@@ -95,11 +96,12 @@ export default defineUserConfig({
     }
   }),
   plugins: [
+    // @ts-ignore
     registerComponentsPlugin({
       // 配置项
       componentsDir: path.resolve(__dirname, './components')
     }),
-    demoblockPlugin({
+    demoBlockPlugin({
       scriptImports: ["import * as cz from '@cz-coco/components'"],
       customClass: 'demoblock-custom',
       theme: 'github-light',
@@ -111,6 +113,7 @@ export default defineUserConfig({
         },
         {
           searchValue: /import ({.*}) from '@cz-coco\/components'/g,
+          // @ts-ignore
           replaceValue: (_s: any, s1: any) => `const ${s1} = cz` as string
         }
       ]
