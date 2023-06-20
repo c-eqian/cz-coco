@@ -15,7 +15,7 @@ import { ref, computed, unref } from 'vue';
  * @returns
  */
 export const useComponentNameFormat = (cname: string): string => {
-  if (!cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX)) return cname;
+  if (cname && cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX)) return cname;
   const compName = cname.toLowerCase();
   return `${cst.NAMESPACE_PREFIX}-${compName.replace(cst.NAMESPACE_PREFIX, '')}`;
 };

@@ -9,10 +9,13 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import DefineOptions from 'unplugin-vue-define-options/vite';
+import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 // import requireTransform from 'vite-plugin-require-transform';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), DefineOptions(),
+    // @ts-ignore
+    vueSetupExtend(),
   //   requireTransform({
   //   fileRegex: /.js$|.vue$/
   // }),

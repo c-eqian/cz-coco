@@ -21,8 +21,9 @@ export type SFCInstallWithContext<T> = SFCWithInstall<T> & {
   */
 export const withInstall = <T>(comp: T) => {
   (comp as SFCWithInstall<T>).install = (app: App) => {
+    console.log({ comp });
     app.component((comp as any).name, comp as any);
-    app.component(useComponentNameFormat((comp as any).name), comp as any);
+    app.component(useComponentNameFormat((comp as any).name || (comp as any).__name), comp as any);
   };
   return comp as SFCWithInstall<T>;
 };

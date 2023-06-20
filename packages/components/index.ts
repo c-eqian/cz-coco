@@ -12,17 +12,24 @@ import _button from './button';
 import _icon from './icon';
 import _image from './image';
 import _card from './card';
+import _Carousel from './carousel';
 
 export * from './button';
 export * from './message';
 export * from './image';
 export * from './icon';
 export * from './card';
-
-const components = [_button, _icon, _image, _card];
+export * from './carousel';
+const components = [
+  _button,
+  _icon,
+  _image,
+  _card,
+  _Carousel
+];
 export default {
   install(app: App) {
-    components.forEach((item) => {
+    components.forEach(item => {
       app.use(item);
     });
   }
