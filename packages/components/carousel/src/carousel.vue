@@ -38,11 +38,14 @@
   </div>
 </template>
 
-<script lang="ts" setup :name="useCreateComponentName('carousel')">
+<script lang="ts" setup>
 import { useCreateComponentName } from '@cz-coco/hooks';
 import { computed, onMounted, ref } from 'vue';
 import { carouselProps } from '../types';
 
+defineOptions({
+  name: useCreateComponentName('carousel')
+});
 // defineOptions({
 //   name: useCreateComponentName('carousel')
 // });

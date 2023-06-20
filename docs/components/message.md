@@ -23,23 +23,14 @@
   <cz-button type="warning" @click="handelMessage('warning')"> warning </cz-button>
   <cz-button type="info" @click="handelMessage('info')"> info </cz-button>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import { CzMessage } from '@cz-coco/components';
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  setup() {
     const handelMessage = (type: string) => {
       CzMessage({
         type: type,
         message: '我是测试的'
       });
     };
-    return {
-      handelMessage
-    };
-  }
-});
 </script>
 ```
 
