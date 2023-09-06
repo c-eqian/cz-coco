@@ -19,7 +19,6 @@ export {
   isPromise,
   isSymbol
 } from '@vue/shared';
-export { isBoolean, isNumber } from '@vueuse/core';
 export { isVNode } from 'vue';
 
 export const isUndefined = (val: any): val is undefined => val === undefined;

@@ -1,19 +1,15 @@
 import {defineConfig} from "vitepress";
-import path from "path";
+import { mdPlugin } from './configs/plugins';
 import {generateSidebar} from "../utils/AutoCompleteSide";
-import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
 export default defineConfig({
     lang: 'zh-CN',
     title: 'cz-coco',
     description: '组件库&工具库',
     head: [['link', { rel: 'icon', href: '/logo.png' }]],
-    markdown: {
-        lineNumbers: true,
-        config(md) {
-            md.use(componentPreview)
-            md.use(containerPreview)
-        }
-    },
+    // markdown: {
+    //     lineNumbers: true,
+    //     config: (md) => mdPlugin(md),
+    // },
     themeConfig: {
         // logo: 'https://s1.ax1x.com/2022/09/10/vOVha6.jpg',
         logo: 'https://s1.ax1x.com/2022/10/15/x0Q84P.png',

@@ -45,7 +45,6 @@ export function generateSidebar(type:string='base'):any[] {
     if (stats.isFile() && path.extname(filename) === '.md') {
       const content = fs.readFileSync(filePath, 'utf-8');
       const title = getTitle(content);
-      console.log('/' + filename.replace('.md', '') + '/')
       sidebar.push({
         text: title,
         link: `/components/${type}/` + filename.replace('.md', '')

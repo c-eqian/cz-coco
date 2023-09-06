@@ -5,7 +5,7 @@ node_modules/
 /.husky/
 
 tests/
-
+docs-vitepress/**
 /*.js
 /*.ts
 /*.json

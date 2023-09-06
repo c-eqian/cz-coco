@@ -19,6 +19,7 @@ import {
   watch,
   withCtx
 } from "./chunk-V634PGSD.js";
+import "./chunk-UXIASGQL.js";
 
 // node_modules/@vitepress-demo-preview/component/dist/preview-component.js
 var Z = (t, n) => {

@@ -17,6 +17,7 @@
 
 :::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
 
+:::
 ```vue
 <template>
   <div class="demo-mr">
@@ -37,14 +38,13 @@
 </style>
 ```
 
-:::
-
 ## 不同尺寸
 
 提供三种不同尺寸的按钮。
 
 :::demo
 
+:::
 ```vue
 <template>
   <div class="demo-mr">
@@ -66,9 +66,6 @@
 }
 </style>
 ```
-
-:::
-
 ## 禁用状态
 
 你可以使用 disabled 属性来定义按钮是否被禁用。
@@ -76,6 +73,8 @@
 使用 disabled 属性来控制按钮是否为禁用状态。 该属性接受一个 Boolean 类型的值。
 :::demo
 
+
+:::
 ```vue
 <template>
   <div class="demo-mr">
@@ -95,5 +94,3 @@
 }
 </style>
 ```
-
-:::
