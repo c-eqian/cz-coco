@@ -54,8 +54,9 @@ export const genEntryTypes = async () => {
 };
 export const copyEntryTypes = () => {
   const src = path.resolve(outDir, "entry/types");
-  const copy = (module) =>
+  const copy = (module:any) =>
     parallel(
+        // @ts-ignore
       withTaskName(`copyEntryTypes:${module}`, () =>
         run(
           `cp -r ${src}/* ${path.resolve(
