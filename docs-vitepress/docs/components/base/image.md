@@ -13,8 +13,6 @@
 
 ## 基础用法
 
-:::demo
-
 ```vue
 <template>
   <div class="demo-mr">
@@ -35,12 +33,9 @@
 </style>
 ```
 
-:::
-
 ## 设置宽高
 
 通过设置`width`、`height`属性改变大小
-:::demo
 
 ```vue
 <template>
@@ -65,5 +60,3 @@ const image2 = 'https://fuss10.elemecdn.com/2/11/6535bcfb26e4c79b48ddde44f4b6fjp
 }
 </style>
 ```
-
-:::

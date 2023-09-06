@@ -7,6 +7,10 @@ import '@vitepress-demo-preview/component/dist/style.css'
 import { globals } from '../vitepress';
 import cz from '@cz-coco/components';
 import '@cz-coco/theme-chalk/src/index.scss';
+import '../vitepress/styles/code.scss'
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
+import 'prism-themes/themes/prism-duotone-dark.css'
 export default {
   ...DefaultTheme,
   // enhanceApp: async ({ app, router, siteData, isServer }) => {
@@ -17,8 +21,10 @@ export default {
   //   });
   // },
   enhanceApp({app}) {
-    app.component('demo-preview', AntDesignContainer)
+    // app.component('demo-preview', AntDesignContainer)
     app.use(cz)
+    // 注册element-plus
+    app.use(ElementPlus);
     // 全局引入vp-demo组件
     globals.forEach(([name, Comp]) => {
       app.component(name, Comp);

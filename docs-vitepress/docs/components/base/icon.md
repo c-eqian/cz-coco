@@ -13,8 +13,6 @@
 
 基础的按钮用法。
 
-:::demo 使用`icon`、`size`属性来定义 icon 图标和大小。
-
 ```vue
 <template>
   <div class="demo-mr">
@@ -41,13 +39,10 @@
 </style>
 ```
 
-:::
-
 ## 不同尺寸
 
 size 改变图标大小
 
-:::demo
 
 ```vue
 <template>
@@ -68,13 +63,10 @@ size 改变图标大小
 </style>
 ```
 
-:::
-
 ## 改变颜色
 
 color 改变图标颜色
 
-:::demo
 
 ```vue
 <template>
@@ -94,6 +86,4 @@ color 改变图标颜色
 }
 </style>
 ```
-
-:::
 

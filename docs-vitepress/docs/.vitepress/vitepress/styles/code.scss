@@ -1,7 +1,8 @@
 /* https://github.com/antfu/prism-theme-vars */
-@use 'prism-theme-vars/base.css';
-@use 'prism-theme-vars/marker.css';
-
+//@use 'prism-theme-vars/base.css';
+//@use 'prism-theme-vars/marker.css';
+@import "prism-theme-vars/base.css";
+@import "prism-theme-vars/themes/vitesse-light.css";
 [class*='language-']:before {
   font-family: var(--code-font-family);
 }

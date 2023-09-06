@@ -6,10 +6,10 @@ export default defineConfig({
     title: 'cz-coco',
     description: '组件库&工具库',
     head: [['link', { rel: 'icon', href: '/logo.png' }]],
-    // markdown: {
-    //     lineNumbers: true,
-    //     config: (md) => mdPlugin(md),
-    // },
+    markdown: {
+        lineNumbers: true,
+        config: (md) => mdPlugin(md),
+    },
     themeConfig: {
         // logo: 'https://s1.ax1x.com/2022/09/10/vOVha6.jpg',
         logo: 'https://s1.ax1x.com/2022/10/15/x0Q84P.png',

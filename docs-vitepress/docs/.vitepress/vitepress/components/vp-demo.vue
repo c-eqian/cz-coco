@@ -47,13 +47,13 @@ const onSourceVisibleKeydown = (e: KeyboardEvent) => {
  */
 const copyCode = async () => {
   if (!isSupported.value) {
-    $message.error('copy-error');
+    $message.error('复制失败');
     return;
   }
   try {
     await copy(decodeURIComponent(props.rawSource));
     console.log(text);
-    $message.success('copy-success');
+    $message.success('复制成功');
   } catch (e: any) {
     $message.error(e.message);
   }
@@ -71,7 +71,7 @@ onMounted(async () => {
     <ElDivider class="m-0" />
     <div class="op-btns">
       <ElTooltip
-        content="copy-code"
+        content="复制代码"
         :show-arrow="false"
         :trigger="['hover', 'focus']"
         :trigger-keys="[]"
@@ -90,7 +90,7 @@ onMounted(async () => {
         </ElIcon>
       </ElTooltip>
       <ElTooltip
-        content="view-source"
+        content="查看代码"
         :show-arrow="false"
         :trigger="['hover', 'focus']"
         :trigger-keys="[]"
@@ -123,7 +123,7 @@ onMounted(async () => {
         <ElIcon :size="16">
           <CaretTop />
         </ElIcon>
-        <span>{{ 'hide-source' }}</span>
+        <span>{{ '隐藏' }}</span>
       </div>
     </Transition>
   </ClientOnly>

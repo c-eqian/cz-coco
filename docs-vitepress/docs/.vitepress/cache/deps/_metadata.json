@@ -1,68 +1,59 @@
 {
-  "hash": "70cfe0c1",
-  "browserHash": "377069d7",
+  "hash": "fdbeb523",
+  "browserHash": "128024ef",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "8d297a21",
+      "fileHash": "8f44f15e",
       "needsInterop": false
     },
-    "@vitepress-demo-preview/component": {
-      "src": "../../../../node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
-      "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "f0f74d17",
+    "element-plus": {
+      "src": "../../../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "5eb89222",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "850b2890",
+      "fileHash": "3e3dff09",
       "needsInterop": false
     },
     "@element-plus/icons-vue": {
-      "src": "../../../../../node_modules/.pnpm/@element-plus+icons-vue@0.2.7_vue@3.3.4/node_modules/@element-plus/icons-vue/dist/es/index.mjs",
+      "src": "../../../../node_modules/@element-plus/icons-vue/dist/index.js",
       "file": "@element-plus_icons-vue.js",
-      "fileHash": "0d2f392c",
-      "needsInterop": false
-    },
-    "element-plus": {
-      "src": "../../../../../node_modules/.pnpm/element-plus@1.3.0-beta.10_vue@3.3.4/node_modules/element-plus/es/index.mjs",
-      "file": "element-plus.js",
-      "fileHash": "23021565",
+      "fileHash": "26ed935c",
       "needsInterop": false
     },
     "lodash-es": {
       "src": "../../../../../node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/lodash.js",
       "file": "lodash-es.js",
-      "fileHash": "2d5aa021",
+      "fileHash": "2481592b",
       "needsInterop": false
     },
     "lodash-unified": {
       "src": "../../../../../node_modules/.pnpm/lodash-unified@1.0.3_@types+lodash-es@4.17.7_lodash-es@4.17.21_lodash@4.17.21/node_modules/lodash-unified/import.js",
       "file": "lodash-unified.js",
-      "fileHash": "c07610dd",
+      "fileHash": "aab3c854",
       "needsInterop": false
     },
     "@vue/shared": {
       "src": "../../../../../node_modules/.pnpm/@vue+shared@3.2.20/node_modules/@vue/shared/dist/shared.esm-bundler.js",
       "file": "@vue_shared.js",
-      "fileHash": "04f29de2",
+      "fileHash": "c167fe99",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-HQS2MUMV": {
-      "file": "chunk-HQS2MUMV.js"
+    "chunk-PEZMLLGD": {
+      "file": "chunk-PEZMLLGD.js"
     },
-    "chunk-V634PGSD": {
-      "file": "chunk-V634PGSD.js"
+    "chunk-IYO332YY": {
+      "file": "chunk-IYO332YY.js"
     },
     "chunk-RQLQPGQG": {
       "file": "chunk-RQLQPGQG.js"
-    },
-    "chunk-OUPUTIQY": {
-      "file": "chunk-OUPUTIQY.js"
     },
     "chunk-UXIASGQL": {
       "file": "chunk-UXIASGQL.js"

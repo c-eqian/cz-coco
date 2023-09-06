@@ -13,8 +13,6 @@
 
 基础的卡片用法。
 
-:::demo
-
 ```vue
 <template>
   <div class="demo-mr">
@@ -32,5 +30,3 @@
 }
 </style>
 ```
-
-:::

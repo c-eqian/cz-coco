@@ -1,4 +1,5 @@
 import path from 'path';
+// @ts-ignore
 import fs from 'fs';
 import MarkdownIt from 'markdown-it';
 import mdContainer from 'markdown-it-container';
@@ -62,8 +63,3 @@ export const mdPlugin = (md: MarkdownIt) => {
     },
   } as ContainerOpts);
 };
-function encodeURIComponent(arg0: any) {
-    // @ts-ignore
-  throw new Error('Function not implemented.');
-}
-

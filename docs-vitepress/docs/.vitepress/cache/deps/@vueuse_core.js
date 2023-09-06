@@ -1,7 +1,7 @@
 import {
   Fragment,
   TransitionGroup,
-  computed,
+  computed2 as computed,
   customRef,
   defineComponent,
   effectScope,
@@ -33,7 +33,7 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-V634PGSD.js";
+} from "./chunk-IYO332YY.js";
 import "./chunk-UXIASGQL.js";
 
 // node_modules/@vueuse/shared/node_modules/vue-demi/lib/index.mjs

@@ -11,10 +11,6 @@
 
 ### 基础用法
 
-[//]: # ':::demo'
-[//]: # '<message-demo></message-demo>'
-
-::: demo
 
 ```vue
 <template>
@@ -33,12 +29,8 @@ import { CzMessage } from '@cz-coco/components';
     };
 </script>
 ```
-
-:::
-
 ### 指定属性
 
-::: demo
 
 ```vue
 <template>
@@ -61,11 +53,7 @@ export default defineComponent({
 </script>
 ```
 
-:::
-
 ### 自定义图标
-
-::: demo
 
 ```vue
 <template>
@@ -94,5 +82,3 @@ export default defineComponent({
 });
 </script>
 ```
-
-:::
