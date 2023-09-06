@@ -1,7 +1,7 @@
 import { cst } from '@cz-coco/constants';
 import { ref, computed, unref } from 'vue';
 export const useComponentNameFormat = (cname) => {
-    if (!cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX))
+    if (cname && cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX))
         return cname;
     const compName = cname.toLowerCase();
     return `${cst.NAMESPACE_PREFIX}-${compName.replace(cst.NAMESPACE_PREFIX, '')}`;

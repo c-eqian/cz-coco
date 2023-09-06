@@ -4,9 +4,9 @@ exports.withInstallFunction = exports.withInstall = void 0;
 const hooks_1 = require("@cz-coco/hooks");
 const withInstall = (comp) => {
     comp.install = (app) => {
-        console.log(7777, comp);
+        console.log({ comp });
         app.component(comp.name, comp);
-        app.component((0, hooks_1.useComponentNameFormat)(comp.name), comp);
+        app.component((0, hooks_1.useComponentNameFormat)(comp.name || comp.__name), comp);
     };
     return comp;
 };

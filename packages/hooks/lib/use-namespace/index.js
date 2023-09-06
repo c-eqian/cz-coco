@@ -4,7 +4,7 @@ exports.useNamespace = exports.useCreateComponentName = exports.firstLetterToUpp
 const constants_1 = require("@cz-coco/constants");
 const vue_1 = require("vue");
 const useComponentNameFormat = (cname) => {
-    if (!cname.startsWith(constants_1.cst.COMPONENT_NAMESPACE_PREFIX))
+    if (cname && cname.startsWith(constants_1.cst.COMPONENT_NAMESPACE_PREFIX))
         return cname;
     const compName = cname.toLowerCase();
     return `${constants_1.cst.NAMESPACE_PREFIX}-${compName.replace(constants_1.cst.NAMESPACE_PREFIX, '')}`;
