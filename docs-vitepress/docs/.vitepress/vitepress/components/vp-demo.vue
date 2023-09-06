@@ -66,73 +66,82 @@ onMounted(async () => {
 </script>
 <template>
   <ClientOnly>
-    <p text="sm" v-html="decodedDescription" />
-    <component :is="demo" v-if="demo" v-bind="$attrs" />
-    <ElDivider class="m-0" />
-    <div class="op-btns">
-      <ElTooltip
-        content="复制代码"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
-        <ElIcon
-          :size="16"
-          aria-label="copy-code"
-          class="op-btn"
-          tabindex="0"
-          role="button"
-          @click="copyCode"
-          @keydown.prevent.enter="copyCode"
-          @keydown.prevent.space="copyCode"
+    <div class="example">
+      <div class="example-wrapper">
+      <p text="sm" v-html="decodedDescription" />
+      <component :is="demo" v-if="demo" v-bind="$attrs" />
+      </div>
+      <ElDivider class="m-0" />
+      <div class="op-btns">
+        <ElTooltip
+            content="复制代码"
+            :show-arrow="false"
+            :trigger="['hover', 'focus']"
+            :trigger-keys="[]"
         >
-          <CopyDocument />
-        </ElIcon>
-      </ElTooltip>
-      <ElTooltip
-        content="查看代码"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
-        <button
-          ref="sourceCodeRef"
-          :aria-label="sourceVisible ? 'hide-source' : 'view-source'"
-          class="reset-btn el-icon op-btn"
-          @click="toggleSourceVisible()"
+          <ElIcon
+              :size="16"
+              aria-label="copy-code"
+              class="op-btn"
+              tabindex="0"
+              role="button"
+              @click="copyCode"
+              @keydown.prevent.enter="copyCode"
+              @keydown.prevent.space="copyCode"
+          >
+            <CopyDocument />
+          </ElIcon>
+        </ElTooltip>
+        <ElTooltip
+            content="查看代码"
+            :show-arrow="false"
+            :trigger="['hover', 'focus']"
+            :trigger-keys="[]"
+        >
+          <button
+              ref="sourceCodeRef"
+              :aria-label="sourceVisible ? 'hide-source' : 'view-source'"
+              class="reset-btn el-icon op-btn"
+              @click="toggleSourceVisible()"
+          >
+            <ElIcon :size="16">
+              <Expand />
+            </ElIcon>
+          </button>
+        </ElTooltip>
+      </div>
+      <ElCollapseTransition>
+        <SourceCode v-show="sourceVisible" :source="source" />
+      </ElCollapseTransition>
+
+      <Transition name="el-fade-in-linear">
+        <div
+            v-show="sourceVisible"
+            class="example-float-control"
+            tabindex="0"
+            role="button"
+            @click="toggleSourceVisible(false)"
+            @keydown="onSourceVisibleKeydown"
         >
           <ElIcon :size="16">
-            <Expand />
+            <CaretTop />
           </ElIcon>
-        </button>
-      </ElTooltip>
+          <span>{{ '隐藏' }}</span>
+        </div>
+      </Transition>
     </div>
-    <ElCollapseTransition>
-      <SourceCode v-show="sourceVisible" :source="source" />
-    </ElCollapseTransition>
-
-    <Transition name="el-fade-in-linear">
-      <div
-        v-show="sourceVisible"
-        class="example-float-control"
-        tabindex="0"
-        role="button"
-        @click="toggleSourceVisible(false)"
-        @keydown="onSourceVisibleKeydown"
-      >
-        <ElIcon :size="16">
-          <CaretTop />
-        </ElIcon>
-        <span>{{ '隐藏' }}</span>
-      </div>
-    </Transition>
   </ClientOnly>
 </template>
 <style scoped lang="scss">
 .m-0 {
-  margin: 0 !important;
+  margin-top: 8px !important;
 }
-
+.example {
+  border: 1px solid #dcdfe6;
+  &-wrapper{
+    padding: 0 15px;
+  }
+}
 .op-btns {
   padding: 0.5rem;
   display: flex;
