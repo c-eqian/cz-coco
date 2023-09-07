@@ -13,7 +13,6 @@ export default defineConfig({
     themeConfig: {
         // logo: 'https://s1.ax1x.com/2022/09/10/vOVha6.jpg',
         logo: 'https://s1.ax1x.com/2022/10/15/x0Q84P.png',
-        lastUpdatedText: '更新时间',
         nav: [
             {
                 text: '指南',
@@ -54,6 +53,17 @@ export default defineConfig({
                     items: generateSidebar('senior')
                 }
             ]
-        }
+        },
+        outline: {
+            level: 'deep',
+            label: '目录',
+        },
+        darkModeSwitchLabel: '外观',
+        returnToTopLabel: '返回顶部',
+        lastUpdatedText: '上次更新',
+        docFooter: {
+            prev: '上一篇',
+            next: '下一篇'
+        },
     }
 })

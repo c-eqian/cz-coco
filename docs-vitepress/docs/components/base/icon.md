@@ -13,77 +13,30 @@
 
 基础的按钮用法。
 
-```vue
-<template>
-  <div class="demo-mr">
-    <cz-icon icon="success"></cz-icon>
-    <cz-icon icon="unlock"></cz-icon>
-    <cz-icon icon="link"></cz-icon>
-    <cz-icon icon="filter"></cz-icon>
-    <cz-icon icon="layers"></cz-icon>
-
-    <cz-icon icon="menu"></cz-icon>
-    <cz-icon icon="mic"></cz-icon>
-    <cz-icon icon="more"></cz-icon>
-    <cz-icon icon="operation"></cz-icon>
-    <cz-icon icon="search"></cz-icon>
-  </div>
-</template>
-<style scoped lang="scss">
-.demo-mr {
-  .cz-icon {
-    margin-right: 10px;
-    font-size: 30px;
-  }
-}
-</style>
-```
+:::demo
+icon/base
+:::
 
 ## 不同尺寸
 
 size 改变图标大小
 
 
-```vue
-<template>
-  <div class="demo-mr">
-    <cz-icon icon="success" :size="16"></cz-icon>
-    <cz-icon icon="success" :size="32"></cz-icon>
-    <cz-icon icon="success" :size="40"></cz-icon>
-    <cz-icon icon="success" :size="48"></cz-icon>
-    <cz-icon icon="success" :size="52"></cz-icon>
-  </div>
-</template>
-<style scoped lang="scss">
-.demo-mr {
-  .cz-icon {
-    margin-right: 10px;
-  }
-}
-</style>
-```
+:::demo
+icon/size
+:::
 
 ## 改变颜色
 
 color 改变图标颜色
 
+:::demo
+icon/color
+:::
 
-```vue
-<template>
-  <div class="demo-mr">
-    <cz-icon icon="success" color="green"></cz-icon>
-    <cz-icon icon="success" color="red"></cz-icon>
-    <cz-icon icon="success" color="blue"></cz-icon>
-    <cz-icon icon="success" color="yellow"></cz-icon>
-  </div>
-</template>
-<style scoped lang="scss">
-.demo-mr {
-  .cz-icon {
-    margin-right: 10px;
-    font-size: 30px;
-  }
-}
-</style>
-```
+<script setup>
+import IconComponent from '../../examples/icon/index.vue'
+</script>
+
+<IconComponent />
 

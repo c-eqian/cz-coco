@@ -13,20 +13,6 @@
 
 基础的卡片用法。
 
-```vue
-<template>
-  <div class="demo-mr">
-    <cz-card>这是卡片</cz-card>
-    <div style="width: 500px;height: 600px">
-      <cz-carousel></cz-carousel>
-    </div>
-  </div>
-</template>
-<style scoped lang="scss">
-.demo-mr {
-  .cz-button {
-    margin-right: 10px;
-  }
-}
-</style>
-```
+:::demo
+card/base
+:::
