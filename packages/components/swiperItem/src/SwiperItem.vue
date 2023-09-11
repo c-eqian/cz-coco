@@ -7,7 +7,7 @@ defineOptions({
 </script>
 
 <template>
-  <div class="cz-swiper-item">
+  <div class="cz-swiper-item w-100% h-100%">
     <slot></slot>
   </div>
 

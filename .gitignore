@@ -4,12 +4,12 @@
 # Package Manager
 node_modules
 .pnpm-debug.log*
-/docs/.vuepress/dist/**
-/docs/.vuepress/.cache**
-/docs/.vuepress/.temp**
 /docs/.vitepress/dist/**
 /docs/.vitepress/.cache**
 /docs/.vitepress/.temp**
+docs/.vitepress/dist/**
+docs/.vitepress/.cache**
+docs/.vitepress/.temp**
 .temp
 .cache
 npm-debug.log*

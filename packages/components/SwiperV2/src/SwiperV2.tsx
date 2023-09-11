@@ -107,12 +107,15 @@ export default defineComponent({
             swiper.value = new Swiper('.swiper', swiperComputed.value);
             // 鼠标移出隐藏按钮，移入显示按钮
             swiper.value.el.onmouseover = function () {
-                swiper.value?.navigation.nextEl[0].classList.remove('hide');
-                swiper.value?.navigation.prevEl[0].classList.remove('hide');
+                console.log(1111);
+                console.log(swiper.value?.navigation.nextEl[0].classList);
+                swiper.value?.navigation.nextEl[0].classList.remove('is-swiper-button-hide');
+                console.log(swiper.value?.navigation.nextEl[0].classList);
+                swiper.value?.navigation.prevEl[0].classList.remove('is-swiper-button-hide');
             };
             swiper.value.el.onmouseout = function () {
-                swiper.value?.navigation.nextEl[0].classList.add('hide');
-                swiper.value?.navigation.prevEl[0].classList.add('hide');
+                swiper.value?.navigation.nextEl[0].classList.add('is-swiper-button-hide');
+                swiper.value?.navigation.prevEl[0].classList.add('is-swiper-button-hide');
             };
             /**
          * 监听大小变化
@@ -188,8 +191,8 @@ export default defineComponent({
                         ]
                     }
                     {isShowSwiperButtonComputed.value && [
-                        h('div', { class: 'swiper-button-prev hide' }),
-                        h('div', { class: 'swiper-button-next hide' })
+                        h('div', { class: 'swiper-button-prev is-swiper-button-hide' }),
+                        h('div', { class: 'swiper-button-next is-swiper-button-hide' })
                     ]}
                     {/* If we need scrollbar */}
                     {/* <div class="swiper-scrollbar"></div> */}

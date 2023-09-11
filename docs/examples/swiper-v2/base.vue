@@ -11,7 +11,7 @@ const wallpapers = ref([
 </script>
 
 <template>
-          <div>
+          <div class="h-500px m-t-15px w-100%">
               <cz-swiper-v2>
                   <cz-swiper-item v-for="item in wallpapers" class="w-100% h-100%" :key="item"
                   >
@@ -22,8 +22,4 @@ const wallpapers = ref([
 </template>
 
 <style scoped lang="scss">
-.h-500px {
-  height: 500px;
-  width: 500px;
-}
 </style>

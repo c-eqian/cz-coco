@@ -10,6 +10,7 @@ import '@cz-coco/theme-chalk/src/index.scss';
 import '../vitepress/styles/code.scss'
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
+import 'uno.css'
 import 'prism-themes/themes/prism-duotone-dark.css'
 // import 'uno.css';
 export default {
