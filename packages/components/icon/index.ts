@@ -7,10 +7,11 @@
  * @LastEditTime: 2022-10-19 23:29:07
  */
 import { withInstall } from '@cz-coco/utils';
+
 import Icon from './src/icon.vue';
 
 const CzIcon = withInstall(Icon);
 export {
-  CzIcon
+    CzIcon
 };
-export default CzIcon;
+export default Icon;

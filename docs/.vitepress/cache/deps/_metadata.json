@@ -1,0 +1,83 @@
+{
+  "hash": "61dcd27a",
+  "browserHash": "73924cff",
+  "optimized": {
+    "vue": {
+      "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "b9249702",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "80ceb435",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "95147de9",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "844271a7",
+      "needsInterop": false
+    },
+    "co-utils-vue": {
+      "src": "../../../../node_modules/.pnpm/co-utils-vue@1.11.2-rc.3/node_modules/co-utils-vue/dist/index.js",
+      "file": "co-utils-vue.js",
+      "fileHash": "ba9fe5fc",
+      "needsInterop": true
+    },
+    "swiper": {
+      "src": "../../../../node_modules/.pnpm/swiper@10.2.0/node_modules/swiper/swiper.mjs",
+      "file": "swiper.js",
+      "fileHash": "88f418c6",
+      "needsInterop": false
+    },
+    "swiper/modules": {
+      "src": "../../../../node_modules/.pnpm/swiper@10.2.0/node_modules/swiper/modules/index.mjs",
+      "file": "swiper_modules.js",
+      "fileHash": "7025cb5c",
+      "needsInterop": false
+    },
+    "lodash-es": {
+      "src": "../../../../node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/lodash.js",
+      "file": "lodash-es.js",
+      "fileHash": "2f8e9d3d",
+      "needsInterop": false
+    },
+    "lodash-unified": {
+      "src": "../../../../node_modules/.pnpm/lodash-unified@1.0.3_@types+lodash-es@4.17.7_lodash-es@4.17.21_lodash@4.17.21/node_modules/lodash-unified/import.js",
+      "file": "lodash-unified.js",
+      "fileHash": "08b34011",
+      "needsInterop": false
+    },
+    "@vue/shared": {
+      "src": "../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
+      "file": "@vue_shared.js",
+      "fileHash": "7a0fb9e8",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-H3PAWVCM": {
+      "file": "chunk-H3PAWVCM.js"
+    },
+    "chunk-SHNSPNRG": {
+      "file": "chunk-SHNSPNRG.js"
+    },
+    "chunk-5MJFUMWL": {
+      "file": "chunk-5MJFUMWL.js"
+    },
+    "chunk-NHPLVZTW": {
+      "file": "chunk-NHPLVZTW.js"
+    },
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
+    }
+  }
+}

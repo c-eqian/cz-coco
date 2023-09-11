@@ -9,11 +9,11 @@
 <template>
   <button
     :class="[
-      ns.m(_type),
-      ns.m(_size),
+      ns.m(type),
+      ns.m(size),
       ns.b(),
-      ns.is('disabled', _disabled),
-      ns.is('plain', _plain)
+      ns.is('disabled', disabled),
+      ns.is('plain', plain)
     ]"
   >
     <slot />
@@ -30,15 +30,15 @@ export default defineComponent({
   props: buttonProps,
   setup(props: IButtonProps) {
     const ns = useNamespace('button');
-    const _type = computed(() => props.type);
-    const _size = computed(() => props.size);
-    const _disabled = computed(() => props.disabled);
-    const _plain = computed(() => props.plain);
+    const type = computed(() => props.type);
+    const size = computed(() => props.size);
+    const disabled = computed(() => props.disabled);
+    const plain = computed(() => props.plain);
     return {
-      _type,
-      _size,
-      _disabled,
-      _plain,
+      type,
+      size,
+      disabled,
+      plain,
       ns
     };
   }

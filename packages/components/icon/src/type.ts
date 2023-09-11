@@ -10,16 +10,16 @@
 import type { ExtractPropTypes } from 'vue';
 //  as const，会让对象的每个属性变成只读（readonly）
 export const iconProps = {
-  icon: {
-    type: String,
-    require: true
-  },
-  size: {
-    type: Number
-  },
-  color: {
-    type: String
-  }
+    icon: {
+        type: String,
+        require: true
+    },
+    size: {
+        type: Number
+    },
+    color: {
+        type: String
+    }
 };
 
 export type IconProps = ExtractPropTypes<typeof iconProps>

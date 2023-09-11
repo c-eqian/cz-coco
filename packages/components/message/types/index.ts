@@ -12,31 +12,31 @@
 //   message: string;
 //   error: string;
 // }
-import { ExtractPropTypes, InjectionKey } from 'vue';
 import { useCreateComponentName } from '@cz-coco/hooks';
 import { buildProps } from '@cz-coco/utils';
+import { ExtractPropTypes, InjectionKey } from 'vue';
 
 export const messageTypes = ['success', 'info', 'warning', 'error'] as const;
 export type messageType = typeof messageTypes[number];
 export const messageOptions = buildProps({
-  type: {
-    type: String,
-    values: messageTypes,
-    default: 'info'
-  },
-  message: {
-    type: String,
-    default: ''
-  },
-  duration: {
-    type: Number,
-    default: 3000
-  },
-  icon: {
-    type: String
-  }
+    type: {
+        type: String,
+        values: messageTypes,
+        default: 'info'
+    },
+    message: {
+        type: String,
+        default: ''
+    },
+    duration: {
+        type: Number,
+        default: 3000
+    },
+    icon: {
+        type: String
+    }
 } as const);
 export type IMessageOptions = ExtractPropTypes<typeof messageOptions>;
 export const buttonInjectionKey: InjectionKey<IMessageOptions> = Symbol(
-  useCreateComponentName('message')
+    useCreateComponentName('message')
 );

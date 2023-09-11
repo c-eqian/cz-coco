@@ -7,7 +7,8 @@
  * @LastEditTime: 2022-10-19 22:16:46
  */
 
-import { createMessage } from './src/message';
 import { withInstallFunction } from '@cz-coco/utils';
+
+import { createMessage } from './src/message';
 
 export const CzMessage = withInstallFunction(createMessage, '$message');

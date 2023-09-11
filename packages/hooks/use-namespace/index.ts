@@ -7,7 +7,7 @@
  * @LastEditTime: 2022-10-19 20:07:18
  */
 import { cst } from '@cz-coco/constants';
-import { ref, computed, unref } from 'vue';
+import { computed, ref, unref } from 'vue';
 
 /**
  * 组件名转换 CzButton => cz-button
@@ -15,9 +15,9 @@ import { ref, computed, unref } from 'vue';
  * @returns
  */
 export const useComponentNameFormat = (cname: string): string => {
-  if (cname && cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX)) return cname;
-  const compName = cname.toLowerCase();
-  return `${cst.NAMESPACE_PREFIX}-${compName.replace(cst.NAMESPACE_PREFIX, '')}`;
+    if (cname && cname.startsWith(cst.COMPONENT_NAMESPACE_PREFIX)) return cname;
+    const compName = cname.toLowerCase();
+    return `${cst.NAMESPACE_PREFIX}-${compName.replace(cst.NAMESPACE_PREFIX, '')}`;
 };
 
 /**
@@ -31,7 +31,7 @@ const globalId = ref<number>(cst.INITIAL_ID);
 
 /** 全局 z-index 自动自增 */
 export const getNextGlobalZIndex = () => {
-  return globalZIndex.value + 1;
+    return globalZIndex.value + 1;
 };
 
 /** 全局 z-index 自动Id */
@@ -39,7 +39,7 @@ export const getNextGlobalId = () => globalId.value + 1;
 
 /** 设置全局 z-index */
 export const setGlobalZIndex = (val: number) => {
-  globalZIndex.value = val;
+    globalZIndex.value = val;
 };
 
 /**
@@ -49,7 +49,7 @@ export const setGlobalZIndex = (val: number) => {
  * test-icon => testIcon
  */
 export const camelize = (str: string): string => {
-  return str.replace(/-(\w)/g, (_, c) => c.toUpperCase());
+    return str.replace(/-(\w)/g, (_, c) => c.toUpperCase());
 };
 
 /**
@@ -58,7 +58,7 @@ export const camelize = (str: string): string => {
  * @returns
  */
 export function firstLetterToUpperCase(str: string): string {
-  return str.replace(/^[a-z]/, firstLetter => firstLetter.toUpperCase());
+    return str.replace(/^[a-z]/, firstLetter => firstLetter.toUpperCase());
 }
 
 /**
@@ -68,29 +68,29 @@ export function firstLetterToUpperCase(str: string): string {
  * icon => CzIcon
  */
 export function useCreateComponentName(cname: string): string {
-  const ns = firstLetterToUpperCase(cst.COMPONENT_NAMESPACE_PREFIX);
-  const componentName = firstLetterToUpperCase(cname);
-  return `${ns}${componentName}`;
+    const ns = firstLetterToUpperCase(cst.COMPONENT_NAMESPACE_PREFIX);
+    const componentName = firstLetterToUpperCase(cname);
+    return `${ns}${componentName}`;
 }
 
 const _bem = (
-  namespace: string,
-  block: string,
-  blockSuffix: string,
-  element: string,
-  modifier: string
+    namespace: string,
+    block: string,
+    blockSuffix: string,
+    element: string,
+    modifier: string
 ) => {
-  let cls = `${namespace}-${block}`;
-  if (blockSuffix) {
-    cls += `-${blockSuffix}`;
-  }
-  if (element) {
-    cls += `__${element}`;
-  }
-  if (modifier) {
-    cls += `--${modifier}`;
-  }
-  return cls;
+    let cls = `${namespace}-${block}`;
+    if (blockSuffix) {
+        cls += `-${blockSuffix}`;
+    }
+    if (element) {
+        cls += `__${element}`;
+    }
+    if (modifier) {
+        cls += `--${modifier}`;
+    }
+    return cls;
 };
 
 /**
@@ -98,41 +98,41 @@ const _bem = (
  */
 
 export const useNamespace = (block: string) => {
-  const namespace = computed(() => cst.NAMESPACE_PREFIX);
-  const b = (blockSuffix = '') => _bem(unref(namespace), block, blockSuffix, '', '');
-  const e = (element?: string) => (element ? _bem(unref(namespace), block, '', element, '') : '');
-  const m = (modifier?: string) => (modifier ? _bem(unref(namespace), block, '', '', modifier) : '');
-  const be = (blockSuffix?: string, element?: string) => (blockSuffix && element
-    ? _bem(unref(namespace), block, blockSuffix, element, '')
-    : '');
-  const em = (element?: string, modifier?: string) => (element && modifier
-    ? _bem(unref(namespace), block, '', element, modifier)
-    : '');
-  const bm = (blockSuffix?: string, modifier?: string) => (blockSuffix && modifier
-    ? _bem(unref(namespace), block, blockSuffix, '', modifier)
-    : '');
-  const bem = (blockSuffix?: string, element?: string, modifier?: string) => (blockSuffix && element && modifier
-    ? _bem(unref(namespace), block, blockSuffix, element, modifier)
-    : '');
-  const is: {
+    const namespace = computed(() => cst.NAMESPACE_PREFIX);
+    const b = (blockSuffix = '') => _bem(unref(namespace), block, blockSuffix, '', '');
+    const e = (element?: string) => (element ? _bem(unref(namespace), block, '', element, '') : '');
+    const m = (modifier?: string) => (modifier ? _bem(unref(namespace), block, '', '', modifier) : '');
+    const be = (blockSuffix?: string, element?: string) => (blockSuffix && element
+        ? _bem(unref(namespace), block, blockSuffix, element, '')
+        : '');
+    const em = (element?: string, modifier?: string) => (element && modifier
+        ? _bem(unref(namespace), block, '', element, modifier)
+        : '');
+    const bm = (blockSuffix?: string, modifier?: string) => (blockSuffix && modifier
+        ? _bem(unref(namespace), block, blockSuffix, '', modifier)
+        : '');
+    const bem = (blockSuffix?: string, element?: string, modifier?: string) => (blockSuffix && element && modifier
+        ? _bem(unref(namespace), block, blockSuffix, element, modifier)
+        : '');
+    const is: {
     // eslint-disable-next-line no-unused-vars
     (name: string, state: boolean | undefined): string;
     // eslint-disable-next-line no-unused-vars
     (name: string): string;
    } = (name: string, ...args: [boolean | undefined] | []) => {
-     const state = args.length >= 1 ? args[0]! : true;
-     return name && state ? `${cst.STATE_PREFIX}${name}` : '';
+       const state = args.length >= 1 ? args[0]! : true;
+       return name && state ? `${cst.STATE_PREFIX}${name}` : '';
    };
-  return {
-    namespace,
-    b,
-    e,
-    m,
-    be,
-    em,
-    bm,
-    bem,
-    is
-  };
+    return {
+        namespace,
+        b,
+        e,
+        m,
+        be,
+        em,
+        bm,
+        bem,
+        is
+    };
 };
 export type UseNamespaceReturn = ReturnType<typeof useNamespace>;

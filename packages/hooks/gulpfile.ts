@@ -6,7 +6,7 @@
  * @LastEditors: 十三
  * @LastEditTime: 2022-10-16 14:39:11
  */
-import { buildPackages } from '../../build/packages'
+import { buildPackages } from '../../build/packages';
 
 
-export default buildPackages(__dirname,'hooks')
+export default buildPackages(__dirname,'hooks');

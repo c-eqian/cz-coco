@@ -8,10 +8,11 @@
  * @LastEditors: 十三
  * @LastEditTime: 2022-10-20 10:55:25
  */
-import { App, createApp, ref, watch } from 'vue';
-import CMessageComponent from './message.vue';
-import { IMessageOptions, messageTypes } from '../types';
 import { isString } from 'lodash-es';
+import { App, createApp, ref, watch } from 'vue';
+
+import { IMessageOptions, messageTypes } from '../types';
+import CMessageComponent from './message.vue';
 
 const CMessageArray = ref<InstanceType<typeof CMessageComponent>[]>([]);
 /**
@@ -22,16 +23,16 @@ const CMessageArray = ref<InstanceType<typeof CMessageComponent>[]>([]);
  * @constructor
  */
 const CMessageHide = (app: any, vm: InstanceType<typeof CMessageComponent>, duration: number) => {
-  vm.timer = setTimeout(async () => {
-    await vm.setVisible(false);
-    app.unmount();
-    CMessageArray.value = CMessageArray.value.filter(item => item !== vm);
-    clearTimeout(vm.timer);
-  }, duration || 3000);
+    vm.timer = setTimeout(async () => {
+        await vm.setVisible(false);
+        app.unmount();
+        CMessageArray.value = CMessageArray.value.filter(item => item !== vm);
+        clearTimeout(vm.timer);
+    }, duration || 3000);
 };
 
 const findIndex = (array: Array<[]>, value: any) => {
-  return array.findIndex(item => item === value);
+    return array.findIndex(item => item === value);
 };
 /**
  * 设置弹窗高度
@@ -39,10 +40,10 @@ const findIndex = (array: Array<[]>, value: any) => {
  * @constructor
  */
 const CMessageSetTop = (vm: InstanceType<typeof CMessageComponent>) => {
-  console.log(vm);
-  const { setTop, height, margin } = vm;
-  const currentIndex = findIndex(CMessageArray.value as any, vm);
-  setTop(margin * (currentIndex + 1) + height * currentIndex);
+    console.log(vm);
+    const { setTop, height, margin } = vm;
+    const currentIndex = findIndex(CMessageArray.value as any, vm);
+    setTop(margin * (currentIndex + 1) + height * currentIndex);
 };
 /**
  * 设置弹窗显示
@@ -51,16 +52,16 @@ const CMessageSetTop = (vm: InstanceType<typeof CMessageComponent>) => {
  * @constructor
  */
 const CMessageShow = (app: App, duration: number) => {
-  const oFrag = document.createDocumentFragment();
-  const vm = app.mount(oFrag) as any;
-  CMessageArray.value.push(vm);
-  document.body.appendChild(oFrag);
-  console.log(vm);
-  CMessageSetTop(vm);
-  vm.setVisible(true);
-  console.log(vm);
-  watch(CMessageArray, () => CMessageSetTop(vm));
-  CMessageHide(app, vm, duration);
+    const oFrag = document.createDocumentFragment();
+    const vm = app.mount(oFrag) as any;
+    CMessageArray.value.push(vm);
+    document.body.appendChild(oFrag);
+    console.log(vm);
+    CMessageSetTop(vm);
+    vm.setVisible(true);
+    console.log(vm);
+    watch(CMessageArray, () => CMessageSetTop(vm));
+    CMessageHide(app, vm, duration);
 };
 export type MessageOptionsWithType = Omit<IMessageOptions, 'type'>
 export type MessageParamsWithType = MessageOptionsWithType | IMessageOptions['message'];
@@ -86,20 +87,20 @@ export interface Message extends MessageFn {
  * @param params
  */
 const normalizeOptions = (params: MessageParams) => {
-  const options = isString(params) ? { message: params } : params;
-  return options;
+    const options = isString(params) ? { message: params } : params;
+    return options;
 };
 const createMessage = (options: IMessageOptions | { message: string; duration?: number;}) => {
-  const CMessageApp = createApp(CMessageComponent, options as any);
-  console.log(options);
-  CMessageShow(CMessageApp, options.duration ?? 3000);
+    const CMessageApp = createApp(CMessageComponent, options as any);
+    console.log(options);
+    CMessageShow(CMessageApp, options.duration ?? 3000);
 };
 
 Object.values(messageTypes).forEach(type => {
-  createMessage[type] = (options: IMessageOptions) => {
-    const normalize = normalizeOptions(options);
-    return createMessage({ ...normalize, type });
-  };
+    createMessage[type] = (options: IMessageOptions) => {
+        const normalize = normalizeOptions(options);
+        return createMessage({ ...normalize, type });
+    };
 });
 // export { CzMessage };
 // /**

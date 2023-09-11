@@ -1,0 +1,44 @@
+{
+  "name": "docs-vitepress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vitepress dev . ",
+    "docs:build": "vitepress build . ",
+    "docs:serve": "vitepress serve . "
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.74"
+  },
+  "dependencies": {
+    "@cz-coco/components": "workspace:^1.0.0",
+    "@cz-coco/constants": "workspace:^1.0.0",
+    "@cz-coco/hooks": "workspace:^1.0.0",
+    "@cz-coco/theme-chalk": "workspace:^1.0.0",
+    "@cz-coco/utils": "workspace:^1.0.0",
+
+    "@types/escape-html": "^1.0.2",
+    "@types/markdown-it": "^13.0.1",
+    "@types/markdown-it-container": "^2.0.6",
+    "@types/node": "^20.5.9",
+    "@types/prismjs": "^1.26.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.2.2",
+    "@vueuse/core": "^10.4.1",
+    "chalk": "^5.3.0",
+    "consola": "^3.2.3",
+    "element-plus": "^2.3.12",
+    "escape-html": "^1.0.3",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
+    "prism-theme-vars": "^0.2.4",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.29.0",
+    "unocss": "^0.55.7",
+    "vite": "^4.4.9",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue": "^3.3.4"
+  }
+}

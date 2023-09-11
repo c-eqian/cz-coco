@@ -7,9 +7,10 @@
  * @LastEditTime: 2022-10-19 19:44:24
  */
 import { withInstall } from '@cz-coco/utils';
+
 import Image from './src/image.vue';
 
 const CzImage = withInstall(Image);
 
 export { CzImage };
-export default CzImage;
+export default Image;

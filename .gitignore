@@ -7,9 +7,9 @@ node_modules
 /docs/.vuepress/dist/**
 /docs/.vuepress/.cache**
 /docs/.vuepress/.temp**
-/docs-vitepress/docs/.vitepress/dist/**
-/docs-vitepress/docs/.vitepress/.cache**
-/docs-vitepress/docs/.vitepress/.temp**
+/docs/.vitepress/dist/**
+/docs/.vitepress/.cache**
+/docs/.vitepress/.temp**
 .temp
 .cache
 npm-debug.log*

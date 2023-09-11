@@ -5,13 +5,13 @@ node_modules/
 /.husky/
 build
 tests/
-docs-vitepress/docs/**
+docs/**
 /*.js
 /*.ts
 /*.json
 
-yarn.lock
-package-lock.json
+docs/yarn.lock
+docs/package-lock.json
 
 # Log files
 *.log

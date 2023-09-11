@@ -7,9 +7,10 @@
  * @LastEditTime: 2022-10-19 19:39:58
  */
 import { withInstall } from '@cz-coco/utils';
+
 import Button from './src/button.vue';
 
 const CzButton = withInstall(Button);
 
 export { CzButton };
-export default CzButton;
+export default Button;
