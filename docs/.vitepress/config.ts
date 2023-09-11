@@ -1,6 +1,6 @@
 import {defineConfig} from "vitepress";
 import { mdPlugin } from './configs/plugins';
-import {generateSidebar} from "../utils/AutoCompleteSide";
+import {generateSidebar} from "./configs/siderbars";
 export default defineConfig({
     lang: 'zh-CN',
     title: 'cz-coco',
