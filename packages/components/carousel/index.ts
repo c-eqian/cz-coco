@@ -2,7 +2,7 @@ import { withInstall } from '@cz-coco/utils';
 
 import Carousel from './src/carousel.vue';
 
-const CzCarousel = withInstall(Carousel);
+export const CzCarousel = withInstall(Carousel);
 
-export { CzCarousel };
 export default Carousel;
+export * from './types/index';

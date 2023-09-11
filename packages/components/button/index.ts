@@ -10,7 +10,7 @@ import { withInstall } from '@cz-coco/utils';
 
 import Button from './src/button.vue';
 
-const CzButton = withInstall(Button);
+export const CzButton = withInstall(Button);
 
-export { CzButton };
 export default Button;
+export * from './src/type';

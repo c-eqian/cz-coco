@@ -12,3 +12,4 @@ import { withInstallFunction } from '@cz-coco/utils';
 import { createMessage } from './src/message';
 
 export const CzMessage = withInstallFunction(createMessage, '$message');
+export * from './types/index';

@@ -6,13 +6,14 @@ import { Swiper } from 'swiper';
 import { Autoplay, EffectFade,Navigation, Pagination } from 'swiper/modules';
 import { computed, defineComponent, h, nextTick, onMounted, onUpdated, PropType, ref, VNode, watchEffect } from 'vue';
 
-import { CO_SWIPER_ITEM_NAME,IProps } from '../types';
+import {CO_SWIPER_ITEM_NAME} from '../../swiperItem/types';
+import { ISwiperProps } from '../types';
 
 export default defineComponent({
     name: useCreateComponentName('swiperV2'),
     props: {
         config: {
-            type: Object as PropType<DeepPartial<IProps>>,
+            type: Object as PropType<DeepPartial<ISwiperProps>>,
             default: () => {
                 return {
                     spaceBetween: 30,
@@ -101,7 +102,7 @@ export default defineComponent({
         /**
      * 处理初始化配置
      */
-        const swiperComputed = computed(() => useMerge({} as IProps, _swiperDefault.value));
+        const swiperComputed = computed(() => useMerge({} as ISwiperProps, _swiperDefault.value));
 
         const initSwiper = () => {
             swiper.value = new Swiper('.swiper', swiperComputed.value);

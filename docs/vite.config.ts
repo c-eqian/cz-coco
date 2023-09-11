@@ -8,6 +8,7 @@ import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 // eslint-disable-next-line import/extensions
 import vueJsx from "@vitejs/plugin-vue-jsx";
 // import path from "path";
+// import Components from 'unplugin-vue-components/vite'
 // import requireTransform from 'vite-plugin-require-transform';
 // https://vitejs.dev/config/
 export default defineConfig({

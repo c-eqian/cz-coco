@@ -1,5 +1,5 @@
-import { useCreateComponentName } from '@cz-coco/hooks';
-export interface IProps {
+
+export interface ISwiperProps {
  spaceBetween: number;
  centeredSlides: boolean;
  /**
@@ -33,4 +33,3 @@ export interface IProps {
   pauseOnMouseEnter: boolean;
  };
 }
-export const CO_SWIPER_ITEM_NAME = useCreateComponentName('swiperItem');

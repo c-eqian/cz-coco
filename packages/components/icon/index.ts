@@ -10,8 +10,6 @@ import { withInstall } from '@cz-coco/utils';
 
 import Icon from './src/icon.vue';
 
-const CzIcon = withInstall(Icon);
-export {
-    CzIcon
-};
+export const CzIcon = withInstall(Icon);
 export default Icon;
+export * from './src/type';

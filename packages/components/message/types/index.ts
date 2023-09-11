@@ -37,6 +37,6 @@ export const messageOptions = buildProps({
     }
 } as const);
 export type IMessageOptions = ExtractPropTypes<typeof messageOptions>;
-export const buttonInjectionKey: InjectionKey<IMessageOptions> = Symbol(
+export const messageInjectionKey: InjectionKey<IMessageOptions> = Symbol(
     useCreateComponentName('message')
 );

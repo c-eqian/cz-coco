@@ -6,7 +6,7 @@
 </template>
 <script lang="ts" setup>
 import { CzMessage } from '@cz-coco/components';
-const handelMessage = (type: string) => {
+const handelMessage = (type: "success" | "warning" | "info" | "error") => {
   CzMessage({
     type: type,
     message: '我是测试的'

@@ -10,7 +10,6 @@ import { withInstall } from '@cz-coco/utils';
 
 import Card from './src/card.vue';
 
-const CzCard = withInstall(Card);
+export const CzCard = withInstall(Card);
 
-export { CzCard };
 export default Card;
