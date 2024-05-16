@@ -39,10 +39,9 @@ export const mdPlugin = (md: MarkdownIt) => {
         const sourceFileToken = tokens[idx + 2];
         let source = '';
         const sourceFile = sourceFileToken.children?.[0].content ?? '';
-        console.log(111, sourceFile, typeof sourceFile)
         if (sourceFileToken.type === 'inline') {
           source = fs.readFileSync(
-            path.resolve('./', 'examples', `${sourceFile}.vue`),
+            path.resolve(process.cwd(),'docs', 'examples', `${sourceFile}.vue`),
             'utf-8'
           );
         }

@@ -25,3 +25,4 @@ docs/package-lock.json
 *.njsproj
 *.sln
 *.sw?
+vite.config.ts

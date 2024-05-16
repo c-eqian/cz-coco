@@ -168,7 +168,7 @@ export default defineComponent({
                         const _VNode = <div class="swiper-slide">
                             {vNode}
                         </div>;
-                        vNodeList.push(_VNode);
+                        vNodeList.push(_VNode as any);
                     }
                 });
             }
@@ -201,7 +201,7 @@ export default defineComponent({
             );
         };
         return (
-            <div class="w-100% h-100%"
+            <div class="cz-w-full cz-h-full"
             >
                 {initRender(handleDefaultSlots.value as any)}
             </div>

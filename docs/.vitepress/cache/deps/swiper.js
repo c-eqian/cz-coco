@@ -16,10 +16,10 @@ import {
   nextTick,
   now,
   setCSSProperty
-} from "./chunk-5MJFUMWL.js";
+} from "./chunk-VGAOZ6JA.js";
 import "./chunk-UXIASGQL.js";
 
-// ../node_modules/.pnpm/swiper@10.2.0/node_modules/swiper/shared/swiper-core.mjs
+// node_modules/.pnpm/swiper@10.2.0/node_modules/swiper/shared/swiper-core.mjs
 var support;
 function calcSupport() {
   const window2 = getWindow();

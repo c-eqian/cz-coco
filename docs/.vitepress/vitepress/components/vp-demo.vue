@@ -46,10 +46,10 @@ const onSourceVisibleKeydown = (e: KeyboardEvent) => {
  * copy code
  */
 const copyCode = async () => {
-  if (!isSupported.value) {
-    $message.error('复制失败');
-    return;
-  }
+  // if (!isSupported.value) {
+  //   $message.error('复制失败');
+  //   return;
+  // }
   try {
     await copy(decodeURIComponent(props.rawSource));
     console.log(text);

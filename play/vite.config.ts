@@ -8,7 +8,6 @@
  */
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import DefineOptions from 'unplugin-vue-define-options/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 // import requireTransform from 'vite-plugin-require-transform';
@@ -16,7 +15,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   plugins: [
     vue(),
-    DefineOptions(),
     Components({
       include: `${__dirname}/**`,
       resolvers: ElementPlusResolver({ importStyle: 'sass' }),

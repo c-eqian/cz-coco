@@ -33,9 +33,7 @@
     "prism-theme-vars": "^0.2.4",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.29.0",
-    "unocss": "^0.55.7",
     "unplugin-vue-components": "^0.22.12",
-    "vite": "2.9.16",
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vitepress": "1.0.0-rc.12",
     "vue": "^3.3.4"

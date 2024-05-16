@@ -2,14 +2,14 @@
 // GlobalComponents for Volar
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    CzButton: typeof import('@cz-coco/components')['CzButton']
-    CzCard: typeof import('@cz-coco/components')['CzCard']
-    CzIcon: typeof import('@cz-coco/components')['CzIcon']
-    CzImage: typeof import('@cz-coco/components')['CzImage']
-    CzMessage: typeof import('@cz-coco/components')['CzMessage']
-    CzCarousel: typeof import('@cz-coco/components')['CzCarousel']
-    CzSwiperV2: typeof import('@cz-coco/components')['CzSwiperV2']
-    CzSwiperItem: typeof import('@cz-coco/components')['CzSwiperItem']
+    CzButton: typeof import('cz-coco')['CzButton']
+    CzCard: typeof import('cz-coco')['CzCard']
+    CzIcon: typeof import('cz-coco')['CzIcon']
+    CzImage: typeof import('cz-coco')['CzImage']
+    CzMessage: typeof import('cz-coco')['CzMessage']
+    CzCarousel: typeof import('cz-coco')['CzCarousel']
+    CzSwiperV2: typeof import('cz-coco')['CzSwiperV2']
+    CzSwiperItem: typeof import('cz-coco')['CzSwiperItem']
   }
 
   interface ComponentCustomProperties {

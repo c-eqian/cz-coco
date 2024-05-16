@@ -2,9 +2,9 @@ import {
   __commonJS
 } from "./chunk-UXIASGQL.js";
 
-// ../node_modules/.pnpm/co-utils-vue@1.11.2-rc.3/node_modules/co-utils-vue/dist/index.js
+// node_modules/.pnpm/co-utils-vue@1.11.2-rc.3/node_modules/co-utils-vue/dist/index.js
 var require_dist = __commonJS({
-  "../node_modules/.pnpm/co-utils-vue@1.11.2-rc.3/node_modules/co-utils-vue/dist/index.js"(exports) {
+  "node_modules/.pnpm/co-utils-vue@1.11.2-rc.3/node_modules/co-utils-vue/dist/index.js"(exports) {
     function e(t2) {
       return e = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e2) {
         return typeof e2;

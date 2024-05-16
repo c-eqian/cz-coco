@@ -3,15 +3,14 @@ import './style.css'
 import DefaultTheme from "vitepress/theme";
 // import "element-plus/dist/index.css";
 import { AntDesignContainer } from '@vitepress-demo-preview/component'
-import '@vitepress-demo-preview/component/dist/style.css'
+// import '@vitepress-demo-preview/component/dist/style.css'
 import { globals } from '../vitepress';
 import cz from '@cz-coco/components';
 import '@cz-coco/theme-chalk/src/index.scss';
-import '../vitepress/styles/code.scss'
+// import '../vitepress/styles/code.scss'
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
-import 'uno.css'
-import 'prism-themes/themes/prism-duotone-dark.css'
+import 'prism-themes/themes/prism-one-dark.css'
 // import 'uno.css';
 export default {
   ...DefaultTheme,
