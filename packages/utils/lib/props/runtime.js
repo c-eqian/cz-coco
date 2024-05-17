@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildProps = exports.buildProp = exports.isEpProp = exports.definePropType = exports.epPropKey = void 0;
-const vue_1 = require("vue");
 const lodash_unified_1 = require("lodash-unified");
-const types_1 = require("../types");
+const vue_1 = require("vue");
 const objects_1 = require("../objects");
+const types_1 = require("../types");
 exports.epPropKey = '__epPropKey';
 const definePropType = (val) => val;
 exports.definePropType = definePropType;

@@ -11,3 +11,4 @@ export const wpRoot = path.resolve(__dirname,'../../packages/cz-coco')
 
 // 组件目录
 export const compRoot = path.resolve(projectRoot,'packages/components')
+console.log(111111, projectRoot)

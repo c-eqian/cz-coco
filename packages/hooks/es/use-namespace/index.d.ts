@@ -19,4 +19,4 @@ export declare const useNamespace: (block: string) => {
         (name: string): string;
     };
 };
-export declare type UseNamespaceReturn = ReturnType<typeof useNamespace>;
+export type UseNamespaceReturn = ReturnType<typeof useNamespace>;

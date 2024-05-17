@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isPropAbsent = exports.isElement = exports.isEmpty = exports.isUndefined = exports.isVNode = exports.isNumber = exports.isBoolean = exports.isSymbol = exports.isPromise = exports.isDate = exports.isString = exports.isObject = exports.isFunction = exports.isArray = void 0;
+exports.isPropAbsent = exports.isElement = exports.isEmpty = exports.isUndefined = exports.isVNode = exports.isSymbol = exports.isPromise = exports.isDate = exports.isString = exports.isObject = exports.isFunction = exports.isArray = void 0;
 const shared_1 = require("@vue/shared");
 const lodash_unified_1 = require("lodash-unified");
 var shared_2 = require("@vue/shared");
@@ -11,9 +11,6 @@ Object.defineProperty(exports, "isString", { enumerable: true, get: function () 
 Object.defineProperty(exports, "isDate", { enumerable: true, get: function () { return shared_2.isDate; } });
 Object.defineProperty(exports, "isPromise", { enumerable: true, get: function () { return shared_2.isPromise; } });
 Object.defineProperty(exports, "isSymbol", { enumerable: true, get: function () { return shared_2.isSymbol; } });
-var core_1 = require("@vueuse/core");
-Object.defineProperty(exports, "isBoolean", { enumerable: true, get: function () { return core_1.isBoolean; } });
-Object.defineProperty(exports, "isNumber", { enumerable: true, get: function () { return core_1.isNumber; } });
 var vue_1 = require("vue");
 Object.defineProperty(exports, "isVNode", { enumerable: true, get: function () { return vue_1.isVNode; } });
 const isUndefined = (val) => val === undefined;

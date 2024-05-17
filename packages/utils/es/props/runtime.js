@@ -1,7 +1,7 @@
-import { warn } from 'vue';
 import { fromPairs } from 'lodash-unified';
-import { isObject } from '../types';
+import { warn } from 'vue';
 import { hasOwn } from '../objects';
+import { isObject } from '../types';
 export const epPropKey = '__epPropKey';
 export const definePropType = (val) => val;
 export const isEpProp = (val) => isObject(val) && !!val[epPropKey];
