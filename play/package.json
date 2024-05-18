@@ -1,10 +1,10 @@
 {
   "private": true,
-  "name": "@cz-coco/play",
+  "name": "@e-ui/play",
   "scripts": {
     "dev": "vite"
   },
-  "author": "cz",
+  "author": "WQ",
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",

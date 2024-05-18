@@ -3,7 +3,7 @@ import { mdPlugin } from './configs/plugins';
 import {generateSidebar} from "./configs/siderbars";
 export default defineConfig({
     lang: 'zh-CN',
-    title: 'cz-coco',
+    title: 'e-ui',
     description: '组件库&工具库',
     head: [['link', { rel: 'icon', href: '/logo.png' }]],
     markdown: {
@@ -28,11 +28,11 @@ export default defineConfig({
             },
             {
                 text: 'Gitee',
-                link: 'https://gitee.com/cyq13/cz-coco'
+                link: 'https://gitee.com/cyq13/e-ui'
             },
             {
                 text: 'Github',
-                link: 'https://github.com/C1320/cz-coco'
+                link: 'https://github.com/C1320/e-ui'
             },
         ],
         sidebar: {

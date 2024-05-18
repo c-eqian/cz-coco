@@ -1,10 +1,10 @@
 {
-  "name": "@cz-coco/utils",
+  "name": "@e-ui/utils",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "gulp"
   },
-  "author": "cz",
+  "author": "WQ",
   "license": "ISC"
 }

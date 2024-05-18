@@ -1,6 +1,6 @@
 import type { Component } from 'vue';
 export const getModule = (path: string): () => Promise<Component> => {
-  const moduleObj: Record<string, () => Promise<Component>> = import.meta.glob('/examples/**/*.vue')
+  const moduleObj: Record<string, () => Promise<Component>> = (import.meta as any).glob('/examples/**/*.vue')
   const initializePath: string = `/examples/${path}.vue`
   if (moduleObj[initializePath]) {
     return moduleObj[initializePath];

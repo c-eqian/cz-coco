@@ -10,11 +10,9 @@
     "docs:serve": "vitepress serve . "
   },
   "dependencies": {
-    "@cz-coco/components": "workspace:^1.0.0",
-    "@cz-coco/constants": "workspace:^1.0.0",
-    "@cz-coco/hooks": "workspace:^1.0.0",
-    "@cz-coco/theme-chalk": "workspace:^1.0.0",
-    "@cz-coco/utils": "workspace:^1.0.0",
+    "@e-ui/components": "workspace:^1.0.0",
+    "@e-ui/theme-chalk": "workspace:^1.0.0",
+    "@e-ui/utils": "workspace:^1.0.0",
     "@types/escape-html": "^1.0.2",
     "@types/markdown-it": "^13.0.1",
     "@types/markdown-it-container": "^2.0.6",

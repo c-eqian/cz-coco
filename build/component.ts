@@ -32,13 +32,17 @@ const buildEachComponent = async () => {
     const config = {
       input,
       plugins: [nodeResolve(), typescript(), vue(), commonjs()],
-      external: (id) => /^vue/.test(id) || /^@cz-coco/.test(id), // 排除掉vue和@cz-coco的依赖
+      external: (id) => {
+        console.log(3333, id)
+        // return true
+        return /^vue/.test(id) || /^@e-ui/.test(id)
+      }, // 排除掉vue和@e-ui的依赖
     };
     const bundle = await rollup(config);
     const options = Object.values(buildConfig).map((config) => ({
       format: config.format,
       file: path.resolve(config.output.path, `components/${file}/index.js`),
-      paths: pathRewriter(config.output.name), // @cz-coco => cz-coco/es cz-coco/lib  处理路径
+      paths: pathRewriter(config.output.name), // @e-ui => e-ui/es e-ui/lib  处理路径
       exports: "named",
     }));
 
@@ -61,7 +65,7 @@ async function genTypes() {
       outDir: path.resolve(outDir, "types"),
       baseUrl: projectRoot,
       paths: {
-        "@cz-coco/*": ["packages/*"],
+        "@e-ui/*": ["packages/*"],
       },
       skipLibCheck: true,
       strict: false,
@@ -76,7 +80,6 @@ async function genTypes() {
     onlyFiles: true,
     absolute: true,
   });
-
   const sourceFiles: SourceFile[] = [];
 
   await Promise.all(
@@ -120,6 +123,7 @@ function copyTypes() {
   const src = path.resolve(outDir, "types/components/");
   const copy = (module) => {
     let output = path.resolve(outDir, module, "components");
+    console.log(3636, output)
     return () => run(`cp -r ${src}/* ${output}`);
   };
   return parallel(copy("es"), copy("lib"));
@@ -128,8 +132,10 @@ function copyTypes() {
 async function buildComponentEntry() {
   const config = {
     input: path.resolve(compRoot, "index.ts"),
-    plugins: [typescript()],
-    external: () => true,
+    external: (id) => {
+      console.log(66666, id)
+      return true
+    },
   };
   const bundle = await rollup(config);
   return Promise.all(

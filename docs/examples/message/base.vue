@@ -5,7 +5,7 @@
   <cz-button type="info" @click="handelMessage('info')"> info </cz-button>
 </template>
 <script lang="ts" setup>
-import { CzMessage } from '@cz-coco/components';
+import { CzMessage } from '@e-ui/components';
 const handelMessage = (type: "success" | "warning" | "info" | "error") => {
   CzMessage({
     type: type,

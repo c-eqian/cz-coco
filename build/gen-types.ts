@@ -45,7 +45,7 @@ export const genEntryTypes = async () => {
       await fs.mkdir(path.dirname(filepath), { recursive: true });
       await fs.writeFile(
         filepath,
-        outputFile.getText().replaceAll("@cz-coco", "."),
+        outputFile.getText().replaceAll("@e-ui", "."),
         "utf8"
       );
     }
@@ -54,16 +54,19 @@ export const genEntryTypes = async () => {
 };
 export const copyEntryTypes = () => {
   const src = path.resolve(outDir, "entry/types");
-  const copy = (module:any) =>
+  const copy = (module) =>
     parallel(
-        // @ts-ignore
       withTaskName(`copyEntryTypes:${module}`, () =>
-        run(
-          `cp -r ${src}/* ${path.resolve(
-            outDir,
-            buildConfig[module].output.path
-          )}/`
+      {
+        console.log(363636, module)
+        return         run(
+            `cp -r ${src}/* ${path.resolve(
+                outDir,
+                buildConfig[module].output.path
+            )}/`
         )
+      }
+
       )
     );
   return parallel(copy("esm"), copy("cjs"));

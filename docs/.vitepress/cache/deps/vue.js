@@ -16,6 +16,8 @@ import {
   assertNumber,
   callWithAsyncErrorHandling,
   callWithErrorHandling,
+  camelize,
+  capitalize,
   cloneVNode,
   compatUtils,
   compile,
@@ -71,6 +73,9 @@ import {
   mergeModels,
   mergeProps,
   nextTick,
+  normalizeClass,
+  normalizeProps,
+  normalizeStyle,
   onActivated,
   onBeforeMount,
   onBeforeUnmount,
@@ -111,6 +116,8 @@ import {
   ssrContextKey,
   ssrUtils,
   stop,
+  toDisplayString,
+  toHandlerKey,
   toHandlers,
   toRaw,
   toRef,
@@ -146,16 +153,7 @@ import {
   withMemo,
   withModifiers,
   withScopeId
-} from "./chunk-HD2UWIWE.js";
-import {
-  camelize,
-  capitalize,
-  normalizeClass,
-  normalizeProps,
-  normalizeStyle,
-  toDisplayString,
-  toHandlerKey
-} from "./chunk-2HZYWKGW.js";
+} from "./chunk-NQEDJL6T.js";
 import "./chunk-UXIASGQL.js";
 export {
   BaseTransition,

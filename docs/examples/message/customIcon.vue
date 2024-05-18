@@ -5,7 +5,7 @@
   <cz-button type="info" @click="handelMessage('info', 'camera')"> info </cz-button>
 </template>
 <script lang="ts">
-import { CzMessage } from '@cz-coco/components';
+import { CzMessage } from '@e-ui/components';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

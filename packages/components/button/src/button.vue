@@ -1,49 +1,26 @@
-<!--
- * @Descripttion:
- * @version:
- * @Author: 十三
- * @Date: 2022-10-14 10:23:03
- * @LastEditors: 十三
- * @LastEditTime: 2022-10-19 19:42:33
--->
 <template>
-  <button
-    :class="[
-      ns.m(type),
-      ns.m(size),
-      ns.b(),
-      ns.is('disabled', disabled),
-      ns.is('plain', plain)
-    ]"
-  >
-    <slot />
-  </button>
+  <el-button :type="type" @click="handlerClick">Primary</el-button>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
-import { buttonProps, IButtonProps } from './type';
-import { useCreateComponentName, useNamespace } from '@cz-coco/hooks';
+import { ElButton } from "element-plus";
+import { defineComponent } from "vue";
+import { buttonProps } from "./button";
 
 export default defineComponent({
-  name: useCreateComponentName('button'),
-  props: buttonProps,
-  setup(props: IButtonProps) {
-    const ns = useNamespace('button');
-    const type = computed(() => props.type);
-    const size = computed(() => props.size);
-    const disabled = computed(() => props.disabled);
-    const plain = computed(() => props.plain);
-    return {
-      type,
-      size,
-      disabled,
-      plain,
-      ns
+  name: "WButton",
+  props:buttonProps,
+  components: {
+    ElButton,
+  },
+  setup() {
+    const handlerClick = () => {
+      alert("WQ!!!!!!");
     };
-  }
+
+    return {
+      handlerClick,
+    };
+  },
 });
 </script>
-<style scoped lang="scss">
-
-</style>

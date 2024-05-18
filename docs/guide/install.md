@@ -9,18 +9,18 @@
 
 # 安装使用
 
-本节将介绍如何在项目中使用 cz-coco
+本节将介绍如何在项目中使用 e-ui
 
 ## 安装
 
 使用 npm 或 yarn 安装
 
 ```
-npm install cz-coco
-yarn add cz-coco
+npm install e-ui
+yarn add e-ui
 ```
 
-## 引入 cz-coco
+## 引入 e-ui
 
 ### 完整引入
 
@@ -32,8 +32,8 @@ yarn add cz-coco
 import { createApp } from 'vue';
 import App from './App.vue';
 // 导入组件库
-import CzUi from 'cz-coco';
-import 'cz-coco/lib/cz-coco.css';
+import CzUi from 'e-ui';
+import 'e-ui/lib/e-ui.css';
 
 const app = createApp(App);
 app.use(CzUi);
@@ -44,7 +44,7 @@ app.mount('#app');
 
 ## 愉快开始
 
-#### 至此 cz-coco 就引入完成并且可以使用了。
+#### 至此 e-ui 就引入完成并且可以使用了。
 
 ```html
 <!-- html -->
@@ -60,7 +60,7 @@ app.mount('#app');
 
 ```js
 /*js*/
-import { CzButton } from 'cz-coco';
+import { CzButton } from 'e-ui';
 ```
 
 <br/>

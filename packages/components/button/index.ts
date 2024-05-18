@@ -1,16 +1,9 @@
-/*
- * @Descripttion:
- * @version:
- * @Author: 十三
- * @Date: 2022-10-15 00:21:16
- * @LastEditors: 十三
- * @LastEditTime: 2022-10-19 19:39:58
- */
-import { withInstall } from '@cz-coco/utils';
+import { withInstall } from "@e-ui/utils/with-install"
+import Button from "./src/button.vue";
 
-import Button from './src/button.vue';
+const WButton = withInstall(Button);
 
-export const CzButton = withInstall(Button);
-
-export default Button;
-export * from './src/type';
+export{
+    WButton
+}
+export default WButton;

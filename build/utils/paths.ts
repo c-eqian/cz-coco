@@ -5,10 +5,9 @@ export const projectRoot = path.resolve(__dirname,'../../')
 
 // 打包输出目录
 export const outDir = path.resolve(__dirname,'../../dist')
-
-// cz-coco 入口 index.ts
-export const wpRoot = path.resolve(__dirname,'../../packages/cz-coco')
-
+export const packageJsonPath = path.resolve(__dirname,'../../packages')
+// e-ui 入口 index.ts
+export const wpRoot = path.resolve(__dirname,'../../packages/e-ui')
+console.log(wpRoot, outDir)
 // 组件目录
 export const compRoot = path.resolve(projectRoot,'packages/components')
-console.log(111111, projectRoot)

@@ -5,7 +5,7 @@ hero:
   image:
       src: 'https://element-plus.org/images/theme-index-blue.png'
       alt:
-  name: cz-coco
+  name: e-ui
   text: 一个简单组件库
   heroImage: 
   heroText: 组件库&工具库

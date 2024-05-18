@@ -12,11 +12,10 @@ export const buildPackages = (dirname: string, name: string) => {
     const output = path.resolve(dirname, config.output.name);
     // 安装依赖gulp-typescript
     return series(
-        // @ts-ignore
       // 处理ts文件
       withTaskName(`build${dirname}`, () => {
         const tsConfig = path.resolve(projectRoot, "tsconfig.json"); // ts配置文件路径
-        const inputs = [`${dirname}/**/*.ts`, "!gulpfile.ts", "!node_modules"];
+        const inputs = ["**/*.ts", "!gulpfile.ts", "!node_modules"];
         return src(inputs)
           .pipe(
             ts.createProject(tsConfig, {

@@ -1,4 +1,4 @@
-# cz-coco
+# e-ui
 
 - build 负责打包的文件夹  gulp 编译ts， 打包样式， 打包单文件组件
 - dist 就是最终生成的打包结果

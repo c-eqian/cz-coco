@@ -20,7 +20,6 @@ const buildFull = async () => {
     plugins: [nodeResolve(), typescript(), vue(), commonjs()],
     external: (id) => /^vue/.test(id), // 打包的时候不打包vue代码
   };
-
   // 组件库两种使用方式 import 导入组件库 在浏览器中使用script
 
   // esm umd
@@ -29,7 +28,7 @@ const buildFull = async () => {
     {
       format: "umd", // 打包的格式
       file: path.resolve(outDir, "index.js"),
-      name: "cz-coco", // 全局变量名字
+      name: "wPlus", // 全局变量名字
       exports: "named", // 导出的名字 用命名的方式导出 libaryTarget:"" name:""
       globals: {
         // 表示使用的vue是全局的
@@ -52,19 +51,21 @@ const buildFull = async () => {
 };
 
 async function buildEntry() {
-  // 读取cz-coco目录下的所有内容，包括目录和文件
+  // 读取e-ui目录下的所有内容，包括目录和文件
   const entryFiles = await fs.readdir(wpRoot, { withFileTypes: true });
-
   // 过滤掉 不是文件的内容和package.json文件  index.ts 作为打包入口
   const entryPoints = entryFiles
     .filter((f) => f.isFile())
     .filter((f) => !["package.json"].includes(f.name))
-    .map((f) => path.resolve(wpRoot, f.name));
-
+    .map((f) => {
+      return path.resolve(wpRoot, f.name)
+    });
   const config = {
     input: entryPoints,
     plugins: [nodeResolve(), vue(), typescript()],
-    external: (id: string) => /^vue/.test(id) || /^@cz-coco/.test(id),
+    external: (id: string) => {
+      return /^vue/.test(id) || /^@e-ui/.test(id)
+    },
   };
   const bundle = await rollup(config);
   return Promise.all(

@@ -1,15 +1,9 @@
-/*
- * @Descripttion:
- * @version:
- * @Author: 十三
- * @Date: 2022-10-15 19:27:22
- * @LastEditors: 十三
- * @LastEditTime: 2022-10-19 23:29:07
- */
-import { withInstall } from '@cz-coco/utils';
+import { withInstall } from "@e-ui/utils/with-install"
+import Icon from "./src/icon.vue";
 
-import Icon from './src/icon.vue';
+const WIcon = withInstall(Icon);
 
-export const CzIcon = withInstall(Icon);
-export default Icon;
-export * from './src/type';
+export{
+    WIcon
+}
+export default WIcon;

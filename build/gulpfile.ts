@@ -4,12 +4,17 @@ import { genTypes } from "./gen-types";
 import { withTaskName, run } from "./utils";
 import { outDir, wpRoot } from "./utils/paths";
 
+console.log('1111----------------->', wpRoot)
 // gulp 不叫打包，做代码转化 vite
 
 const copySourceCode = () => async () => {
-  await run(`cp ${wpRoot}/package.json ${outDir}/package.json`);
-};
+    try {
+        await run(`cp ${wpRoot}/package.json ${outDir}/package.json`);
+    } catch (e) {
+        console.log(e)
+    }
 
+};
 
 /**
  * 1. 打包样式
@@ -20,12 +25,10 @@ const copySourceCode = () => async () => {
  * 6. 发布组件
  */
 export default series(
-    // @ts-ignore
   withTaskName("clean", async () => run("rm -rf ./dist")), // 删除dist目录
   parallel(
-      // @ts-ignore
     withTaskName("buildPackages", () =>
-        run("pnpm run --filter \"./packages/**\" --parallel build")
+      run("pnpm run --filter \"./packages/**\" --parallel build")
     ), // 并行执行packages目录下的build脚本
     withTaskName("buildFullComponent", () =>
       run("pnpm run build buildFullComponent")

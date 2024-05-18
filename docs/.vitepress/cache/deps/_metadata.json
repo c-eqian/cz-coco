@@ -1,92 +1,47 @@
 {
-  "hash": "c7811f8c",
-  "browserHash": "3152622f",
+  "hash": "0f74ad20",
+  "browserHash": "d0d1326d",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.3.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "fda0f25e",
+      "fileHash": "e5f7d42d",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/index.js",
+      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@6.6.1/node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "affcd6bc",
+      "fileHash": "44c25357",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/.pnpm/element-plus@2.3.12_vue@3.3.4/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "d1e2053d",
+      "fileHash": "dee49d1b",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@10.4.1_vue@3.3.4/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "477e7562",
+      "fileHash": "3835cb29",
       "needsInterop": false
     },
     "@element-plus/icons-vue": {
-      "src": "../../../node_modules/@element-plus/icons-vue/dist/index.js",
+      "src": "../../../../node_modules/.pnpm/@element-plus+icons-vue@2.3.1_vue@3.3.4/node_modules/@element-plus/icons-vue/dist/index.js",
       "file": "@element-plus_icons-vue.js",
-      "fileHash": "00a3ee58",
-      "needsInterop": false
-    },
-    "co-utils-vue": {
-      "src": "../../../../node_modules/.pnpm/co-utils-vue@1.11.2-rc.3/node_modules/co-utils-vue/dist/index.js",
-      "file": "co-utils-vue.js",
-      "fileHash": "3cf6a2bb",
-      "needsInterop": true
-    },
-    "swiper": {
-      "src": "../../../../node_modules/.pnpm/swiper@10.2.0/node_modules/swiper/swiper.mjs",
-      "file": "swiper.js",
-      "fileHash": "0bf894ac",
-      "needsInterop": false
-    },
-    "swiper/modules": {
-      "src": "../../../../node_modules/.pnpm/swiper@10.2.0/node_modules/swiper/modules/index.mjs",
-      "file": "swiper_modules.js",
-      "fileHash": "777e8a81",
-      "needsInterop": false
-    },
-    "lodash-es": {
-      "src": "../../../../node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/lodash.js",
-      "file": "lodash-es.js",
-      "fileHash": "5b92bd40",
-      "needsInterop": false
-    },
-    "lodash-unified": {
-      "src": "../../../../node_modules/.pnpm/lodash-unified@1.0.3_@types+lodash-es@4.17.9_lodash-es@4.17.21_lodash@4.17.21/node_modules/lodash-unified/import.js",
-      "file": "lodash-unified.js",
-      "fileHash": "51cde21f",
-      "needsInterop": false
-    },
-    "@vue/shared": {
-      "src": "../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
-      "file": "@vue_shared.js",
-      "fileHash": "a909185b",
+      "fileHash": "c1e5dd4c",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-HRLCNPHF": {
-      "file": "chunk-HRLCNPHF.js"
+    "chunk-GPHLWC3N": {
+      "file": "chunk-GPHLWC3N.js"
     },
-    "chunk-VQFJPTKY": {
-      "file": "chunk-VQFJPTKY.js"
+    "chunk-OVZF4LFJ": {
+      "file": "chunk-OVZF4LFJ.js"
     },
-    "chunk-JP43PKLV": {
-      "file": "chunk-JP43PKLV.js"
-    },
-    "chunk-HD2UWIWE": {
-      "file": "chunk-HD2UWIWE.js"
-    },
-    "chunk-2HZYWKGW": {
-      "file": "chunk-2HZYWKGW.js"
-    },
-    "chunk-VGAOZ6JA": {
-      "file": "chunk-VGAOZ6JA.js"
+    "chunk-NQEDJL6T": {
+      "file": "chunk-NQEDJL6T.js"
     },
     "chunk-UXIASGQL": {
       "file": "chunk-UXIASGQL.js"
